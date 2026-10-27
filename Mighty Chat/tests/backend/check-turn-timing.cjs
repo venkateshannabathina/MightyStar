@@ -1,0 +1,57 @@
+'use strict';
+const assert = require('node:assert/strict');
+const { TurnTiming } = require('../../Backend/performance/TurnTiming.cjs');
+let now = 0;
+const timing = new TurnTiming({ enabled: true, capacity: 2, now: () => ++now });
+const id = turnId => ({ sessionId: 's', characterId: 'c', generation: 1, turnId, content: 'secret', apiKey: 'secret' });
+timing.mark(id('a'), 'input_commit'); timing.mark(id('a'), 'input_commit');
+timing.mark(id('a'), 'llm_first_token'); timing.mark(id('a'), 'unknown');
+let rows = timing.jsonLines().split('\n').map(JSON.parse);
+assert.deepEqual(rows[0].timestamps, { input_commit: 1, llm_first_token: 2 });
+assert(!timing.jsonLines().includes('secret'));
+timing.mark(id('b'), 'input_commit'); timing.mark(id('c'), 'input_commit');
+rows = timing.jsonLines().split('\n').map(JSON.parse);
+assert.deepEqual(rows.map(row => row.turnId), ['b', 'c']);
+const off = new TurnTiming({ enabled: false, now: () => { throw Error('Clock accessed with flag off'); } });
+off.mark(id('a'), 'input_commit'); assert.equal(off.jsonLines(), '');
+assert.throws(() => new TurnTiming({ capacity: 0 }));
+console.log('Turn timing: bounded JSONL, first occurrence, privacy and flag-off checks passed');
+
+(async () => {
+  const { turnTiming } = require('../../Backend/performance/TurnTiming.cjs');
+  const { ConversationSession } = require('../../Backend/call/ConversationSession.cjs');
+  turnTiming.enabled = true;
+  const session = new ConversationSession({ send() {}, stream: async function* ({ onRequestSent }) { onRequestSent?.(); yield 'Hello there.'; } });
+  await session.turn({ ...id('integration'), generation: 0 }, 'Hello', []);
+  const row = turnTiming.jsonLines().split('\n').map(JSON.parse).find(row => row.turnId === 'integration');
+  for (const name of ['llm_request_sent', 'llm_first_token', 'first_sentence_end', 'first_phrase_emitted', 'response_complete']) assert(Number.isFinite(row.timestamps[name]), name);
+  assert(!turnTiming.jsonLines().includes('Hello'));
+  console.log('Conversation timing integration passed');
+})().catch(error => { console.error(error); process.exitCode = 1; });
+
+const synced = new TurnTiming({ enabled: true, now: () => 10000 });
+const identity = id('clock');
+synced.mark(identity, 'input_commit');
+assert(synced.importSample({identity, source: 'native', offsetMs: -90000, uncertaintyMs: 2, timestamps: {input_commit: 99990, playback_start: 100000}}));
+let sample = JSON.parse(synced.jsonLines());
+assert.equal(sample.timestamps.input_commit, 9990);
+assert.equal(sample.timestamps.input_commit_received, 10000);
+assert.equal(sample.timestamps.playback_start, 10000);
+assert(!synced.importSample({identity, source: 'native', offsetMs: 0, uncertaintyMs: 1, timestamps: {content: 1}}));
+assert(!synced.importSample({identity, source: 'native', offsetMs: NaN, uncertaintyMs: 1, timestamps: {playback_start: 1}}));
+assert(!synced.importSample({identity, source: 'renderer', offsetMs: 0, uncertaintyMs: 1, timestamps: {playback_start: 1}}));
+assert(!synced.importSample({identity, source: 'native', offsetMs: 0, uncertaintyMs: 1, timestamps: {playback_start: 1e12}}));
+const { summarize } = require('../../scripts/report-v2-baseline.cjs');
+const report = summarize(Array.from({length: 20}, (_, i) => ({sessionId: 's', characterId: 'c', generation: i, turnId: 't', timestamps: {input_commit: 0, playback_start: i + 1}})));
+assert.equal(report.deltas.commit_to_playback.p50, 10);
+assert.equal(report.deltas.commit_to_playback.p90, 18);
+assert.equal(report.deltas.commit_to_stt.p50, null);
+assert.equal(report.deltas.commit_to_stt.missing, 20);
+assert.throws(() => summarize([sample, sample]), /Duplicate/);
+console.log('Clock correlation, validation, missing data and percentile checks passed');
+
+assert(synced.importSample({identity,source:'native',offsetMs:0,uncertaintyMs:1,timestamps:{chunk_0_start:9000,chunk_0_end:9300,chunk_1_start:9400}}));
+assert(!synced.importSample({identity,source:'renderer',offsetMs:0,uncertaintyMs:1,timestamps:{chunk_0_end:9300}}));
+assert(!synced.importSample({identity,source:'native',offsetMs:0,uncertaintyMs:1,timestamps:{chunk_64_end:9300}}));
+const gapReport=summarize([JSON.parse(synced.jsonLines())]);assert.equal(gapReport.chunkGaps.n,1);assert.equal(gapReport.chunkGaps.p50,100);
+console.log('WP7 bounded native chunk timestamps and correlated signed gap report passed');

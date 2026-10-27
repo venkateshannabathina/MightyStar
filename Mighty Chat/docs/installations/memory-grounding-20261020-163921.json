@@ -1,0 +1,21 @@
+{
+  "installedAt": "2026-10-20T16:39:22.313373",
+  "app": "<workspace>/Mighty Chat.app",
+  "backup": "<workspace>/backups/main-app-before-memory-grounding-20261020-163921/Mighty Chat.app",
+  "memorySourceSHA256": {
+    "MemoryService.cjs": "9dad014e489766b1c33ee1fd97166d7a8af4e530cbcb7aad88b32d0022242136",
+    "FactGrounding.cjs": "d8713eeb073d61731ec1af8d2b8918ea97bd2c95e4869cbcc7882a31fa466b5a",
+    "LocalEmbeddings.cjs": "2d28a1544b1e3ce6cc87edb2d10a0cea574a2973c60b915c6b90ebc7fe16a73e",
+    "embedding-worker.cjs": "ac16ac07dd53859f67b0330ef21361262795ba525acc5bdc8ce21f3cec202824"
+  },
+  "flags": {
+    "MIGHTY_MEMORY_V1": "1",
+    "MIGHTY_STREAM_CHAT": "1",
+    "MIGHTY_EXPR_V2": "1",
+    "MIGHTY_ENERGY_JAW": "1",
+    "MIGHTY_GESTURES_V2": "1",
+    "MIGHTY_FACE_LAB": "0",
+    "MIGHTY_DEBUG_PERF": "0"
+  },
+  "signatureVerified": true
+}

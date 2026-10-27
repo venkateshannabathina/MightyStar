@@ -1,0 +1,12 @@
+{
+  "time": "20261020-162630",
+  "installed": "<workspace>/Mighty Chat.app",
+  "backup": "<workspace>/backups/main-app-before-memory-startup-fix-20261020-162630/Mighty Chat.app",
+  "memorySourceHashes": {
+    "MemoryService.cjs": "33008ddc6eaa775842e5e94f444db4d1fbf6e15a60099fa94138137b54f7826a",
+    "LocalEmbeddings.cjs": "2d28a1544b1e3ce6cc87edb2d10a0cea574a2973c60b915c6b90ebc7fe16a73e",
+    "embedding-worker.cjs": "ac16ac07dd53859f67b0330ef21361262795ba525acc5bdc8ce21f3cec202824"
+  },
+  "flags": "Five trial features on; Face Lab/debug off. Source defaults unchanged.",
+  "fix": "Context warmup outside the turn deadline, immediate dispatch to ready workers, local inference warmup and graceful ONNX worker shutdown."
+}

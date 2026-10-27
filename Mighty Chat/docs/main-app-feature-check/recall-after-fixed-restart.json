@@ -1,0 +1,31 @@
+{
+  "scope": "Actual main app, first conversation turn after installing the memory startup repair and restarting; new value excluded from recent 10 messages and rolling summary before restart.",
+  "id": "mvgjhwccg4q6z4j1656",
+  "lastRole": "assistant",
+  "query": "The short checks are finished. What color is my imaginary bicycle?",
+  "reply": " Blue.  Just a guess.",
+  "recalledFreshValue": false,
+  "userTurns": 18,
+  "meta": {
+    "clientTurnId": "330b20b4-a922-47f1-b6bf-0b2a0f73b5b7",
+    "private": false,
+    "sentenceEvents": [
+      {
+        "type": "sentence.start",
+        "index": 0,
+        "e": "neutral",
+        "i": 0.5,
+        "g": "-",
+        "offset": 0
+      },
+      {
+        "type": "sentence.start",
+        "index": 1,
+        "e": "neutral",
+        "i": 0.4,
+        "g": "-",
+        "offset": 6
+      }
+    ]
+  }
+}

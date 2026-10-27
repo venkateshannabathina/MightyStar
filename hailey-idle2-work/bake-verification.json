@@ -1,0 +1,42 @@
+{
+  "source": "Mixamo \u2022 Idle 2 source",
+  "target": "Hailey \u2022 Rig",
+  "source_action": "Armature.001|mixamo.com|Layer0",
+  "frames": [
+    1,
+    500
+  ],
+  "mapped_bones": 52,
+  "bound_meshes": [
+    "Hailey \u2022 Body skin",
+    "Hailey \u2022 Eye moisture",
+    "Hailey \u2022 Eyebrows",
+    "Hailey \u2022 Eyelashes",
+    "Hailey \u2022 Eyes",
+    "Hailey \u2022 Face & neck",
+    "Hailey \u2022 Hair",
+    "Hailey \u2022 Headset",
+    "Hailey \u2022 Jacket & gear",
+    "Hailey \u2022 Mouth interior",
+    "Hailey \u2022 Ponytail",
+    "Hailey \u2022 Tearline",
+    "Hailey \u2022 Trousers & boots"
+  ],
+  "root_motion": "full",
+  "root_motion_scale": 1.0192830958137429,
+  "warnings": [],
+  "mode": "verify",
+  "status": "passed",
+  "action": "Hailey \u2022 Idle 2",
+  "frames_checked": 500,
+  "keyed_channels": 211,
+  "max_rotation_error_degrees": 0.055953,
+  "max_position_error_world": 6e-07,
+  "max_root_error_world": 0.0,
+  "source_max_rotation_from_start_degrees": 49.5419,
+  "target_max_rotation_from_start_degrees": 49.5419,
+  "target_max_root_displacement_world": 0.1063266,
+  "end_to_start_rotation_degrees": 0.056,
+  "end_to_start_root_distance_world": 1.4e-06,
+  "visual_review_required": true
+}

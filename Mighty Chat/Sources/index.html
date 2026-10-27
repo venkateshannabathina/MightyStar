@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MightyStar</title>
+<link rel="stylesheet" href="design-tokens.css"><link rel="stylesheet" href="particle-orb.css"><link rel="stylesheet" href="mightystar-ui.css"><link rel="stylesheet" href="character-editor.css"><link rel="stylesheet" href="kit-polish.css"><link rel="stylesheet" href="home-backgrounds.css"><link rel="stylesheet" href="sidebar-rail.css"><link rel="stylesheet" href="siri-chat.css"></head>
+<body>
+<div class="shell sidebar-collapsed" id="shell">
+<aside class="sidebar" aria-label="Characters">
+<div class="sidebar-expanded" id="sidebarExpanded" hidden inert aria-hidden="true">
+ <div class="brand-row"><button class="brand" aria-label="Home" onclick="showHome()"><img class="brand-eye" src="eye-style-change.gif" width="780" height="660" alt="" aria-hidden="true" draggable="false"></button><button class="gloss blue upgrade" onclick="showService('upgrade')">✦ Upgrade</button></div>
+ <input id="search" type="hidden" value="">
+ <button class="suggestions-row" onclick="showSuggestions()"><span class="unread-dot quiet"></span><span class="avatar suggestions-avatar" data-symbol="sparkles"></span><span class="chat-text"><span class="chat-top"><strong>Suggestions <b id="suggestionCount" hidden>0</b></strong><span class="time">Now</span></span><span class="preview">A little inspiration for your next idea</span></span></button>
+ <div class="chats" id="chats"></div>
+ <div class="sidebar-footer"><div class="footer-actions"><button class="apps-button" onclick="openSettings('Integrations')"><span class="app-mini" data-symbol="square.stack.3d.up.fill"></span>Apps <span>+</span></button><button class="gloss mint" onclick="openSettings('Invite & Earn')"><span data-symbol="gift.fill"></span>Invite & Earn</button></div><div class="account-row"><button class="account-identity" onclick="openSettings('Account')"><span class="user-avatar" data-user-avatar></span><span><strong data-user-name>Your workspace</strong><small>Local <span class="usage-ring"></span></small></span></button><button id="shortcutInfo" class="icon" aria-label="Keyboard shortcuts" aria-expanded="false" onclick="toggleShortcuts()" data-symbol="info.circle"></button><button class="icon" aria-label="Settings" onclick="openSettings('Account')" data-symbol="gearshape.fill"></button></div></div>
+</div>
+<div class="sidebar-rail" id="sidebarRail" aria-hidden="false">
+ <div class="rail-brand"><button class="brand" aria-label="Home" onclick="showHome()"><img class="brand-eye" src="eye-style-change.gif" width="780" height="660" alt="" aria-hidden="true" draggable="false"></button></div>
+ <div class="rail-chats" id="railChats" aria-label="Characters"></div>
+ <div class="rail-footer"><button class="icon" aria-label="Apps" onclick="openSettings('Integrations')"><svg class="rail-apps-symbol" viewBox="0 0 20 20" aria-hidden="true"><rect x="2.5" y="2.5" width="6" height="6" rx=".7"/><rect x="11.5" y="2.5" width="6" height="6" rx=".7"/><rect x="2.5" y="11.5" width="6" height="6" rx=".7"/><rect x="11.5" y="11.5" width="6" height="6" rx=".7"/></svg></button><button class="icon" aria-label="Invite & Earn" onclick="openSettings('Invite & Earn')" data-symbol="gift.fill"></button><button class="icon" aria-label="Settings" onclick="openSettings('Account')" data-symbol="gearshape.fill"></button></div>
+</div>
+</aside>
+<main class="conversation" id="conversation">
+ <div class="header-shade"></div>
+ <div class="window-actions"><button id="camera" class="icon" aria-label="Companion view modes" onclick="toggleCharacterMenu()" data-symbol="rectangle.on.rectangle"></button><button class="icon" aria-label="Return home" onclick="showHome()" data-symbol="xmark"></button></div>
+ <header class="topbar"><button class="contact-button" aria-label="Character details" onclick="toggleInspector()"><span class="avatar" id="contactAvatar"></span><span class="contact-chip"><span id="contactName"></span><span data-symbol="chevron.right"></span></span></button></header>
+ <div class="messages" id="messages" aria-live="polite" tabindex="0" aria-label="Conversation history"></div>
+ <div class="home-view" id="homeView"><img id="homeBackground" class="home-background" src="Backgrounds/bundled-1.jpg" alt="" draggable="false"></div>
+ <div class="composer-zone" id="composerZone">
+ <div class="siri-voice-controls" aria-label="Voice controls" aria-hidden="true" inert>
+ <button type="button" id="siriVoiceMute" class="icon" aria-label="Mute voice" aria-pressed="false" onclick="toggleSiriVoiceMute()" data-symbol="speaker.wave.2.fill"></button>
+ <button type="button" id="siriVoiceOrb" class="siri-voice-orb" aria-label="Start recording" onclick="toggleDesktopTalk()"><canvas aria-hidden="true"></canvas><span class="siri-orb-label" aria-hidden="true"></span></button>
+ <button type="button" class="icon" aria-label="Switch to typing" onclick="showTextMode()" data-symbol="keyboard"></button>
+ </div>
+ <form class="composer siri-composer" onsubmit="sendMessage(event)">
+ <button type="button" class="attachment icon" aria-label="Attach a text file" onclick="document.getElementById('attachmentInput').click()" data-symbol="plus"></button>
+ <div class="text-field"><textarea id="message" rows="1" aria-label="Message" placeholder="Ask…" oninput="updateSend();saveDraft()"></textarea><button type="submit" id="send" class="send-button" aria-label="Send message" data-symbol="arrow.up"></button></div>
+ <button type="button" class="talk-button icon" id="holdTalk" aria-label="Hold to talk" title="Hold to talk"><span data-symbol="mic.fill"></span><span id="talkLabel" class="chat-sr-only">Hold to talk</span></button>
+ <button type="button" class="stop-call icon" id="stopCall" hidden aria-label="End voice conversation" onclick="endLiveCall()" data-symbol="stop.fill"></button>
+ </form>
+ <div class="composer-hint" id="voiceLabel" role="status" hidden>Release to send</div>
+ <div id="attachmentList"></div><input type="file" id="attachmentInput" accept=".txt,.md,.csv,.json,.log" hidden onchange="attachTextFile(this.files[0]);this.value=''">
+ </div>
+ <aside class="inspector" id="inspector" hidden></aside>
+ <div id="characterMenu" class="character-menu hidden" role="dialog" aria-label="Companion view modes"></div>
+</main>
+</div>
+<div class="settings-shell" id="settingsShell" hidden><aside class="settings-nav"><header><button class="back-button" onclick="closeCharacterSettings()"><span data-symbol="chevron.left"></span>Back</button><strong>Settings</strong></header><nav id="settingsNav" aria-label="Settings"></nav><small class="app-version">MightyStar 1.1</small></aside><main class="settings-main"><div class="header-shade"></div><div class="window-actions"><button class="icon" aria-label="Companion view modes" onclick="closeCharacterSettings();toggleCharacterMenu()" data-symbol="rectangle.on.rectangle"></button><button class="icon" aria-label="Close settings" onclick="closeCharacterSettings()" data-symbol="xmark"></button></div><div class="settings-content" id="settingsContent"></div></main></div>
+<div class="shortcut-popover" id="shortcutPopover" hidden></div>
+<div id="modalBackdrop" class="modal-backdrop" hidden><section id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"></section></div>
+<div class="toast hidden" id="toast" role="status"></div>
+<div hidden><button id="dockOrb" aria-label="Companion views"></button><button id="modeTrigger"></button><span id="characterDownload"></span><span id="liveCallLabel"></span><button id="callButton"></button><div id="liveCallBar"></div><div id="floating"></div></div>
+<script src="catalog.js"></script><script src="chat-personas.js"></script><script src="particle-orb.js"></script><script src="companion-ui.js"></script><script src="chat-ui.js"></script><script src="orb-reference.js"></script><script src="siri-chat.js"></script><script src="symbol-assets.js"></script><script src="background-assets.js"></script><script src="home-backgrounds.js"></script><script src="sidebar-rail.js"></script><script src="pocket-catalog.js"></script><script src="mightystar-ui.js"></script></body></html>

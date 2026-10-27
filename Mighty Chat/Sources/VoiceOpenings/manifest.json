@@ -1,0 +1,1187 @@
+{
+  "voice": "en-US-AvaMultilingualNeural",
+  "rate": "+0%",
+  "pitch": "+0Hz",
+  "clips": [
+    {
+      "id": "01",
+      "intent": "a simple greeting",
+      "text": "Hey! It's good to hear from you.",
+      "file": "opening-01.mp3",
+      "sha256": "880ffa8e70a164d575f1d697de791a1e0236899f55c1a6f53419938a09875474",
+      "timeline": {
+        "durationSeconds": 2.424,
+        "lastWordEndSeconds": 2.075,
+        "quality": "word-boundaries",
+        "words": [
+          {
+            "start": 0.1375,
+            "end": 0.5625,
+            "text": "Hey"
+          },
+          {
+            "start": 0.9625,
+            "end": 1.15,
+            "text": "It's"
+          },
+          {
+            "start": 1.15,
+            "end": 1.3,
+            "text": "good"
+          },
+          {
+            "start": 1.3,
+            "end": 1.35,
+            "text": "to"
+          },
+          {
+            "start": 1.3625,
+            "end": 1.5875,
+            "text": "hear"
+          },
+          {
+            "start": 1.6,
+            "end": 1.7625,
+            "text": "from"
+          },
+          {
+            "start": 1.775,
+            "end": 2.075,
+            "text": "you"
+          }
+        ],
+        "mouthCues": []
+      }
+    },
+    {
+      "id": "02",
+      "intent": "a simple greeting",
+      "text": "Hi there. I'm glad you stopped by.",
+      "file": "opening-02.mp3",
+      "sha256": "40c2bbbbafb9e1d70aff5f615635afc91772d26a537645d05ce41c427de83184",
+      "timeline": {
+        "durationSeconds": 2.664,
+        "lastWordEndSeconds": 2.2875,
+        "quality": "word-boundaries",
+        "words": [
+          {
+            "start": 0.1125,
+            "end": 0.3625,
+            "text": "Hi"
+          },
+          {
+            "start": 0.375,
+            "end": 0.7375,
+            "text": "there"
+          },
+          {
+            "start": 1.1375,
+            "end": 1.2375,
+            "text": "I'm"
+          },
+          {
+            "start": 1.2375,
+            "end": 1.4875,
+            "text": "glad"
+          },
+          {
+            "start": 1.5,
+            "end": 1.575,
+            "text": "you"
+          },
+          {
+            "start": 1.5875,
+            "end": 1.925,
+            "text": "stopped"
+          },
+          {
+            "start": 1.925,
+            "end": 2.2875,
+            "text": "by"
+          }
+        ],
+        "mouthCues": []
+      }
+    },
+    {
+      "id": "03",
+      "intent": "a simple greeting",
+      "text": "Hey, I'm here. What's on your mind?",
+      "file": "opening-03.mp3",
+      "sha256": "1e8be4b9b3028d140ca70f881362dda8c490169c83b40dee569a6be5b40837f0",
+      "timeline": {
+        "durationSeconds": 2.64,
+        "lastWordEndSeconds": 2.2875,
+        "quality": "word-boundaries",
+        "words": [
+          {
+            "start": 0.1125,
+            "end": 0.3875,
+            "text": "Hey"
+          },
+          {
+            "start": 0.4,
+            "end": 0.575,
+            "text": "I'm"
+          },
+          {
+            "start": 0.5875,
+            "end": 1,
+            "text": "here"
+          },
+          {
+            "start": 1.35,
+            "end": 1.575,
+            "text": "What's"
+          },
+          {
+            "start": 1.5875,
+            "end": 1.7,
+            "text": "on"
+          },
+          {
+            "start": 1.7125,
+            "end": 1.8,
+            "text": "your"
+          },
+          {
+            "start": 1.8125,
+            "end": 2.2875,
+            "text": "mind"
+          }
+        ],
+        "mouthCues": []
+      }
+    },
+    {
+      "id": "04",
+      "intent": "thanks for something that helped",
+      "text": "You're welcome. I'm glad that helped.",
+      "file": "opening-04.mp3",
+      "sha256": "c107834133684034d11092fa5e761a7b3185c64ba17f2d7bd3683cbb5db57032",
+      "timeline": {
+        "durationSeconds": 2.52,
+        "lastWordEndSeconds": 2.175,
+        "quality": "word-boundaries",
+        "words": [
+          {
+            "start": 0.0625,
+            "end": 0.1875,
+            "text": "You're"
+          },
+          {
+            "start": 0.2,
+            "end": 0.725,
+            "text": "welcome"
+          },
+          {
+            "start": 1.1375,
+            "end": 1.2875,
+            "text": "I'm"
+          },
+          {
+            "start": 1.3,
+            "end": 1.6625,
+            "text": "glad"
+          },
+          {
+            "start": 1.675,
+            "end": 1.7625,
+            "text": "that"
+          },
+          {
+            "start": 1.7625,
+            "end": 2.175,
+            "text": "helped"
+          }
+        ],
+        "mouthCues": []
+      }
+    },
+    {
+      "id": "05",
+      "intent": "thanks after resolving something",
+      "text": "Of course. I'm happy we could sort that out.",
+      "file": "opening-05.mp3",
+      "sha256": "db58502eeadfd0b7a7ff8a506df1be6f9726a2e373a13b0d8203fff70a885f5b",
+      "timeline": {
+        "durationSeconds": 3.048,
+        "lastWordEndSeconds": 2.675,
+        "quality": "word-boundaries",
+        "words": [
+          {
+            "start": 0.075,
+            "end": 0.225,
+            "text": "Of"
+          },
+          {
+            "start": 0.2375,
+            "end": 0.8375,
+            "text": "course"
+          },
+          {
+            "start": 1.2375,
+            "end": 1.35,
+            "text": "I'm"
+          },
+          {
+            "start": 1.35,
+            "end": 1.675,
+            "text": "happy"
+          },
+          {
+            "start": 1.6875,
+            "end": 1.8,
+            "text": "we"
+          },
+          {
+            "start": 1.8,
+            "end": 1.9375,
+            "text": "could"
+          },
+          {
+            "start": 1.95,
+            "end": 2.1875,
+            "text": "sort"
+          },
+          {
+            "start": 2.2,
+            "end": 2.35,
+            "text": "that"
+          },
+          {
+            "start": 2.3625,
+            "end": 2.675,
+            "text": "out"
+          }
+        ],
+        "mouthCues": []
+      }
+    },
+    {
+      "id": "06",
+      "intent": "frustration about an external problem, NOT feedback about this conversation",
+      "text": "I hear you. Let's focus on what's actually going wrong.",
+      "file": "opening-06.mp3",
+      "sha256": "80f6e91da0aa8e1d79ffa63fd193229084af899a243e863f54e669b2a6455742",
+      "timeline": {
+        "durationSeconds": 3.888,
+        "lastWordEndSeconds": 3.525,
+        "quality": "word-boundaries",
+        "words": [
+          {
+            "start": 0.1,
+            "end": 0.25,
+            "text": "I"
+          },
+          {
+            "start": 0.25,
+            "end": 0.5625,
+            "text": "hear"
+          },
+          {
+            "start": 0.575,
+            "end": 0.85,
+            "text": "you"
+          },
+          {
+            "start": 1.2125,
+            "end": 1.4,
+            "text": "Let's"
+          },
+          {
+            "start": 1.4125,
+            "end": 1.9125,
+            "text": "focus"
+          },
+          {
+            "start": 1.925,
+            "end": 2.0875,
+            "text": "on"
+          },
+          {
+            "start": 2.1,
+            "end": 2.3,
+            "text": "what's"
+          },
+          {
+            "start": 2.375,
+            "end": 2.7875,
+            "text": "actually"
+          },
+          {
+            "start": 2.8,
+            "end": 3.0625,
+            "text": "going"
+          },
+          {
+            "start": 3.0625,
+            "end": 3.525,
+            "text": "wrong"
+          }
+        ],
+        "mouthCues": []
+      }
+    },
+    {
+      "id": "07",
+      "intent": "your earlier answer missed the user’s question",
+      "text": "You're right, I missed your point. Here's the answer to what you actually asked.",
+      "file": "opening-07.mp3",
+      "sha256": "36a3f3971959d01ae15cb68d46ec6fe3a62a4a56f8e2a0c86046441f4900ab14",
+      "timeline": {
+        "durationSeconds": 4.368,
+        "lastWordEndSeconds": 4.0125,
+        "quality": "word-boundaries",
+        "words": [
+          {
+            "start": 0.05,
+            "end": 0.2,
+            "text": "You're"
+          },
+          {
+            "start": 0.2,
+            "end": 0.55,
+            "text": "right"
+          },
+          {
+            "start": 0.625,
+            "end": 0.7375,
+            "text": "I"
+          },
+          {
+            "start": 0.75,
+            "end": 1.0125,
+            "text": "missed"
+          },
+          {
+            "start": 1.025,
+            "end": 1.1,
+            "text": "your"
+          },
+          {
+            "start": 1.1,
+            "end": 1.5375,
+            "text": "point"
+          },
+          {
+            "start": 1.9625,
+            "end": 2.175,
+            "text": "Here's"
+          },
+          {
+            "start": 2.1875,
+            "end": 2.275,
+            "text": "the"
+          },
+          {
+            "start": 2.2875,
+            "end": 2.6375,
+            "text": "answer"
+          },
+          {
+            "start": 2.65,
+            "end": 2.7375,
+            "text": "to"
+          },
+          {
+            "start": 2.75,
+            "end": 2.875,
+            "text": "what"
+          },
+          {
+            "start": 2.8875,
+            "end": 3.0375,
+            "text": "you"
+          },
+          {
+            "start": 3.1,
+            "end": 3.55,
+            "text": "actually"
+          },
+          {
+            "start": 3.5625,
+            "end": 4.0125,
+            "text": "asked"
+          }
+        ],
+        "mouthCues": []
+      }
+    },
+    {
+      "id": "08",
+      "intent": "sadness or emotional difficulty",
+      "text": "I'm sorry it's been so hard. I'm here with you.",
+      "file": "opening-08.mp3",
+      "sha256": "1db305dea79925d73a91b5bcc0c428d4fee42998171cba2209d8d361e125f0a6",
+      "timeline": {
+        "durationSeconds": 3.696,
+        "lastWordEndSeconds": 3.325,
+        "quality": "word-boundaries",
+        "words": [
+          {
+            "start": 0.0875,
+            "end": 0.2125,
+            "text": "I'm"
+          },
+          {
+            "start": 0.2125,
+            "end": 0.6625,
+            "text": "sorry"
+          },
+          {
+            "start": 0.675,
+            "end": 0.8125,
+            "text": "it's"
+          },
+          {
+            "start": 0.8125,
+            "end": 1,
+            "text": "been"
+          },
+          {
+            "start": 1.0125,
+            "end": 1.45,
+            "text": "so"
+          },
+          {
+            "start": 1.4625,
+            "end": 2.0125,
+            "text": "hard"
+          },
+          {
+            "start": 2.4125,
+            "end": 2.5875,
+            "text": "I'm"
+          },
+          {
+            "start": 2.6,
+            "end": 2.8125,
+            "text": "here"
+          },
+          {
+            "start": 2.825,
+            "end": 2.9625,
+            "text": "with"
+          },
+          {
+            "start": 2.975,
+            "end": 3.325,
+            "text": "you"
+          }
+        ],
+        "mouthCues": []
+      }
+    },
+    {
+      "id": "09",
+      "intent": "an overwhelming or difficult situation",
+      "text": "That sounds really difficult. We can take it one step at a time.",
+      "file": "opening-09.mp3",
+      "sha256": "c5a0a6884f84b2ee0a34cc19643aa57f34f6c8c9d3135ef84a1121d22a28e2ba",
+      "timeline": {
+        "durationSeconds": 4.128,
+        "lastWordEndSeconds": 3.7625,
+        "quality": "word-boundaries",
+        "words": [
+          {
+            "start": 0.075,
+            "end": 0.2125,
+            "text": "That"
+          },
+          {
+            "start": 0.225,
+            "end": 0.575,
+            "text": "sounds"
+          },
+          {
+            "start": 0.6125,
+            "end": 1.0625,
+            "text": "really"
+          },
+          {
+            "start": 1.0625,
+            "end": 1.55,
+            "text": "difficult"
+          },
+          {
+            "start": 1.9125,
+            "end": 2,
+            "text": "We"
+          },
+          {
+            "start": 2.0125,
+            "end": 2.125,
+            "text": "can"
+          },
+          {
+            "start": 2.1375,
+            "end": 2.375,
+            "text": "take"
+          },
+          {
+            "start": 2.3875,
+            "end": 2.5,
+            "text": "it"
+          },
+          {
+            "start": 2.5125,
+            "end": 2.8,
+            "text": "one"
+          },
+          {
+            "start": 2.8125,
+            "end": 3.1125,
+            "text": "step"
+          },
+          {
+            "start": 3.125,
+            "end": 3.2,
+            "text": "at"
+          },
+          {
+            "start": 3.2125,
+            "end": 3.25,
+            "text": "a"
+          },
+          {
+            "start": 3.25,
+            "end": 3.7625,
+            "text": "time"
+          }
+        ],
+        "mouthCues": []
+      }
+    },
+    {
+      "id": "10",
+      "intent": "good news or a personal success",
+      "text": "That's lovely to hear. I'm really happy for you.",
+      "file": "opening-10.mp3",
+      "sha256": "b9a51a8d0e066ab0f8e41b2050a2a0c0692eeab59e1ac176397f6e383a3b5f75",
+      "timeline": {
+        "durationSeconds": 3.432,
+        "lastWordEndSeconds": 3.0625,
+        "quality": "word-boundaries",
+        "words": [
+          {
+            "start": 0.075,
+            "end": 0.425,
+            "text": "That's"
+          },
+          {
+            "start": 0.4375,
+            "end": 0.975,
+            "text": "lovely"
+          },
+          {
+            "start": 0.9875,
+            "end": 1.0875,
+            "text": "to"
+          },
+          {
+            "start": 1.1,
+            "end": 1.55,
+            "text": "hear"
+          },
+          {
+            "start": 1.9375,
+            "end": 2.0875,
+            "text": "I'm"
+          },
+          {
+            "start": 2.0875,
+            "end": 2.3375,
+            "text": "really"
+          },
+          {
+            "start": 2.35,
+            "end": 2.65,
+            "text": "happy"
+          },
+          {
+            "start": 2.6625,
+            "end": 2.8,
+            "text": "for"
+          },
+          {
+            "start": 2.8125,
+            "end": 3.0625,
+            "text": "you"
+          }
+        ],
+        "mouthCues": []
+      }
+    },
+    {
+      "id": "11",
+      "intent": "good news or a personal success",
+      "text": "That's great news. I'm glad you shared it with me.",
+      "file": "opening-11.mp3",
+      "sha256": "83b374002fa3a4197ed864a425aef75311c4f50b1ce7991e622dbb198c5ac277",
+      "timeline": {
+        "durationSeconds": 3.504,
+        "lastWordEndSeconds": 3.15,
+        "quality": "word-boundaries",
+        "words": [
+          {
+            "start": 0.0875,
+            "end": 0.3875,
+            "text": "That's"
+          },
+          {
+            "start": 0.3875,
+            "end": 0.65,
+            "text": "great"
+          },
+          {
+            "start": 0.6625,
+            "end": 1.2875,
+            "text": "news"
+          },
+          {
+            "start": 1.6625,
+            "end": 1.8375,
+            "text": "I'm"
+          },
+          {
+            "start": 1.85,
+            "end": 2.15,
+            "text": "glad"
+          },
+          {
+            "start": 2.15,
+            "end": 2.2375,
+            "text": "you"
+          },
+          {
+            "start": 2.25,
+            "end": 2.6125,
+            "text": "shared"
+          },
+          {
+            "start": 2.6125,
+            "end": 2.7,
+            "text": "it"
+          },
+          {
+            "start": 2.7125,
+            "end": 2.85,
+            "text": "with"
+          },
+          {
+            "start": 2.8625,
+            "end": 3.15,
+            "text": "me"
+          }
+        ],
+        "mouthCues": []
+      }
+    },
+    {
+      "id": "12",
+      "intent": "a practical problem needing an explanation",
+      "text": "Let's work through it. I'll start with the part that matters most.",
+      "file": "opening-12.mp3",
+      "sha256": "17a6a63d6e7c9349fe520b4cc472560cc2788a70c45b702c6584ab6d7e5214ef",
+      "timeline": {
+        "durationSeconds": 3.72,
+        "lastWordEndSeconds": 3.35,
+        "quality": "word-boundaries",
+        "words": [
+          {
+            "start": 0.0625,
+            "end": 0.2625,
+            "text": "Let's"
+          },
+          {
+            "start": 0.275,
+            "end": 0.4875,
+            "text": "work"
+          },
+          {
+            "start": 0.5,
+            "end": 0.7625,
+            "text": "through"
+          },
+          {
+            "start": 0.775,
+            "end": 1.0375,
+            "text": "it"
+          },
+          {
+            "start": 1.4,
+            "end": 1.5,
+            "text": "I'll"
+          },
+          {
+            "start": 1.5125,
+            "end": 1.75,
+            "text": "start"
+          },
+          {
+            "start": 1.75,
+            "end": 1.85,
+            "text": "with"
+          },
+          {
+            "start": 1.8625,
+            "end": 1.925,
+            "text": "the"
+          },
+          {
+            "start": 1.925,
+            "end": 2.25,
+            "text": "part"
+          },
+          {
+            "start": 2.25,
+            "end": 2.425,
+            "text": "that"
+          },
+          {
+            "start": 2.425,
+            "end": 2.8375,
+            "text": "matters"
+          },
+          {
+            "start": 2.85,
+            "end": 3.35,
+            "text": "most"
+          }
+        ],
+        "mouthCues": []
+      }
+    },
+    {
+      "id": "13",
+      "intent": "a request for an approach or explanation",
+      "text": "I see what you're asking. Here's how I'd approach it.",
+      "file": "opening-13.mp3",
+      "sha256": "32f0bf74d20fb17f75d4ace9204182d88de9dada09f0831367c604c9868fa4df",
+      "timeline": {
+        "durationSeconds": 3.312,
+        "lastWordEndSeconds": 2.9625,
+        "quality": "word-boundaries",
+        "words": [
+          {
+            "start": 0.1625,
+            "end": 0.3,
+            "text": "I"
+          },
+          {
+            "start": 0.3125,
+            "end": 0.625,
+            "text": "see"
+          },
+          {
+            "start": 0.6375,
+            "end": 0.7375,
+            "text": "what"
+          },
+          {
+            "start": 0.7375,
+            "end": 0.875,
+            "text": "you're"
+          },
+          {
+            "start": 0.8875,
+            "end": 1.45,
+            "text": "asking"
+          },
+          {
+            "start": 1.8625,
+            "end": 2.0875,
+            "text": "Here's"
+          },
+          {
+            "start": 2.1,
+            "end": 2.2375,
+            "text": "how"
+          },
+          {
+            "start": 2.2375,
+            "end": 2.3375,
+            "text": "I'd"
+          },
+          {
+            "start": 2.35,
+            "end": 2.725,
+            "text": "approach"
+          },
+          {
+            "start": 2.7375,
+            "end": 2.9625,
+            "text": "it"
+          }
+        ],
+        "mouthCues": []
+      }
+    },
+    {
+      "id": "14",
+      "intent": "a request for a personal opinion",
+      "text": "I'll give you my honest take, based on what you've told me.",
+      "file": "opening-14.mp3",
+      "sha256": "c2338ad46ccb0d98abfc810072d7779228cd77203368b10690310eb923982f0b",
+      "timeline": {
+        "durationSeconds": 3.072,
+        "lastWordEndSeconds": 2.7125,
+        "quality": "word-boundaries",
+        "words": [
+          {
+            "start": 0.0875,
+            "end": 0.225,
+            "text": "I'll"
+          },
+          {
+            "start": 0.2375,
+            "end": 0.3625,
+            "text": "give"
+          },
+          {
+            "start": 0.375,
+            "end": 0.45,
+            "text": "you"
+          },
+          {
+            "start": 0.4625,
+            "end": 0.625,
+            "text": "my"
+          },
+          {
+            "start": 0.6375,
+            "end": 1,
+            "text": "honest"
+          },
+          {
+            "start": 1,
+            "end": 1.35,
+            "text": "take"
+          },
+          {
+            "start": 1.5625,
+            "end": 1.85,
+            "text": "based"
+          },
+          {
+            "start": 1.8625,
+            "end": 1.9375,
+            "text": "on"
+          },
+          {
+            "start": 1.95,
+            "end": 2.0625,
+            "text": "what"
+          },
+          {
+            "start": 2.0625,
+            "end": 2.175,
+            "text": "you've"
+          },
+          {
+            "start": 2.175,
+            "end": 2.425,
+            "text": "told"
+          },
+          {
+            "start": 2.425,
+            "end": 2.7125,
+            "text": "me"
+          }
+        ],
+        "mouthCues": []
+      }
+    },
+    {
+      "id": "15",
+      "intent": "a request for a personal impression",
+      "text": "From what you've shared, here's how it comes across to me.",
+      "file": "opening-15.mp3",
+      "sha256": "03e592f8413120c2badb57b58125f689036edd22df9e0ae36bf38046cabba9c1",
+      "timeline": {
+        "durationSeconds": 3.288,
+        "lastWordEndSeconds": 2.95,
+        "quality": "word-boundaries",
+        "words": [
+          {
+            "start": 0.125,
+            "end": 0.275,
+            "text": "From"
+          },
+          {
+            "start": 0.2875,
+            "end": 0.45,
+            "text": "what"
+          },
+          {
+            "start": 0.4625,
+            "end": 0.6,
+            "text": "you've"
+          },
+          {
+            "start": 0.6,
+            "end": 1.1375,
+            "text": "shared"
+          },
+          {
+            "start": 1.6,
+            "end": 1.8375,
+            "text": "here's"
+          },
+          {
+            "start": 1.85,
+            "end": 1.9875,
+            "text": "how"
+          },
+          {
+            "start": 2,
+            "end": 2.0625,
+            "text": "it"
+          },
+          {
+            "start": 2.0625,
+            "end": 2.275,
+            "text": "comes"
+          },
+          {
+            "start": 2.2875,
+            "end": 2.625,
+            "text": "across"
+          },
+          {
+            "start": 2.6375,
+            "end": 2.7125,
+            "text": "to"
+          },
+          {
+            "start": 2.725,
+            "end": 2.95,
+            "text": "me"
+          }
+        ],
+        "mouthCues": []
+      }
+    },
+    {
+      "id": "16",
+      "intent": "an ambiguous message needing clarification",
+      "text": "I want to make sure I understand you before I answer.",
+      "file": "opening-16.mp3",
+      "sha256": "4ee814be4801c7da10d6da15c05000af6218882625ee1b88bc0a654a7f60ac34",
+      "timeline": {
+        "durationSeconds": 2.784,
+        "lastWordEndSeconds": 2.425,
+        "quality": "word-boundaries",
+        "words": [
+          {
+            "start": 0.1,
+            "end": 0.175,
+            "text": "I"
+          },
+          {
+            "start": 0.1875,
+            "end": 0.325,
+            "text": "want"
+          },
+          {
+            "start": 0.325,
+            "end": 0.3625,
+            "text": "to"
+          },
+          {
+            "start": 0.3625,
+            "end": 0.5125,
+            "text": "make"
+          },
+          {
+            "start": 0.525,
+            "end": 0.7625,
+            "text": "sure"
+          },
+          {
+            "start": 0.775,
+            "end": 0.9,
+            "text": "I"
+          },
+          {
+            "start": 0.9125,
+            "end": 1.4125,
+            "text": "understand"
+          },
+          {
+            "start": 1.425,
+            "end": 1.55,
+            "text": "you"
+          },
+          {
+            "start": 1.5625,
+            "end": 1.8375,
+            "text": "before"
+          },
+          {
+            "start": 1.8375,
+            "end": 1.9125,
+            "text": "I"
+          },
+          {
+            "start": 1.925,
+            "end": 2.425,
+            "text": "answer"
+          }
+        ],
+        "mouthCues": []
+      }
+    },
+    {
+      "id": "17",
+      "intent": "an ambiguous message needing clarification",
+      "text": "There are a couple of ways to read that. Let me check what you mean.",
+      "file": "opening-17.mp3",
+      "sha256": "0d5ca283a755b36854a18b0fdca373f3964b4a85ba761fd098dc5d1af2cb01b2",
+      "timeline": {
+        "durationSeconds": 3.864,
+        "lastWordEndSeconds": 3.5125,
+        "quality": "word-boundaries",
+        "words": [
+          {
+            "start": 0.05,
+            "end": 0.25,
+            "text": "There"
+          },
+          {
+            "start": 0.25,
+            "end": 0.325,
+            "text": "are"
+          },
+          {
+            "start": 0.3375,
+            "end": 0.3875,
+            "text": "a"
+          },
+          {
+            "start": 0.4,
+            "end": 0.6625,
+            "text": "couple"
+          },
+          {
+            "start": 0.6625,
+            "end": 0.7375,
+            "text": "of"
+          },
+          {
+            "start": 0.75,
+            "end": 1.05,
+            "text": "ways"
+          },
+          {
+            "start": 1.0625,
+            "end": 1.175,
+            "text": "to"
+          },
+          {
+            "start": 1.1875,
+            "end": 1.4625,
+            "text": "read"
+          },
+          {
+            "start": 1.4625,
+            "end": 1.8625,
+            "text": "that"
+          },
+          {
+            "start": 2.2375,
+            "end": 2.35,
+            "text": "Let"
+          },
+          {
+            "start": 2.3625,
+            "end": 2.45,
+            "text": "me"
+          },
+          {
+            "start": 2.4625,
+            "end": 2.7375,
+            "text": "check"
+          },
+          {
+            "start": 2.75,
+            "end": 2.9125,
+            "text": "what"
+          },
+          {
+            "start": 2.925,
+            "end": 3.025,
+            "text": "you"
+          },
+          {
+            "start": 3.0375,
+            "end": 3.5125,
+            "text": "mean"
+          }
+        ],
+        "mouthCues": []
+      }
+    },
+    {
+      "id": "18",
+      "intent": "the user wants to talk about what happened",
+      "text": "I'm listening. You can tell me what's been happening.",
+      "file": "opening-18.mp3",
+      "sha256": "d542c5ab7cb26d847b0b84f28c38bff93474f860c6f80c31585622efd804e527",
+      "timeline": {
+        "durationSeconds": 3.384,
+        "lastWordEndSeconds": 3.0375,
+        "quality": "word-boundaries",
+        "words": [
+          {
+            "start": 0.0625,
+            "end": 0.3875,
+            "text": "I'm"
+          },
+          {
+            "start": 0.4,
+            "end": 1.125,
+            "text": "listening"
+          },
+          {
+            "start": 1.5125,
+            "end": 1.6375,
+            "text": "You"
+          },
+          {
+            "start": 1.65,
+            "end": 1.7875,
+            "text": "can"
+          },
+          {
+            "start": 1.8,
+            "end": 2.0125,
+            "text": "tell"
+          },
+          {
+            "start": 2.025,
+            "end": 2.1375,
+            "text": "me"
+          },
+          {
+            "start": 2.1375,
+            "end": 2.325,
+            "text": "what's"
+          },
+          {
+            "start": 2.325,
+            "end": 2.4625,
+            "text": "been"
+          },
+          {
+            "start": 2.475,
+            "end": 3.0375,
+            "text": "happening"
+          }
+        ],
+        "mouthCues": []
+      }
+    }
+  ]
+}

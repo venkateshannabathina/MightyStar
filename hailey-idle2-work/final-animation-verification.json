@@ -1,0 +1,25 @@
+{
+  "action": "Hailey \u2022 Idle 2",
+  "frames_checked": 500,
+  "fps": 30,
+  "finite_transforms": true,
+  "loop_rotation_degrees": 0.05595291023658669,
+  "loop_root_difference_m": 1.4273289473014069e-06,
+  "constraints": [],
+  "floor_range": {
+    "L": [
+      0.00013195062638260424,
+      0.005183421541005373
+    ],
+    "R": [
+      0.004649152979254723,
+      0.004784313961863518
+    ]
+  },
+  "ankle_horizontal_span_m": {
+    "L": 0.0038835332125718137,
+    "R": 0.0038456298216534954
+  },
+  "source_dependency": false,
+  "static_helper_bones_keyed": 195
+}

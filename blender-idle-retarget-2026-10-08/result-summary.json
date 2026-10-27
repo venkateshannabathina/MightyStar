@@ -1,0 +1,21 @@
+{
+  "result": "<workspace>/blender-idle-retarget-2026-10-08/Augusta-idle-retargeted.blend",
+  "bytes": 134539773,
+  "target": "Augusta_Idle_Rig",
+  "action": "Augusta • Idle (hands clear)",
+  "baked_frames": [
+    1,
+    1567
+  ],
+  "idle_preview": [
+    2,
+    1500
+  ],
+  "fps": 24.0,
+  "packed_images": 30,
+  "ground_height_correction": 0.05053900182247162,
+  "loop_note": "Original full action contains a reference pose and ending turn; idle preview omits both. No seamless loop synthesis was applied.",
+  "arm_spacing_outward_degrees": 16,
+  "arm_spacing_verification": "arm-spacing-verification.json",
+  "mesh_verification": "mesh-verification-hands-clear.json"
+}

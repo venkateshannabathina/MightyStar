@@ -1,0 +1,356 @@
+{
+  "source_armature": "Mixamo \u2022 Idle 2 source",
+  "target_armature": "Hailey \u2022 Rig",
+  "source_action": "Armature.001|mixamo.com|Layer0",
+  "action_name": "Hailey \u2022 Idle 2",
+  "root_source": "mixamorig:Hips",
+  "root_target": "Bip001",
+  "mapping": {
+    "Bip001": "mixamorig:Hips",
+    "Bip001-Spine1": "mixamorig:Spine",
+    "Bip001-Spine2": "mixamorig:Spine1",
+    "Bip001-Spine3": "mixamorig:Spine2",
+    "Bip001-Neck": "mixamorig:Neck",
+    "Bip001-Head": "mixamorig:Head",
+    "Bip001-L-Clavicle": "mixamorig:LeftShoulder",
+    "Bip001-L-UpperArm": "mixamorig:LeftArm",
+    "Bip001-L-Forearm": "mixamorig:LeftForeArm",
+    "Bip001-L-Hand": "mixamorig:LeftHand",
+    "Bip001-L-Thigh": "mixamorig:LeftUpLeg",
+    "Bip001-L-Calf": "mixamorig:LeftLeg",
+    "Bip001-L-Foot": "mixamorig:LeftFoot",
+    "Bip001-L-Toe0": "mixamorig:LeftToeBase",
+    "Bip001-L-Finger0": "mixamorig:LeftHandThumb1",
+    "Bip001-L-Finger01": "mixamorig:LeftHandThumb2",
+    "Bip001-L-Finger02": "mixamorig:LeftHandThumb3",
+    "Bip001-L-Finger1": "mixamorig:LeftHandIndex1",
+    "Bip001-L-Finger11": "mixamorig:LeftHandIndex2",
+    "Bip001-L-Finger12": "mixamorig:LeftHandIndex3",
+    "Bip001-L-Finger2": "mixamorig:LeftHandMiddle1",
+    "Bip001-L-Finger21": "mixamorig:LeftHandMiddle2",
+    "Bip001-L-Finger22": "mixamorig:LeftHandMiddle3",
+    "Bip001-L-Finger3": "mixamorig:LeftHandRing1",
+    "Bip001-L-Finger31": "mixamorig:LeftHandRing2",
+    "Bip001-L-Finger32": "mixamorig:LeftHandRing3",
+    "Bip001-L-Finger4": "mixamorig:LeftHandPinky1",
+    "Bip001-L-Finger41": "mixamorig:LeftHandPinky2",
+    "Bip001-L-Finger42": "mixamorig:LeftHandPinky3",
+    "Bip001-R-Clavicle": "mixamorig:RightShoulder",
+    "Bip001-R-UpperArm": "mixamorig:RightArm",
+    "Bip001-R-Forearm": "mixamorig:RightForeArm",
+    "Bip001-R-Hand": "mixamorig:RightHand",
+    "Bip001-R-Thigh": "mixamorig:RightUpLeg",
+    "Bip001-R-Calf": "mixamorig:RightLeg",
+    "Bip001-R-Foot": "mixamorig:RightFoot",
+    "Bip001-R-Toe0": "mixamorig:RightToeBase",
+    "Bip001-R-Finger0": "mixamorig:RightHandThumb1",
+    "Bip001-R-Finger01": "mixamorig:RightHandThumb2",
+    "Bip001-R-Finger02": "mixamorig:RightHandThumb3",
+    "Bip001-R-Finger1": "mixamorig:RightHandIndex1",
+    "Bip001-R-Finger11": "mixamorig:RightHandIndex2",
+    "Bip001-R-Finger12": "mixamorig:RightHandIndex3",
+    "Bip001-R-Finger2": "mixamorig:RightHandMiddle1",
+    "Bip001-R-Finger21": "mixamorig:RightHandMiddle2",
+    "Bip001-R-Finger22": "mixamorig:RightHandMiddle3",
+    "Bip001-R-Finger3": "mixamorig:RightHandRing1",
+    "Bip001-R-Finger31": "mixamorig:RightHandRing2",
+    "Bip001-R-Finger32": "mixamorig:RightHandRing3",
+    "Bip001-R-Finger4": "mixamorig:RightHandPinky1",
+    "Bip001-R-Finger41": "mixamorig:RightHandPinky2",
+    "Bip001-R-Finger42": "mixamorig:RightHandPinky3"
+  },
+  "segments": [
+    {
+      "target": "Bip001-L-Clavicle",
+      "target_end": "Bip001-L-UpperArm",
+      "source": "mixamorig:LeftShoulder",
+      "source_end": "mixamorig:LeftArm"
+    },
+    {
+      "target": "Bip001-L-UpperArm",
+      "target_end": "Bip001-L-Forearm",
+      "source": "mixamorig:LeftArm",
+      "source_end": "mixamorig:LeftForeArm"
+    },
+    {
+      "target": "Bip001-L-Forearm",
+      "target_end": "Bip001-L-Hand",
+      "source": "mixamorig:LeftForeArm",
+      "source_end": "mixamorig:LeftHand"
+    },
+    {
+      "target": "Bip001-L-Thigh",
+      "target_end": "Bip001-L-Calf",
+      "source": "mixamorig:LeftUpLeg",
+      "source_end": "mixamorig:LeftLeg"
+    },
+    {
+      "target": "Bip001-L-Calf",
+      "target_end": "Bip001-L-Foot",
+      "source": "mixamorig:LeftLeg",
+      "source_end": "mixamorig:LeftFoot"
+    },
+    {
+      "target": "Bip001-L-Foot",
+      "target_end": "Bip001-L-Toe0",
+      "source": "mixamorig:LeftFoot",
+      "source_end": "mixamorig:LeftToeBase"
+    },
+    {
+      "target": "Bip001-L-Finger0",
+      "target_end": "Bip001-L-Finger01",
+      "source": "mixamorig:LeftHandThumb1",
+      "source_end": "mixamorig:LeftHandThumb2",
+      "prior_palm": "Bip001-L-Hand"
+    },
+    {
+      "target": "Bip001-L-Finger01",
+      "target_end": "Bip001-L-Finger02",
+      "source": "mixamorig:LeftHandThumb2",
+      "source_end": "mixamorig:LeftHandThumb3",
+      "prior_palm": "Bip001-L-Hand"
+    },
+    {
+      "target": "Bip001-L-Finger1",
+      "target_end": "Bip001-L-Finger11",
+      "source": "mixamorig:LeftHandIndex1",
+      "source_end": "mixamorig:LeftHandIndex2",
+      "prior_palm": "Bip001-L-Hand"
+    },
+    {
+      "target": "Bip001-L-Finger11",
+      "target_end": "Bip001-L-Finger12",
+      "source": "mixamorig:LeftHandIndex2",
+      "source_end": "mixamorig:LeftHandIndex3",
+      "prior_palm": "Bip001-L-Hand"
+    },
+    {
+      "target": "Bip001-L-Finger2",
+      "target_end": "Bip001-L-Finger21",
+      "source": "mixamorig:LeftHandMiddle1",
+      "source_end": "mixamorig:LeftHandMiddle2",
+      "prior_palm": "Bip001-L-Hand"
+    },
+    {
+      "target": "Bip001-L-Finger21",
+      "target_end": "Bip001-L-Finger22",
+      "source": "mixamorig:LeftHandMiddle2",
+      "source_end": "mixamorig:LeftHandMiddle3",
+      "prior_palm": "Bip001-L-Hand"
+    },
+    {
+      "target": "Bip001-L-Finger3",
+      "target_end": "Bip001-L-Finger31",
+      "source": "mixamorig:LeftHandRing1",
+      "source_end": "mixamorig:LeftHandRing2",
+      "prior_palm": "Bip001-L-Hand"
+    },
+    {
+      "target": "Bip001-L-Finger31",
+      "target_end": "Bip001-L-Finger32",
+      "source": "mixamorig:LeftHandRing2",
+      "source_end": "mixamorig:LeftHandRing3",
+      "prior_palm": "Bip001-L-Hand"
+    },
+    {
+      "target": "Bip001-L-Finger4",
+      "target_end": "Bip001-L-Finger41",
+      "source": "mixamorig:LeftHandPinky1",
+      "source_end": "mixamorig:LeftHandPinky2",
+      "prior_palm": "Bip001-L-Hand"
+    },
+    {
+      "target": "Bip001-L-Finger41",
+      "target_end": "Bip001-L-Finger42",
+      "source": "mixamorig:LeftHandPinky2",
+      "source_end": "mixamorig:LeftHandPinky3",
+      "prior_palm": "Bip001-L-Hand"
+    },
+    {
+      "target": "Bip001-R-Clavicle",
+      "target_end": "Bip001-R-UpperArm",
+      "source": "mixamorig:RightShoulder",
+      "source_end": "mixamorig:RightArm"
+    },
+    {
+      "target": "Bip001-R-UpperArm",
+      "target_end": "Bip001-R-Forearm",
+      "source": "mixamorig:RightArm",
+      "source_end": "mixamorig:RightForeArm"
+    },
+    {
+      "target": "Bip001-R-Forearm",
+      "target_end": "Bip001-R-Hand",
+      "source": "mixamorig:RightForeArm",
+      "source_end": "mixamorig:RightHand"
+    },
+    {
+      "target": "Bip001-R-Thigh",
+      "target_end": "Bip001-R-Calf",
+      "source": "mixamorig:RightUpLeg",
+      "source_end": "mixamorig:RightLeg"
+    },
+    {
+      "target": "Bip001-R-Calf",
+      "target_end": "Bip001-R-Foot",
+      "source": "mixamorig:RightLeg",
+      "source_end": "mixamorig:RightFoot"
+    },
+    {
+      "target": "Bip001-R-Foot",
+      "target_end": "Bip001-R-Toe0",
+      "source": "mixamorig:RightFoot",
+      "source_end": "mixamorig:RightToeBase"
+    },
+    {
+      "target": "Bip001-R-Finger0",
+      "target_end": "Bip001-R-Finger01",
+      "source": "mixamorig:RightHandThumb1",
+      "source_end": "mixamorig:RightHandThumb2",
+      "prior_palm": "Bip001-R-Hand"
+    },
+    {
+      "target": "Bip001-R-Finger01",
+      "target_end": "Bip001-R-Finger02",
+      "source": "mixamorig:RightHandThumb2",
+      "source_end": "mixamorig:RightHandThumb3",
+      "prior_palm": "Bip001-R-Hand"
+    },
+    {
+      "target": "Bip001-R-Finger1",
+      "target_end": "Bip001-R-Finger11",
+      "source": "mixamorig:RightHandIndex1",
+      "source_end": "mixamorig:RightHandIndex2",
+      "prior_palm": "Bip001-R-Hand"
+    },
+    {
+      "target": "Bip001-R-Finger11",
+      "target_end": "Bip001-R-Finger12",
+      "source": "mixamorig:RightHandIndex2",
+      "source_end": "mixamorig:RightHandIndex3",
+      "prior_palm": "Bip001-R-Hand"
+    },
+    {
+      "target": "Bip001-R-Finger2",
+      "target_end": "Bip001-R-Finger21",
+      "source": "mixamorig:RightHandMiddle1",
+      "source_end": "mixamorig:RightHandMiddle2",
+      "prior_palm": "Bip001-R-Hand"
+    },
+    {
+      "target": "Bip001-R-Finger21",
+      "target_end": "Bip001-R-Finger22",
+      "source": "mixamorig:RightHandMiddle2",
+      "source_end": "mixamorig:RightHandMiddle3",
+      "prior_palm": "Bip001-R-Hand"
+    },
+    {
+      "target": "Bip001-R-Finger3",
+      "target_end": "Bip001-R-Finger31",
+      "source": "mixamorig:RightHandRing1",
+      "source_end": "mixamorig:RightHandRing2",
+      "prior_palm": "Bip001-R-Hand"
+    },
+    {
+      "target": "Bip001-R-Finger31",
+      "target_end": "Bip001-R-Finger32",
+      "source": "mixamorig:RightHandRing2",
+      "source_end": "mixamorig:RightHandRing3",
+      "prior_palm": "Bip001-R-Hand"
+    },
+    {
+      "target": "Bip001-R-Finger4",
+      "target_end": "Bip001-R-Finger41",
+      "source": "mixamorig:RightHandPinky1",
+      "source_end": "mixamorig:RightHandPinky2",
+      "prior_palm": "Bip001-R-Hand"
+    },
+    {
+      "target": "Bip001-R-Finger41",
+      "target_end": "Bip001-R-Finger42",
+      "source": "mixamorig:RightHandPinky2",
+      "source_end": "mixamorig:RightHandPinky3",
+      "prior_palm": "Bip001-R-Hand"
+    }
+  ],
+  "palms": [
+    {
+      "target": [
+        "Bip001-L-Hand",
+        "Bip001-L-Finger2",
+        "Bip001-L-Finger1",
+        "Bip001-L-Finger4"
+      ],
+      "source": [
+        "mixamorig:LeftHand",
+        "mixamorig:LeftHandMiddle1",
+        "mixamorig:LeftHandIndex1",
+        "mixamorig:LeftHandPinky1"
+      ]
+    },
+    {
+      "target": [
+        "Bip001-R-Hand",
+        "Bip001-R-Finger2",
+        "Bip001-R-Finger1",
+        "Bip001-R-Finger4"
+      ],
+      "source": [
+        "mixamorig:RightHand",
+        "mixamorig:RightHandMiddle1",
+        "mixamorig:RightHandIndex1",
+        "mixamorig:RightHandPinky1"
+      ]
+    }
+  ],
+  "inherit_calibration": {
+    "Bip001-L-Finger02": "Bip001-L-Finger01",
+    "Bip001-L-Finger12": "Bip001-L-Finger11",
+    "Bip001-L-Finger22": "Bip001-L-Finger21",
+    "Bip001-L-Finger32": "Bip001-L-Finger31",
+    "Bip001-L-Finger42": "Bip001-L-Finger41",
+    "Bip001-R-Finger02": "Bip001-R-Finger01",
+    "Bip001-R-Finger12": "Bip001-R-Finger11",
+    "Bip001-R-Finger22": "Bip001-R-Finger21",
+    "Bip001-R-Finger32": "Bip001-R-Finger31",
+    "Bip001-R-Finger42": "Bip001-R-Finger41"
+  },
+  "leg_chains": [
+    {
+      "target": [
+        "Bip001-L-Thigh",
+        "Bip001-L-Calf",
+        "Bip001-L-Foot"
+      ],
+      "source": [
+        "mixamorig:LeftUpLeg",
+        "mixamorig:LeftLeg",
+        "mixamorig:LeftFoot"
+      ]
+    },
+    {
+      "target": [
+        "Bip001-R-Thigh",
+        "Bip001-R-Calf",
+        "Bip001-R-Foot"
+      ],
+      "source": [
+        "mixamorig:RightUpLeg",
+        "mixamorig:RightLeg",
+        "mixamorig:RightFoot"
+      ]
+    }
+  ],
+  "alignment_quaternion": [
+    1.0,
+    0.0,
+    0.0,
+    1.5402180224555195e-06
+  ],
+  "frame_range": [
+    1,
+    500
+  ],
+  "root_motion": "full",
+  "backup_path": "<workspace>/hailey-idle2-work/Hailey-reference-with-Idle2.blend"
+}

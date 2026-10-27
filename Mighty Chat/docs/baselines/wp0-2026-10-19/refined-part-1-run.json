@@ -1,0 +1,68 @@
+{
+  "completed" : 12,
+  "stage" : "provider-or-playback-error",
+  "submitted" : 13,
+  "success" : false,
+  "turns" : [
+    {
+      "index" : 1,
+      "inputIndex" : 0,
+      "status" : "complete"
+    },
+    {
+      "index" : 2,
+      "inputIndex" : 1,
+      "status" : "complete"
+    },
+    {
+      "index" : 3,
+      "inputIndex" : 2,
+      "status" : "complete"
+    },
+    {
+      "index" : 4,
+      "inputIndex" : 3,
+      "status" : "complete"
+    },
+    {
+      "index" : 5,
+      "inputIndex" : 4,
+      "status" : "complete"
+    },
+    {
+      "index" : 6,
+      "inputIndex" : 0,
+      "status" : "complete"
+    },
+    {
+      "index" : 7,
+      "inputIndex" : 1,
+      "status" : "complete"
+    },
+    {
+      "index" : 8,
+      "inputIndex" : 2,
+      "status" : "complete"
+    },
+    {
+      "index" : 9,
+      "inputIndex" : 3,
+      "status" : "complete"
+    },
+    {
+      "index" : 10,
+      "inputIndex" : 4,
+      "status" : "complete"
+    },
+    {
+      "index" : 11,
+      "inputIndex" : 0,
+      "status" : "complete"
+    },
+    {
+      "index" : 12,
+      "inputIndex" : 1,
+      "status" : "complete"
+    }
+  ]
+}

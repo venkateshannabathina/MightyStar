@@ -1,0 +1,35 @@
+[
+  {
+    "assemblyMs": 51.67741699999988
+  },
+  {
+    "attempt": 0,
+    "totalMs": 57.85170799999992,
+    "timedOut": true,
+    "relevantMemories": false
+  },
+  {
+    "assemblyMs": 2.602833000000146
+  },
+  {
+    "assemblyMs": 1.834583000000066
+  },
+  {
+    "attempt": 1,
+    "totalMs": 6.2079170000001795,
+    "timedOut": false,
+    "relevantMemories": true
+  },
+  {
+    "assemblyMs": 2.2274999999999636
+  },
+  {
+    "assemblyMs": 1.9324999999998909
+  },
+  {
+    "attempt": 2,
+    "totalMs": 4.863375000000133,
+    "timedOut": false,
+    "relevantMemories": true
+  }
+]

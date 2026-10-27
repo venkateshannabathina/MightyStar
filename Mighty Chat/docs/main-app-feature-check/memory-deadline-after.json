@@ -1,0 +1,22 @@
+[
+  {
+    "assemblyMs": 48.11845799999992
+  },
+  {
+    "assemblyMs": 3.8320830000000115
+  },
+  {
+    "registrationMs": 55.67104200000006
+  },
+  {
+    "assemblyMs": 4.613334000000009
+  },
+  {
+    "assemblyMs": 3.925416000000041
+  },
+  {
+    "firstPrepareMs": 21.66504199999997,
+    "timedOut": false,
+    "hasRetrievedMemories": true
+  }
+]

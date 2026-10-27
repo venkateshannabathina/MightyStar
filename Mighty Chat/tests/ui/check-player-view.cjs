@@ -1,0 +1,78 @@
+const {chromium}=require('playwright');
+const {spawn}=require('node:child_process');
+const {pathToFileURL}=require('node:url');
+const path=require('node:path');
+const fs=require('node:fs');
+const assert=require('node:assert/strict');
+(async()=>{
+ const root=path.resolve(__dirname,'../..'),server=spawn(process.execPath,[path.join(root,'Sources/companion-server.cjs')],{stdio:['pipe','pipe','pipe']});
+ let browser;
+ try{
+  const ready=await new Promise((resolve,reject)=>{let out='';const timer=setTimeout(()=>reject(Error('Backend startup timed out')),15000);server.stdout.on('data',b=>{out+=b;if(out.includes('\n')){clearTimeout(timer);resolve(JSON.parse(out.split('\n')[0]));}});server.once('exit',()=>{clearTimeout(timer);reject(Error('Backend stopped'));});});
+  browser=await chromium.launch({headless:true,executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'});
+  const page=await browser.newPage({viewport:{width:540,height:540},deviceScaleFactor:2}),errors=[];
+  page.on('pageerror',e=>errors.push(e.message));
+  await page.addInitScript(()=>{window.nativeMessages=[];window.webkit={messageHandlers:{companion:{postMessage:v=>{if(v.action!=='hitMask')nativeMessages.push(v);}}}};});
+  await page.goto(pathToFileURL(path.join(root,'Sources/desktop.html')).href);
+  const config={mode:'player',origin:'http://127.0.0.1:'+ready.port,token:ready.token,playing:true,subtitles:true,volume:.65,muted:false,character:{id:'player-hailey',name:'Hailey',appearance:{key:'local/chars/hailey/hailey.glb',name:'Hailey',directory:'local/chars/hailey',file:'hailey.glb'},profile:{speak:true}}};
+  await page.evaluate(v=>configureDesktop(v),config);
+  await page.frameLocator('#viewer').locator('#status').waitFor({state:'hidden',timeout:90000});
+  assert.equal(await page.locator('#playerToolbar').isVisible(),true);
+  assert.equal(await page.locator('#desktopHint').isVisible(),false);
+  assert.equal(await page.locator('#playerVolume').inputValue(),'65');
+  const out=path.join(root,'build/player-review');fs.mkdirSync(out,{recursive:true});
+  assert.equal(await page.locator('#playerToolbar').evaluate(el=>el.getBoundingClientRect().height),38);
+  await page.locator('#playerToolbar').screenshot({path:path.join(out,'toolbar-subtitles.png')});
+  await page.getByRole('button',{name:'Subtitles',exact:true}).click();
+  await page.mouse.move(20,250,{steps:10});
+  await page.locator('#playerToolbar').screenshot({path:path.join(out,'toolbar-idle.png')});
+  await page.getByRole('button',{name:'Subtitles',exact:true}).click();
+  await page.getByRole('button',{name:'Voice volume',exact:true}).click();
+  await page.waitForFunction(()=>document.getElementById('playerToolbar').getBoundingClientRect().width>165);
+  assert.equal(await page.locator('#playerCaptions').isVisible(),false,'volume replaces the primary actions inline');
+  await page.locator('#playerToolbar').screenshot({path:path.join(out,'toolbar-volume.png')});
+  await page.getByRole('slider',{name:'Voice volume'}).fill('37');
+  assert.deepEqual(await page.evaluate(()=>nativeMessages.filter(m=>m.action==='playerOutput').at(-1)),{action:'playerOutput',volume:.37,muted:false});
+  await page.getByRole('button',{name:'Mute voice',exact:true}).click();
+  assert.equal(await page.locator('#playerSpeaker').getAttribute('data-muted'),'true');
+  await page.getByRole('button',{name:'Unmute voice',exact:true}).click();
+  assert.equal(await page.locator('#playerVolume').inputValue(),'37','unmute preserves chosen volume');
+  await page.keyboard.press('Escape');assert.equal(await page.locator('#playerVolumePanel').isVisible(),false);
+  await page.mouse.move(20,250,{steps:10});
+  await page.getByRole('button',{name:'Voice volume',exact:true}).hover();
+  await page.locator('#playerVolumePanel').waitFor({state:'visible'});
+  await page.mouse.move(20,250,{steps:10});
+  await page.locator('#playerVolumePanel').waitFor({state:'hidden'});
+  const speech={version:1,utteranceId:'speech-1',characterId:'player-hailey',text:'Hello there. How are you?',words:[{start:0,end:.4,text:'Hello'},{start:.4,end:.9,text:'there.'},{start:1.2,end:1.5,text:'How'},{start:1.5,end:1.7,text:'are'},{start:1.7,end:2,text:'you?'}],mouthCues:[],durationSeconds:2.2};
+  await page.evaluate(p=>{setDesktopSpeech('performance',p);setDesktopSpeech('playback',{utteranceId:p.utteranceId,characterId:p.characterId,sequence:1,state:'speaking',positionSeconds:.2,playbackRate:1});},speech);
+  assert.equal(await page.locator('#playerSubtitles').innerText(),'Hello there.');
+  await page.evaluate(()=>setDesktopSpeech('playback',{utteranceId:'speech-1',characterId:'player-hailey',sequence:2,state:'speaking',positionSeconds:1.4,playbackRate:1}));
+  assert.equal(await page.locator('#playerSubtitles').innerText(),'How are you?');
+  // Delayed snapshots from an interrupted turn cannot overwrite the active caption.
+  await page.evaluate(()=>setDesktopSpeech('playback',{utteranceId:'old-turn',characterId:'player-hailey',sequence:99,state:'speaking',positionSeconds:0}));
+  assert.equal(await page.locator('#playerSubtitles').innerText(),'How are you?');
+  await page.getByRole('button',{name:'Subtitles',exact:true}).click();assert.equal(await page.locator('#playerSubtitles').isVisible(),false);
+  await page.getByRole('button',{name:'Subtitles',exact:true}).click();assert.equal(await page.locator('#playerSubtitles').isVisible(),true);
+  await page.screenshot({path:path.join(out,'player-hailey.png'),omitBackground:true});
+  await page.getByRole('button',{name:'Change view',exact:true}).click();
+  assert.equal(await page.getByRole('menuitemradio',{name:'Player View',exact:true}).getAttribute('aria-checked'),'true');
+  await page.locator('#playerToolbar').screenshot({path:path.join(out,'toolbar-view-selected.png')});
+  await page.getByRole('menuitemradio',{name:'Chat',exact:true}).click();
+  assert.deepEqual(await page.evaluate(()=>nativeMessages.filter(m=>m.action==='desktopMode').at(-1)),{action:'desktopMode',mode:'standard'});
+  for(const side of [320,420,700]){
+   await page.setViewportSize({width:side,height:side});await page.getByRole('button',{name:'Voice volume',exact:true}).click();
+   const b=await page.locator('#playerVolumePanel').boundingBox();assert.ok(b.x>=0&&b.x+b.width<=side&&b.y+b.height<=side);
+   await page.keyboard.press('Escape');
+  }
+  await page.evaluate(v=>configureDesktop({...v,mode:'overlay'}),config);assert.equal(await page.locator('#playerToolbar').isVisible(),false);
+  await page.evaluate(v=>configureDesktop(v),config);assert.equal(await page.locator('#playerToolbar').isVisible(),true);
+  await page.evaluate(()=>setDesktopSpeech('playback',{utteranceId:'speech-1',characterId:'player-hailey',sequence:4,state:'cancelled',positionSeconds:1.4}));
+  assert.equal(await page.locator('#playerSubtitles').isVisible(),false,'interruption clears subtitles');
+  await page.evaluate(()=>{setDesktopSpeech('performance',{utteranceId:'audio-only',characterId:'player-hailey',text:'Phrase fallback without word timings.',words:[]});setDesktopSpeech('playback',{utteranceId:'audio-only',characterId:'player-hailey',sequence:5,state:'speaking',positionSeconds:.2});});
+  assert.equal(await page.locator('#playerSubtitles').innerText(),'Phrase fallback without word timings.');
+  await page.evaluate(v=>configureDesktop({...v,character:{...v.character,id:'other-character'}}),config);
+  assert.equal(await page.locator('#playerSubtitles').isVisible(),false,'character change clears previous speech');
+  assert.deepEqual(errors,[]);
+  console.log('PASS: live Hailey renderer, player layout at 320–700 px, volume/mute bridge, subtitle timing/toggle/fallback, stale turns, view menu and character switching.');
+ }finally{await browser?.close();server.stdin.end();server.kill();}
+})().catch(e=>{console.error(e);process.exitCode=1;});

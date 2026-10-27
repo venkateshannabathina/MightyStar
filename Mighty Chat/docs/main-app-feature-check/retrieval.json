@@ -1,0 +1,47 @@
+{
+  "scope": "Read-only semantic retrieval of the synthetic test character’s live main-app facts using installed Node/ONNX modules; not a production request timing measurement.",
+  "query": "What drink do I prefer and what is my imaginary turtle named?",
+  "dimensions": 384,
+  "hits": [
+    {
+      "id": 17,
+      "text": "User has an imaginary pet turtle named Juniper",
+      "importance": 3,
+      "last_seen": 1792492107.983,
+      "created": 1792492107.983,
+      "source_turn": 28,
+      "similarity": 0.6720978999488354,
+      "score": 0.5376323298986503
+    },
+    {
+      "id": 16,
+      "text": "User's favorite drink is jasmine tea",
+      "importance": 3,
+      "last_seen": 1792492107.967,
+      "created": 1792492107.967,
+      "source_turn": 28,
+      "similarity": 0.6339406954871221,
+      "score": 0.5071091760840443
+    },
+    {
+      "id": 20,
+      "text": "User won an imaginary rematch",
+      "importance": 3,
+      "last_seen": 1792492479.484,
+      "created": 1792492479.484,
+      "source_turn": 34,
+      "similarity": 0.5332001017341885,
+      "score": 0.4265480471563283
+    },
+    {
+      "id": 19,
+      "text": "User has no preferences or pets in this reply",
+      "importance": 3,
+      "last_seen": 1792492479.477,
+      "created": 1792492479.477,
+      "source_turn": 34,
+      "similarity": 0.5264289070427401,
+      "score": 0.4211312437729195
+    }
+  ]
+}

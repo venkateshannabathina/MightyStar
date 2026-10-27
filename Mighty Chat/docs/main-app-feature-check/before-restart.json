@@ -1,0 +1,266 @@
+{
+  "scope": "Only the synthetic test character in the live main-app database; read-only pre-restart inspection.",
+  "id": "mvgjhwccg4q6z4j1656",
+  "userTurns": 9,
+  "assistantTurns": 9,
+  "recentContainsOriginalValues": false,
+  "summary": "",
+  "recent": [
+    {
+      "id": 36,
+      "role": "user",
+      "content": "For the next five calculation checks, reply only with the number and no personal details. What is 2 plus 2?",
+      "meta": "{\"clientTurnId\":\"83290b9b-47cf-4188-9048-47ad193d8fb8\",\"private\":false}"
+    },
+    {
+      "id": 37,
+      "role": "assistant",
+      "content": "4",
+      "meta": "{\"clientTurnId\":\"83290b9b-47cf-4188-9048-47ad193d8fb8\",\"private\":false,\"sentenceEvents\":[{\"type\":\"sentence.start\",\"index\":0,\"e\":\"neutral\",\"i\":0,\"g\":\"-\",\"offset\":0}]}"
+    },
+    {
+      "id": 38,
+      "role": "user",
+      "content": "Calculation check two: what is 3 plus 4? Reply with the number only.",
+      "meta": "{\"clientTurnId\":\"aeafcbbd-2ff3-459e-8e22-bc907d0cd07a\",\"private\":false}"
+    },
+    {
+      "id": 39,
+      "role": "assistant",
+      "content": "7",
+      "meta": "{\"clientTurnId\":\"aeafcbbd-2ff3-459e-8e22-bc907d0cd07a\",\"private\":false,\"sentenceEvents\":[{\"type\":\"sentence.start\",\"index\":0,\"e\":\"neutral\",\"i\":0,\"g\":\"-\",\"offset\":0}]}"
+    },
+    {
+      "id": 40,
+      "role": "user",
+      "content": "Calculation check three: what is 5 plus 6? Reply with the number only.",
+      "meta": "{\"clientTurnId\":\"7b7c9c31-e18b-45e4-a85d-a20ff02acc3f\",\"private\":false}"
+    },
+    {
+      "id": 41,
+      "role": "assistant",
+      "content": "11",
+      "meta": "{\"clientTurnId\":\"7b7c9c31-e18b-45e4-a85d-a20ff02acc3f\",\"private\":false,\"sentenceEvents\":[{\"type\":\"sentence.start\",\"index\":0,\"e\":\"neutral\",\"i\":0,\"g\":\"-\",\"offset\":0}]}"
+    },
+    {
+      "id": 42,
+      "role": "user",
+      "content": "Calculation check four: what is 7 plus 8? Reply with the number only.",
+      "meta": "{\"clientTurnId\":\"d8b49628-e9ce-4921-8a2d-8f6b42b7d9de\",\"private\":false}"
+    },
+    {
+      "id": 43,
+      "role": "assistant",
+      "content": "15",
+      "meta": "{\"clientTurnId\":\"d8b49628-e9ce-4921-8a2d-8f6b42b7d9de\",\"private\":false,\"sentenceEvents\":[{\"type\":\"sentence.start\",\"index\":0,\"e\":\"neutral\",\"i\":0,\"g\":\"-\",\"offset\":0}]}"
+    },
+    {
+      "id": 44,
+      "role": "user",
+      "content": "Calculation check five: what is 9 plus 10? Reply with the number only.",
+      "meta": "{\"clientTurnId\":\"2f2a879f-34eb-4158-a991-5bdb1a1df31f\",\"private\":false}"
+    },
+    {
+      "id": 45,
+      "role": "assistant",
+      "content": "19",
+      "meta": "{\"clientTurnId\":\"2f2a879f-34eb-4158-a991-5bdb1a1df31f\",\"private\":false,\"sentenceEvents\":[{\"type\":\"sentence.start\",\"index\":0,\"e\":\"neutral\",\"i\":0,\"g\":\"-\",\"offset\":0}]}"
+    }
+  ],
+  "syntheticTurns": [
+    {
+      "id": 28,
+      "role": "user",
+      "content": "For this harmless test, remember that my favorite drink is jasmine tea and my imaginary pet turtle is named Juniper.",
+      "meta": "{\"clientTurnId\":\"dc1e6e1f-ac39-4cb0-a8a1-59faa5eced04\",\"private\":false}"
+    },
+    {
+      "id": 29,
+      "role": "assistant",
+      "content": " Got it, jasmine tea noted.  Juniper the turtle is cool.",
+      "meta": "{\"clientTurnId\":\"dc1e6e1f-ac39-4cb0-a8a1-59faa5eced04\",\"private\":false,\"sentenceEvents\":[{\"type\":\"sentence.start\",\"index\":0,\"e\":\"neutral\",\"i\":0.4,\"g\":\"-\",\"offset\":0},{\"type\":\"sentence.start\",\"index\":1,\"e\":\"happy\",\"i\":0.5,\"g\":\"-\",\"offset\":27}]}"
+    },
+    {
+      "id": 30,
+      "role": "user",
+      "content": "I passed my imaginary exam! Celebrate with a victory gesture and give me two enthusiastic sentences, about fifty words in total.",
+      "meta": "{\"clientTurnId\":\"1b9799f8-a5ae-4513-9be1-192e2dc7c42d\",\"private\":false}"
+    },
+    {
+      "id": 31,
+      "role": "assistant",
+      "content": " Congrats on acing that imaginary exam—your brain's doing a victory dance!  Time to celebrate with a big cup of jasmine tea and a proud shout for Juniper!",
+      "meta": "{\"clientTurnId\":\"1b9799f8-a5ae-4513-9be1-192e2dc7c42d\",\"private\":false,\"sentenceEvents\":[{\"type\":\"sentence.start\",\"index\":0,\"e\":\"happy\",\"i\":0.8,\"g\":\"victory\",\"offset\":0},{\"type\":\"sentence.start\",\"index\":1,\"e\":\"amused\",\"i\":0.7,\"g\":\"-\",\"offset\":74}]}"
+    },
+    {
+      "id": 32,
+      "role": "user",
+      "content": "For this visual test, do not mention any preferences or pets. I lost my imaginary contest and feel sad. Comfort me with two gentle, serious sentences, about forty words.",
+      "meta": "{\"clientTurnId\":\"17813484-d59a-4bbf-b43d-d75c4d81e0ce\",\"private\":false}"
+    },
+    {
+      "id": 33,
+      "role": "assistant",
+      "content": " I'm so sorry to hear you didn't win that contest.  Remember, the effort you put in shines brighter than any trophy.",
+      "meta": "{\"clientTurnId\":\"17813484-d59a-4bbf-b43d-d75c4d81e0ce\",\"private\":false,\"sentenceEvents\":[{\"type\":\"sentence.start\",\"index\":0,\"e\":\"worried\",\"i\":0.7,\"g\":\"-\",\"offset\":0},{\"type\":\"sentence.start\",\"index\":1,\"e\":\"amused\",\"i\":0.5,\"g\":\"-\",\"offset\":50}]}"
+    },
+    {
+      "id": 34,
+      "role": "user",
+      "content": "No preferences or pets in this reply. I won the imaginary rematch! Give a big victory gesture and celebrate happily in two sentences, around sixty words.",
+      "meta": "{\"clientTurnId\":\"129ed3d7-9b85-4a15-b553-eac27fa99787\",\"private\":false}"
+    },
+    {
+      "id": 35,
+      "role": "assistant",
+      "content": " You nailed the rematch—what a triumph!  Let’s toast with a steaming cup of your favorite brew and cheer for the next challenge.",
+      "meta": "{\"clientTurnId\":\"129ed3d7-9b85-4a15-b553-eac27fa99787\",\"private\":false,\"sentenceEvents\":[{\"type\":\"sentence.start\",\"index\":0,\"e\":\"happy\",\"i\":0.7,\"g\":\"victory\",\"offset\":0},{\"type\":\"sentence.start\",\"index\":1,\"e\":\"amused\",\"i\":0.6,\"g\":\"-\",\"offset\":39}]}"
+    },
+    {
+      "id": 36,
+      "role": "user",
+      "content": "For the next five calculation checks, reply only with the number and no personal details. What is 2 plus 2?",
+      "meta": "{\"clientTurnId\":\"83290b9b-47cf-4188-9048-47ad193d8fb8\",\"private\":false}"
+    },
+    {
+      "id": 37,
+      "role": "assistant",
+      "content": "4",
+      "meta": "{\"clientTurnId\":\"83290b9b-47cf-4188-9048-47ad193d8fb8\",\"private\":false,\"sentenceEvents\":[{\"type\":\"sentence.start\",\"index\":0,\"e\":\"neutral\",\"i\":0,\"g\":\"-\",\"offset\":0}]}"
+    },
+    {
+      "id": 38,
+      "role": "user",
+      "content": "Calculation check two: what is 3 plus 4? Reply with the number only.",
+      "meta": "{\"clientTurnId\":\"aeafcbbd-2ff3-459e-8e22-bc907d0cd07a\",\"private\":false}"
+    },
+    {
+      "id": 39,
+      "role": "assistant",
+      "content": "7",
+      "meta": "{\"clientTurnId\":\"aeafcbbd-2ff3-459e-8e22-bc907d0cd07a\",\"private\":false,\"sentenceEvents\":[{\"type\":\"sentence.start\",\"index\":0,\"e\":\"neutral\",\"i\":0,\"g\":\"-\",\"offset\":0}]}"
+    },
+    {
+      "id": 40,
+      "role": "user",
+      "content": "Calculation check three: what is 5 plus 6? Reply with the number only.",
+      "meta": "{\"clientTurnId\":\"7b7c9c31-e18b-45e4-a85d-a20ff02acc3f\",\"private\":false}"
+    },
+    {
+      "id": 41,
+      "role": "assistant",
+      "content": "11",
+      "meta": "{\"clientTurnId\":\"7b7c9c31-e18b-45e4-a85d-a20ff02acc3f\",\"private\":false,\"sentenceEvents\":[{\"type\":\"sentence.start\",\"index\":0,\"e\":\"neutral\",\"i\":0,\"g\":\"-\",\"offset\":0}]}"
+    },
+    {
+      "id": 42,
+      "role": "user",
+      "content": "Calculation check four: what is 7 plus 8? Reply with the number only.",
+      "meta": "{\"clientTurnId\":\"d8b49628-e9ce-4921-8a2d-8f6b42b7d9de\",\"private\":false}"
+    },
+    {
+      "id": 43,
+      "role": "assistant",
+      "content": "15",
+      "meta": "{\"clientTurnId\":\"d8b49628-e9ce-4921-8a2d-8f6b42b7d9de\",\"private\":false,\"sentenceEvents\":[{\"type\":\"sentence.start\",\"index\":0,\"e\":\"neutral\",\"i\":0,\"g\":\"-\",\"offset\":0}]}"
+    },
+    {
+      "id": 44,
+      "role": "user",
+      "content": "Calculation check five: what is 9 plus 10? Reply with the number only.",
+      "meta": "{\"clientTurnId\":\"2f2a879f-34eb-4158-a991-5bdb1a1df31f\",\"private\":false}"
+    },
+    {
+      "id": 45,
+      "role": "assistant",
+      "content": "19",
+      "meta": "{\"clientTurnId\":\"2f2a879f-34eb-4158-a991-5bdb1a1df31f\",\"private\":false,\"sentenceEvents\":[{\"type\":\"sentence.start\",\"index\":0,\"e\":\"neutral\",\"i\":0,\"g\":\"-\",\"offset\":0}]}"
+    }
+  ],
+  "facts": [
+    {
+      "id": 16,
+      "text": "User's favorite drink is jasmine tea",
+      "importance": 3,
+      "embeddingBytes": 1536
+    },
+    {
+      "id": 17,
+      "text": "User has an imaginary pet turtle named Juniper",
+      "importance": 3,
+      "embeddingBytes": 1536
+    },
+    {
+      "id": 18,
+      "text": "The user passed an imaginary exam",
+      "importance": 1,
+      "embeddingBytes": 1536
+    },
+    {
+      "id": 19,
+      "text": "User has no preferences or pets in this reply",
+      "importance": 3,
+      "embeddingBytes": 1536
+    },
+    {
+      "id": 20,
+      "text": "User won an imaginary rematch",
+      "importance": 3,
+      "embeddingBytes": 1536
+    },
+    {
+      "id": 21,
+      "text": "User wants to reply only with numbers for next five calculation checks",
+      "importance": 1,
+      "embeddingBytes": 1536
+    },
+    {
+      "id": 22,
+      "text": "User asked what is 2 plus 2",
+      "importance": 1,
+      "embeddingBytes": 1536
+    },
+    {
+      "id": 23,
+      "text": "User answered 4",
+      "importance": 1,
+      "embeddingBytes": 1536
+    },
+    {
+      "id": 24,
+      "text": "The user states that 3 plus 4 equals 7",
+      "importance": 5,
+      "embeddingBytes": 1536
+    },
+    {
+      "id": 25,
+      "text": "The user received the answer 11 for the calculation of 5 plus 6.",
+      "importance": 3,
+      "embeddingBytes": 1536
+    },
+    {
+      "id": 26,
+      "text": "User asks for the sum of 7 and 8",
+      "importance": 3,
+      "embeddingBytes": 1536
+    },
+    {
+      "id": 27,
+      "text": "User states the answer is 15",
+      "importance": 3,
+      "embeddingBytes": 1536
+    },
+    {
+      "id": 28,
+      "text": "User requests reply with the number only",
+      "importance": 3,
+      "embeddingBytes": 1536
+    },
+    {
+      "id": 29,
+      "text": "The user claims that 9 plus 10 equals 19.",
+      "importance": 3,
+      "embeddingBytes": 1536
+    }
+  ]
+}

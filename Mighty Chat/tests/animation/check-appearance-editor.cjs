@@ -1,0 +1,46 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const {pathToFileURL}=require('node:url');
+const root=path.resolve(__dirname,'../../..'),req=require('node:module').createRequire(path.join(root,'model-viewer-clean/package.json'));
+const ts=req('typescript'),url=name=>pathToFileURL(req.resolve(name+'.js')).href;
+async function load(file){let source=fs.readFileSync(path.join(root,'Mighty Chat/Renderer',file),'utf8').replace(/"(@babylonjs\/core\/[^"\n]+)"/g,(_,name)=>JSON.stringify(url(name)));
+ const moduleURL=source=>'data:text/javascript;base64,'+Buffer.from(ts.transpileModule(source,{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.ES2022}}).outputText).toString('base64');
+ source=source.replaceAll('"./FacialExpressions"',JSON.stringify(moduleURL(fs.readFileSync(path.join(root,'Mighty Chat/Renderer/FacialExpressions.ts'),'utf8'))));
+ return import(moduleURL(source));}
+async function main(){
+ const {AppearanceEditor}=await load('AppearanceEditor.ts');
+ const {NullEngine}=await import(url('@babylonjs/core/Engines/nullEngine')),{Scene}=await import(url('@babylonjs/core/scene'));
+ const {AssetContainer}=await import(url('@babylonjs/core/assetContainer')),{CreateBox}=await import(url('@babylonjs/core/Meshes/Builders/boxBuilder'));
+ const {StandardMaterial}=await import(url('@babylonjs/core/Materials/standardMaterial')),{MultiMaterial}=await import(url('@babylonjs/core/Materials/multiMaterial'));
+ const {MorphTarget}=await import(url('@babylonjs/core/Morph/morphTarget')),{MorphTargetManager}=await import(url('@babylonjs/core/Morph/morphTargetManager'));
+ const {ArcRotateCamera}=await import(url('@babylonjs/core/Cameras/arcRotateCamera')),{Matrix,Vector3}=await import(url('@babylonjs/core/Maths/math.vector'));
+ const engine=new NullEngine(),scene=new Scene(engine),container=new AssetContainer(scene);
+ const mesh=CreateBox('Coat',{},scene),material=new StandardMaterial('Coat fabric',scene),multi=new MultiMaterial('Parts',scene);
+ multi.subMaterials=[material];mesh.material=multi;container.meshes.push(mesh);
+ const manager=new MorphTargetManager(scene),smile=new MorphTarget('Smile',0,scene);manager.addTarget(smile);mesh.morphTargetManager=manager;
+ const editor=new AppearanceEditor();editor.bind(container,undefined,'evelyn');
+ const inventory=editor.inspect();assert.equal(inventory.parts[0].name,'Coat fabric');assert.equal(inventory.expressions[0].name,'Smile');
+ const settings={version:1,appearanceKey:'evelyn',face:{'morph:0':.6},hiddenParts:['part:0:0']};editor.apply(settings);
+ assert.equal(smile.influence,.6);assert.equal(multi.subMaterials[0].alpha,0);assert.equal(material.alpha,1,'original shared material is untouched');
+ const materialCount=scene.materials.length;for(let i=0;i<30;i++)editor.apply({...settings,hiddenParts:i%2?[]:settings.hiddenParts});assert.equal(scene.materials.length,materialCount,'visibility changes do not allocate materials');
+ editor.apply({...settings,appearanceKey:'another'});assert.equal(smile.influence,0);assert.equal(multi.subMaterials[0].alpha,1,'another appearance cannot hide this model');
+ editor.apply({...settings,face:{'morph:0':Infinity},hiddenParts:['unknown']});assert.equal(smile.influence,0);assert.deepEqual(editor.inspect().settings.hiddenParts,[]);
+ editor.clear();assert.equal(multi.subMaterials[0],material);assert.equal(smile.influence,0);assert.equal(scene.materials.length,materialCount-1,'cloned material is disposed');
+ mesh.material=material;editor.bind(container,undefined,'glb');editor.apply({appearanceKey:'glb',hiddenParts:['mesh:0'],face:{'morph:0':2}});assert.equal(mesh.isVisible,false);assert.equal(smile.influence,1);editor.clear();assert.equal(mesh.isVisible,true);
+ let weight;
+ editor.bind(container,{mesh:{metadata:{morphs:[{category:2},{category:4}]}},morph:{morphs:[{name:'Blink'},{name:'Body size'}],setMorphWeightFromIndex:(i,value)=>{if(i===0)weight=value;}}},'mmd');
+ assert.equal(editor.inspect().expressions.length,2,'author-specific keys remain available for manual assignment');assert.equal(editor.inspect().expressions[1].group,'Other model keys');editor.apply({appearanceKey:'mmd',face:{'morph:0':.4}});assert.equal(weight,.4);editor.clear();
+ editor.bind(container,undefined,'glb');const stableId=editor.inspect().expressions[0].stableId;
+ const library=editor.inspect().expressionLibrary;library.presets[0].weights={[stableId]:.15};
+ editor.apply({appearanceKey:'glb',expressionLibrary:library});assert.equal(smile.influence,.15,'Neutral is the resting expression');
+ editor.previewFace({[stableId]:.8});assert.equal(smile.influence,.8,'draft previews use the real morph target');
+ editor.animateFace({[stableId]:.35});assert.equal(smile.influence,.8,'manual preview wins over the runtime compositor');
+ assert(editor.isPreviewing());editor.animateFace(null);
+ editor.apply({appearanceKey:'glb',expressionLibrary:library});assert.equal(smile.influence,.8,'updating saved presets preserves the temporary preview');
+ editor.previewFace(null);assert.equal(smile.influence,.15,'leaving Facial restores Neutral rather than the selected preview');
+ editor.previewFace({unknown:1,[stableId]:Infinity});assert.equal(smile.influence,0,'preview weights are validated');
+ editor.clear();editor.bind(container,undefined,'another');editor.apply({appearanceKey:'glb',expressionLibrary:library});assert.equal(smile.influence,0,'saved expression libraries are scoped to the appearance');editor.clear();
+ console.log('PASS: facial morphs, MMD face categories, GLB meshes, material parts, saved edits, appearance isolation, bounds, reset and disposal');
+ scene.dispose();engine.dispose();
+}
+main().catch(error=>{console.error(error);process.exitCode=1;});

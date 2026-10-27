@@ -1,0 +1,31 @@
+# Cached voice fillers
+
+Mode: Improve. Scope: native voice turns only; leave text chat, model, Edge Ava voice, captions/history and chat/orb layout unchanged. Contract: begin a short cached acknowledgement about 300 ms after a valid voice commit when the real reply is not ready; synthesize the real reply in parallel, finish the acknowledgement and hand over without overlapping, clipped words, repeated fillers or stale speech after interruption. Measure filler onset separately from actual reply onset. This masks part of the wait; it does not reduce model/provider computation.
+
+Plan:
+1. Record seven short Ava hesitations once, bundle 24 kHz mono PCM and predecode off main. No filler generation or network requests during a turn.
+2. Use a generation-scoped gate: skip a filler if reply audio arrives early, play at most one, finish it before scheduling the real reply, and invalidate pending timers and completions on interruption/end/error.
+3. Rotate clips without immediate repetition. Use light hesitations rather than forced repeated syllables. Preserve mute/volume and the real reply's sample clock. No filler text enters stored chat or model context.
+4. Restrict the bundled bank to its exact Edge Ava/default speed/pitch configuration; skip it for unmatched voices or disabled speech. Add regression tests for races, cancellation and handoff, then build/sign/install and verify the app.
+
+Bank: “Hmm… let me think.”, “Well… let’s see.”, “Um… let me think.”, “Let me think for a moment.”, “Hmm… well, let’s see.”, “Well, um…”, “Let’s see here…”. Recorded durations after trimming external silence are 0.80–1.46 seconds, with a short preserved natural tail. There is no stretched or repeated-syllable speech. These are deliberately non-committal, rather than agreeing before hearing the transcript. They still cannot suit every conversational situation perfectly. One filler will not conceal an arbitrarily long provider delay.
+
+Research: a 2025 interactive-agent study found natural conversational fillers improved perceived response time at 4.0 s and 6.5 s delays; broader UX effects were not reliably removed. This is evidence for trying the mechanism, not a predicted improvement for this app. https://doi.org/10.1145/3719160.3736636
+
+Verification environment: physical M2 Mac (Mac14,2), macOS 27.0.1, optimized Swift native playback. Asset receipt, tests and playback measurements will be recorded after validation. Primary pass criteria are no overlap, no stale audio after interruption, early-reply bypass, exact voice matching and separate filler/reply timing. No percentage improvement in perceived latency is claimed without a user evaluation.
+
+## Implementation and verification
+
+Changed production code: `Native/Audio/PlaybackEngine.swift`, `Native/Call/LiveCallRuntime.swift`, and the debug timing allowlist in `Backend/performance/TurnTiming.cjs`. AudioHost adds an output-only fixture entry point only in test builds. Seven hashed WAV assets and their voice/settings manifest are in `Sources/Fillers`; their decoded buffers use under 1 MB. `scripts/generate-fillers.cjs` and `scripts/trim-fillers.py` reproduce the bank.
+
+The player waits for the filler dataPlayedBack callback and resets its sample origin before scheduling the answer. Filler onset has its own `filler_playback_start` mark; `playback_start` still means actual reply audio. The report includes separate `commit_to_filler` and `commit_to_playback` deltas. Fillers bypass history, model context, answer captions and response-completion events. The existing orb uses its speaking state during the filler.
+
+Tests cover early-reply bypass, one filler maximum, interruption before/during playback, stale completion rejection, exact voice/speed matching and disabled speech. The native output-only fixture uses the real AVAudioEngine, muted, without microphone or provider requests. Its first successful sample measured filler onset at 360 ms and reply handoff at 42 ms after filler completion. A full native voice-turn fixture with synthetic STT/reply and a deliberate 2-second TTS delay measured filler onset at 370 ms and actual answer onset at 2,130 ms. These are controlled sample-clock observations, not an acoustic onset measurement or a guarantee on a live network.
+
+The staged optimized app built and passed existing protocol, conversation, cancellation, phrase, provider, STT, worker, voice, UI bridge and native input checks. The timing API and source-authority checks passed. Asset verification checks each SHA-256, voice settings, PCM format and duration. The initial playback test found a mixed-type manifest loading error, which was corrected before passing; the first full-turn fixture lacked its empty OrbAssets directory and was repaired. An exploratory run with optional gesture mode enabled exposed its unrelated existing sentence-cue expectation (no sentenceCues are attached by the current ConversationSession); that optional mode is not covered by the filler completion claim. The filler integration test targets the app's current gesture-disabled mode.
+
+Tradeoff: if reply audio becomes ready after the filler has already begun, the answer waits for its end (at most the remainder of the 1.46-second maximum clip). Replies ready within the initial 300 ms bypass the filler. No audio overlaps or filler loops are used. For waits longer than a clip, some silence can remain. User-perceived naturalness and improvement still require listening feedback; there is no claimed UX percentage.
+
+Final validation repeated the current-mode full native fixture: filler at 363 ms, actual answer at 2,125 ms. The output-only handoff/cancellation suite then measured filler at 349 ms and handoff at 43 ms. All scoped checks passed. No live microphone or user conversation was transmitted in these fixtures.
+
+Installed in workspace `Mighty Chat.app` and the canonical `Mighty Chat/build/Mighty Chat.app`; both retain the persistent signing identity and pass deep/strict verification. Only the native executable, cached filler directory and debug timing allowlist were deployed. Selected HTML, CSS and chat/orb JavaScript hashes were verified unchanged. A recoverable backup and installation hashes are in workspace `backups/before-voice-fillers-20261022`.

@@ -1,0 +1,46 @@
+{
+  "query": "The short checks are finished. What color is my imaginary bicycle?",
+  "embeddingMs": 17.184999999999945,
+  "hits": [
+    {
+      "id": 22,
+      "text": "User asked what is 2 plus 2",
+      "importance": 5,
+      "last_seen": 1792493346.751,
+      "created": 1792492581.819,
+      "source_turn": 36,
+      "similarity": 0.5765850377184506,
+      "score": 0.5765292644877548
+    },
+    {
+      "id": 34,
+      "text": "User states that five plus seven equals twelve.",
+      "importance": 5,
+      "last_seen": 1792493641.531,
+      "created": 1792493641.531,
+      "source_turn": 58,
+      "similarity": 0.544105895465546,
+      "score": 0.5440780111530843
+    },
+    {
+      "id": 24,
+      "text": "The user states that 3 plus 4 equals 7",
+      "importance": 5,
+      "last_seen": 1792492600.202,
+      "created": 1792492600.202,
+      "source_turn": 38,
+      "similarity": 0.515927530022064,
+      "score": 0.5158182080685185
+    },
+    {
+      "id": 32,
+      "text": "User wants six short checks",
+      "importance": 3,
+      "last_seen": 1792493346.757,
+      "created": 1792493346.757,
+      "source_turn": 50,
+      "similarity": 0.6400754599306577,
+      "score": 0.5120108366770614
+    }
+  ]
+}

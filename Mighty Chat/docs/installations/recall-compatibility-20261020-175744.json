@@ -1,0 +1,21 @@
+{
+  "installedAt": "2026-10-20T17:57:44.406182",
+  "parentRepair": "recall-overlay-20261020-174959.json",
+  "app": "<workspace>/Mighty Chat.app",
+  "backup": "<workspace>/backups/main-app-before-recall-compatibility-20261020-175744/Mighty Chat.app",
+  "sha256": {
+    "MemoryService.cjs": "82086fe61c3b874bd7fff9ddd85a64b3abc899e88d7f8cb72d78b316c8991c87",
+    "MemoryStore.cjs": "892d484b230e47f61e7524849f34080bb364510b32d86121b022cdb66e643742",
+    "FactGrounding.cjs": "3c76da986fcbc8647f6d28456a68f1efc9bc0db7fe173a3569724547c20ea1e7"
+  },
+  "flags": {
+    "MIGHTY_MEMORY_V1": "1",
+    "MIGHTY_STREAM_CHAT": "1",
+    "MIGHTY_EXPR_V2": "1",
+    "MIGHTY_ENERGY_JAW": "1",
+    "MIGHTY_GESTURES_V2": "1",
+    "MIGHTY_FACE_LAB": "0",
+    "MIGHTY_DEBUG_PERF": "0"
+  },
+  "signatureVerified": true
+}

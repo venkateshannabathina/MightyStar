@@ -1,0 +1,20 @@
+/* One small monochrome control, anchored to the right. */
+.particle-orb{position:absolute;top:12px;right:12px;left:auto;width:64px;height:64px;display:grid;place-items:center;padding:0;border:0;border-radius:50%;background:transparent;color:#000;cursor:pointer;touch-action:none;user-select:none;z-index:5;box-shadow:none;text-shadow:none}
+.particle-orb:hover{background:transparent}
+.orb-ring{box-sizing:border-box;position:absolute;width:20px;height:20px;border:2px solid transparent;border-radius:50%;background:transparent;opacity:0;transition:width .22s ease,height .22s ease,opacity .15s,border-color .15s,background .15s;pointer-events:none}
+.orb-dots{display:flex;gap:3px;align-items:center;pointer-events:none;transition:opacity .12s}
+.orb-dots i{display:block;width:3px;height:3px;background:#000;border-radius:50%}
+.particle-orb[data-open=true]{cursor:grab}
+.particle-orb[data-open=true] .orb-ring,.particle-orb[data-held=true] .orb-ring,.particle-orb[data-state=listening] .orb-ring,.particle-orb[data-state=speaking] .orb-ring,.particle-orb[data-state=error] .orb-ring{width:52px;height:52px;border-color:#000;opacity:1}
+.particle-orb[data-open=true] .orb-dots,.particle-orb[data-held=true] .orb-dots,.particle-orb[data-state=listening] .orb-dots,.particle-orb[data-state=speaking] .orb-dots,.particle-orb[data-state=error] .orb-dots{opacity:0}
+.orb-ring:after{content:'';position:absolute;top:50%;left:50%;width:12px;height:12px;border-radius:50%;background:white;transform:translate(-50%,-50%);opacity:0}
+.particle-orb[data-held=true]{cursor:grabbing}
+.particle-orb[data-held=true] .orb-ring{background:#000;border-color:#000;animation:none}
+.particle-orb[data-held=true] .orb-ring:after{opacity:1}
+.particle-orb[data-state=listening] .orb-ring,.particle-orb[data-state=speaking] .orb-ring{animation:orb-voice .24s ease-in-out infinite alternate}
+.particle-orb[data-state=error] .orb-ring{border-color:#ff1717}
+.particle-orb[data-held=true] .orb-ring{animation:none}
+.particle-orb:focus-visible{outline:2px solid #777;outline-offset:2px}
+.dock{position:relative}.companion-caption{display:none}
+@keyframes orb-voice{0%{transform:translate(0,-1px)}35%{transform:translate(1px,1.5px)}70%{transform:translate(-1px,-1.5px)}100%{transform:translate(0,1px)}}
+@media(prefers-reduced-motion:reduce){.particle-orb .orb-ring{animation:none;transition:none}.orb-dots{transition:none}}

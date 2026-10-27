@@ -1,0 +1,14 @@
+[
+  [
+    73,
+    "assistant",
+    " Cobalt blue.  Got it.",
+    "{\"clientTurnId\":\"b0f4ddf0-e5aa-440f-864b-37ef810be49a\",\"private\":false,\"sentenceEvents\":[{\"type\":\"sentence.start\",\"index\":0,\"e\":\"happy\",\"i\":0.5,\"g\":\"victory\",\"offset\":0},{\"type\":\"sentence.start\",\"index\":1,\"e\":\"happy\",\"i\":0.49915612020065,\"g\":\"-\",\"offset\":13}]}"
+  ],
+  [
+    72,
+    "user",
+    "What color is my imaginary bicycle?",
+    "{\"clientTurnId\":\"b0f4ddf0-e5aa-440f-864b-37ef810be49a\",\"private\":false}"
+  ]
+]

@@ -1,0 +1,36 @@
+{
+  "fix": "Missing restricted CORS headers on successful streamed chat replies",
+  "installedBundle": "<workspace>/Mighty Chat.app",
+  "installedServerSHA256": "ad1ab0612b31ec6493d7b964c52446512cda2d284d4d605275fcd308e1973835",
+  "flags": {
+    "MIGHTY_MEMORY_V1": "1",
+    "MIGHTY_STREAM_CHAT": "1",
+    "MIGHTY_EXPR_V2": "1",
+    "MIGHTY_ENERGY_JAW": "1",
+    "MIGHTY_GESTURES_V2": "1",
+    "MIGHTY_FACE_LAB": "0",
+    "MIGHTY_DEBUG_PERF": "0"
+  },
+  "checks": {
+    "preFixActualWebKit": "failed as expected",
+    "postFixActualWebKitMemoryOffOn": "passed",
+    "relatedRegressionSuite": "passed",
+    "mainAppRetry": "completed reply observed in native UI",
+    "realGroqEdgeVoiceAllFiveFlags": "passed"
+  },
+  "files": {
+    "Sources/companion-server.cjs": "ad1ab0612b31ec6493d7b964c52446512cda2d284d4d605275fcd308e1973835",
+    "tests/backend/check-stream-chat.cjs": "fb9b57f1033114c7a856831be715c3812ed140d71a57fcdc7ce4368e81787182",
+    "tests/streaming/check-webkit.swift": "71b26a27b9fb6586e2d2356ef11f1b735c1a45ce90aad8eac2fe5a4fefc21f89",
+    "tests/streaming/run-webkit.cjs": "affd17653a9212a66d76b76511ada2c1aa67ce16e1c5337ed1df9c2c11cfd0b0",
+    "scripts/test-stream-webkit.sh": "9c7d92ee655217838015899f4ca819ce4670f790679982ce960ac6d2f0dda78d",
+    "docs/V2-PROGRESS.md": "c91c7a85d15a48d0627ab882e2e6f9f6e6d502da07d79cd1ec0e52a8175797eb",
+    "docs/SPEC-DEVIATIONS.md": "351887333e8c7980e3637dc41c559b9ebafc6a99b47d4fb5a633881c027940f1"
+  },
+  "logs": {
+    "regression.log": "2e18fe7dec7ff0fdd814d9d416d6b7bcc9ea5b05eddfd16670880e402e180970",
+    "live-voice.log": "872991ac802ce4e6ba9a80233ecee59ff566b6dae618e3cdf447a5ab2b5047e1",
+    "webkit.log": "e7a1a530c592353618ff083d0505d714e056eb24c3a45587b69af55c655b35d7",
+    "before.log": "50c1baf508f3526db24ab6fff6c0c550e6c2146323c4a4228184178a56d2deaa"
+  }
+}

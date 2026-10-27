@@ -1,0 +1,12 @@
+[
+  [
+    "assistant",
+    " Cobalt blue.  Remember.",
+    "{\"clientTurnId\":\"053b5117-06c4-4716-8a4c-1457b23f5ff1\",\"private\":false,\"sentenceEvents\":[{\"type\":\"sentence.start\",\"index\":0,\"e\":\"neutral\",\"i\":0,\"g\":\"-\",\"offset\":0},{\"type\":\"sentence.start\",\"index\":1,\"e\":\"neutral\",\"i\":0,\"g\":\"-\",\"offset\":13}]}"
+  ],
+  [
+    "user",
+    "Tell me the bicycle color again.",
+    "{\"clientTurnId\":\"053b5117-06c4-4716-8a4c-1457b23f5ff1\",\"private\":false}"
+  ]
+]

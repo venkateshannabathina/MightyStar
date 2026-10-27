@@ -1,0 +1,71 @@
+'use strict';
+// Serve Sources at 127.0.0.1:8765. Uses temporary browser data and synthetic replies.
+const {chromium}=require('playwright');
+const assert=require('node:assert/strict');
+const path=require('node:path');
+const fs=require('node:fs');
+(async()=>{
+ const output=path.resolve(__dirname,'../../build/siri-chat-review');fs.mkdirSync(output,{recursive:true});
+ const browser=await chromium.launch({headless:true,executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'});
+ const context=await browser.newContext({viewport:{width:1214,height:814},deviceScaleFactor:2});
+ const page=await context.newPage(),errors=[];page.on('pageerror',error=>errors.push(error.message));
+ await page.route('https://**/*',route=>route.abort());
+ await page.goto('http://127.0.0.1:8765');
+ await page.evaluate(()=>{
+  contacts=[{id:'siri-fixture',name:'Hailey',profile:{speak:false},color:'#c2cad7'}];
+  saved={'siri-fixture':[{role:'user',text:'hi'},{role:'assistant',text:'Hello there, I’m Hailey.'},{role:'user',text:'wow ur siri?'},{role:'assistant',text:'I’m Hailey, your virtual assistant.'}]};selectChat(0);
+  window.nativeMessages=[];window.webkit={messageHandlers:{companion:{postMessage:value=>nativeMessages.push(value)}}};
+  window.requestCharacterReply=async(character,rows,onEvent)=>new Promise(resolve=>{window.resolveReply=()=>resolve({reply:'I’m here to help you with your requests.'});window.replyDelta=onEvent;});
+ });
+ const geometry=()=>page.evaluate(()=>{const area=document.getElementById('messages'),turn=area.lastElementChild,rect=turn.getBoundingClientRect();return {top:rect.top,expected:area.getBoundingClientRect().top+parseFloat(getComputedStyle(area).paddingTop),scroll:area.scrollTop,previous:area.firstElementChild.getBoundingClientRect().bottom};});
+ let g=await geometry();assert.ok(Math.abs(g.top-g.expected)<2);assert.ok(g.previous<=g.expected+1);
+ await page.screenshot({path:path.join(output,'01-latest-turn.png')});
+ await page.locator('#message').fill('whats so great about u?');await page.locator('#message').dispatchEvent('input');await page.keyboard.press('Enter');
+ await page.waitForTimeout(80);g=await geometry();assert.ok(g.top>g.expected+10,'new turn begins below its destination');
+ await page.screenshot({path:path.join(output,'02-moving-up.png')});
+ await page.waitForTimeout(600);g=await geometry();assert.ok(Math.abs(g.top-g.expected)<2,'question slides to top');
+ assert.ok(await page.getByRole('status',{name:'Thinking',exact:true}).isVisible());
+ await page.screenshot({path:path.join(output,'03-thinking.png')});
+ await page.evaluate(()=>replyDelta({type:'assistant.delta',text:'I’m here to help'}));await page.waitForTimeout(50);
+ assert.equal(await page.getByRole('status',{name:'Thinking',exact:true}).count(),0);
+ g=await geometry();assert.ok(Math.abs(g.top-g.expected)<2,'streaming preserves question position');
+ await page.evaluate(()=>document.getElementById('messages').scrollTop=0);
+ await page.evaluate(()=>replyDelta({type:'assistant.delta',text:' you with your requests.'}));await page.waitForTimeout(50);
+ assert.equal(await page.locator('#messages').evaluate(el=>el.scrollTop),0,'streaming preserves history reading position');
+ await page.evaluate(()=>resolveReply());await page.waitForFunction(()=>!pendingReplies.size);
+ assert.equal(await page.locator('#messages').evaluate(el=>el.scrollTop),0,'completion preserves history reading position');
+ await page.evaluate(()=>scrollToTurn(document.getElementById('messages'),document.querySelector('.chat-turn:last-child'),false));
+ await page.screenshot({path:path.join(output,'04-reply.png')});
+ for(const size of [{width:880,height:600},{width:1214,height:814},{width:1600,height:1000}]){
+  await page.setViewportSize(size);await page.waitForTimeout(80);
+  g=await geometry();assert.ok(Math.abs(g.top-g.expected)<2,`turn fits ${size.width}`);
+  await page.locator('#message').fill('Long draft '.repeat(100));await page.locator('#message').dispatchEvent('input');
+  const boxes=await page.locator('.siri-composer > button,.siri-composer .text-field').evaluateAll(els=>els.filter(e=>e.getClientRects().length).map(e=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,w:r.width,h:r.height};}));
+  assert.ok(boxes.every(r=>r.x>=0&&r.x+r.w<=size.width&&r.y+r.h<=size.height));
+  for(let i=1;i<boxes.length;i++)assert.ok(boxes[i-1].x+boxes[i-1].w<=boxes[i].x);
+  await page.locator('#message').fill('');await page.locator('#message').dispatchEvent('input');
+ }
+ await page.setViewportSize({width:1214,height:814});
+ await page.locator('#holdTalk').click();assert.ok(await page.locator('#siriVoiceOrb').isVisible());
+ assert.ok(await page.evaluate(()=>nativeMessages.some(m=>m.action==='callStart')));
+ await page.evaluate(()=>liveCallStatus({state:'active',label:'Listening…'}));
+ assert.ok(await page.evaluate(()=>nativeMessages.some(m=>m.action==='callHoldBegin')));
+ await page.locator('#siriVoiceOrb').click();assert.ok(await page.evaluate(()=>nativeMessages.some(m=>m.action==='callHoldEnd')));
+ await page.evaluate(()=>{liveCallMessage({role:'user',text:'Hello'});liveCallMessage({role:'assistant',text:'Hello.'});});
+ await page.waitForTimeout(650);g=await geometry();assert.ok(Math.abs(g.top-g.expected)<2,'spoken turn moves to top');
+ await page.locator('#siriVoiceMute').click();assert.ok(await page.evaluate(()=>nativeMessages.some(m=>m.action==='playerOutput'&&m.muted)));
+ await page.screenshot({path:path.join(output,'05-voice.png')});
+ await page.getByRole('button',{name:'Switch to typing',exact:true}).click();assert.ok(await page.locator('#message').isVisible());
+ assert.ok(await page.evaluate(()=>nativeMessages.some(m=>m.action==='callEnd')));
+ await page.emulateMedia({reducedMotion:'reduce'});
+ await page.evaluate(()=>{saved[contacts[selected].id].push({role:'user',text:'Reduced motion'});renderMessages(true);});
+ g=await geometry();assert.ok(Math.abs(g.top-g.expected)<2,'reduced motion uses direct positioning');
+ await page.evaluate(()=>{saved[contacts[selected].id].push({role:'assistant',text:'A long answer.\n\n'.repeat(200)});renderMessages();});
+ assert.ok(await page.locator('#messages').evaluate(el=>el.scrollHeight>el.clientHeight));
+ await page.evaluate(()=>{contacts.push({id:'other',name:'Other',profile:{speak:false}});selectChat(1);selectChat(0);});
+ assert.equal(await page.locator('.chat-turn').count(),5,'history survives character changes');
+ assert.deepEqual(errors,[]);
+ await context.close();await browser.close();
+ console.log('Siri chat passed: animated turn advance, spinner-to-stream, history scroll preservation, voice turns, mute bridge, typing return, responsive/multiline layout, reduced motion and long replies.');
+
+})().catch(error=>{console.error(error);process.exitCode=1});

@@ -1,0 +1,37 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const root=path.resolve(__dirname,'../../..');
+const ts=require(path.join(root,'model-viewer-clean/node_modules/typescript'));
+async function main(){
+ const source=fs.readFileSync(path.join(root,'Mighty Chat/Renderer/FacialExpressions.ts'),'utf8');
+ const {faceKeyGroup,defaultFaceLibrary,sanitizeFaceLibrary}=await import('data:text/javascript;base64,'+Buffer.from(ts.transpileModule(source,{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.ES2022}}).outputText).toString('base64'));
+ const inventory=fs.readFileSync(path.join(root,'PMX-FACE-KEYS.md'),'utf8').split('### 18. Evelyn Chevalier')[1].split('### 19.')[0];
+ const keys=[...inventory.matchAll(/^\| (\d+) \| `([^`]+)` \| ([^|]+) \| (Eye|Lip|Eyebrow) \|/gm)].map(([,index,name,alias,category])=>({id:'morph:'+index,stableId:'key:'+encodeURIComponent(name)+':0',name,englishName:alias.trim().replaceAll('`','').replace('—',''),group:faceKeyGroup(name,{Eye:2,Lip:3,Eyebrow:1}[category])}));
+ assert.equal(keys.length,49,'exercise the complete extracted current-character inventory');
+ const lib=defaultFaceLibrary(keys,'zzz/chars/Evelyn Chevalier/Evelyn.pmx');
+ assert.equal(lib.presets.length,14);assert.deepEqual(lib.presets[0].weights,{});
+ for(const preset of lib.presets.slice(1))assert.ok(Object.keys(preset.weights).length,`${preset.name} is mapped on Evelyn`);
+ const byName=name=>keys.find(k=>k.name===name).stableId;
+ const pose=id=>lib.presets.find(p=>p.id===id).weights;
+ assert.deepEqual(pose('closed'),{[byName('まばたき')]:1});
+ assert.deepEqual(pose('closedRight'),{[byName('ｳｨﾝｸ２右')]:1});assert.deepEqual(pose('closedLeft'),{[byName('ウィンク２')]:1});
+ assert.ok(pose('surprised')[byName('びっくり右')]&&pose('surprised')[byName('びっくり左')]);
+ for(const [id,name] of Object.entries({a:'あ',i:'い',u:'う',e:'え',o:'お２'}))assert.deepEqual(pose(id),{[byName(name)]:.8});
+ const neutral=defaultFaceLibrary(keys,'current',{'morph:14':.4,'morph:43':.2}).presets[0];
+ assert.equal(neutral.weights[byName('あ')],.4,'legacy positional edits migrate into Neutral');
+ const stable=defaultFaceLibrary([...keys].reverse(),'zzz/chars/Evelyn Chevalier/Evelyn.pmx');assert.deepEqual(stable,lib,'unique-key order changes cannot remap presets');
+ const supplied={presets:[{id:'neutral',name:'Bad built-in name',weights:{[byName('あ')]:.12}},{id:'custom-1',name:'  My face  ',weights:{[byName('あ')]:3,[byName('い')]:NaN,[byName('う')]:-1,unknown:.5}},{id:'custom-1',name:'duplicate',weights:{}},{id:'empty',name:' ',weights:{}}]};
+ const normalized=sanitizeFaceLibrary(supplied,keys,lib);
+ assert.equal(normalized.presets.length,15);assert.equal(normalized.presets.find(p=>p.id==='neutral').name,'Neutral');
+ assert.deepEqual(normalized.presets.find(p=>p.id==='custom-1'),{id:'custom-1',name:'My face',kind:'custom',weights:{[byName('あ')]:1}});
+ assert.deepEqual(sanitizeFaceLibrary({presets:lib.presets.map(p=>({...p,weights:{}}))},keys,lib).presets.map(p=>p.weights),Array.from({length:14},()=>({})),'intentionally cleared expressions stay cleared');
+ const arkit=['eyeBlinkLeft','eyeBlinkRight','mouthSmileLeft','mouthSmileRight','browInnerUp','browDownLeft','browDownRight','eyeWideLeft','eyeWideRight','jawOpen','mouthPucker','mouthFunnel'].map((name,i)=>({id:'morph:'+i,stableId:'key:'+name+':0',name,englishName:'',group:faceKeyGroup(name)}));
+ const arkitLib=defaultFaceLibrary(arkit,'arkit');
+ assert.equal(Object.keys(arkitLib.presets.find(p=>p.id==='closed').weights).length,2);
+ assert.equal(Object.keys(arkitLib.presets.find(p=>p.id==='smiling').weights).length,2);
+ assert.deepEqual(sanitizeFaceLibrary({presets:lib.presets},arkit,arkitLib).presets[1].weights,{},'foreign keys cannot deform a different rig');
+ const unfamiliar=[{id:'morph:0',stableId:'key:author-specific:0',name:'author-specific',englishName:'',group:'Other model keys'}];
+ assert.ok(defaultFaceLibrary(unfamiliar,'unknown').presets.every(p=>Object.keys(p.weights).length===0),'unrecognized keys are left for the user to map');
+ console.log('PASS: 14 Evelyn defaults, both winks, vowels, stable name IDs, legacy migration, ARKit starters, custom presets, sanitization and foreign-key isolation');
+}
+main().catch(error=>{console.error(error);process.exitCode=1;});

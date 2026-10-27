@@ -1,0 +1,261 @@
+{
+  "status": "passed",
+  "action": "Augusta • Idle (relaxed hands)",
+  "finger_rotation_fraction": 0.35,
+  "unchanged_channels": 91,
+  "modified_channels": 120,
+  "sample_frames": [
+    2,
+    51,
+    400,
+    800,
+    1200,
+    1384,
+    1500,
+    1546,
+    1567
+  ],
+  "max_finger_bone_length_error": 6.891787052154541e-08,
+  "original_peak_local_finger_angle_degrees": 112.46221527559926,
+  "original_peak_frame": 1546,
+  "surface_measurements": {
+    "before": [
+      {
+        "frame": 2,
+        "hand_surface": {
+          "L": {
+            "p99_edge_length_ratio": 2.058249879217722,
+            "max_edge_length_ratio": 5.17253203199961
+          },
+          "R": {
+            "p99_edge_length_ratio": 1.9673290736267304,
+            "max_edge_length_ratio": 5.7978438723025185
+          }
+        }
+      },
+      {
+        "frame": 51,
+        "hand_surface": {
+          "L": {
+            "p99_edge_length_ratio": 2.050490635384311,
+            "max_edge_length_ratio": 5.151739187116053
+          },
+          "R": {
+            "p99_edge_length_ratio": 1.962170621148264,
+            "max_edge_length_ratio": 5.861743109948474
+          }
+        }
+      },
+      {
+        "frame": 400,
+        "hand_surface": {
+          "L": {
+            "p99_edge_length_ratio": 2.098883961737612,
+            "max_edge_length_ratio": 5.194729849293143
+          },
+          "R": {
+            "p99_edge_length_ratio": 1.9777801471354703,
+            "max_edge_length_ratio": 5.677988293760748
+          }
+        }
+      },
+      {
+        "frame": 800,
+        "hand_surface": {
+          "L": {
+            "p99_edge_length_ratio": 2.044796726491963,
+            "max_edge_length_ratio": 5.158044760319171
+          },
+          "R": {
+            "p99_edge_length_ratio": 1.99106603110388,
+            "max_edge_length_ratio": 6.116453697833979
+          }
+        }
+      },
+      {
+        "frame": 1200,
+        "hand_surface": {
+          "L": {
+            "p99_edge_length_ratio": 2.123909724434693,
+            "max_edge_length_ratio": 5.261829756558058
+          },
+          "R": {
+            "p99_edge_length_ratio": 1.9844745886964221,
+            "max_edge_length_ratio": 5.586397614808475
+          }
+        }
+      },
+      {
+        "frame": 1384,
+        "hand_surface": {
+          "L": {
+            "p99_edge_length_ratio": 2.2616553606846526,
+            "max_edge_length_ratio": 5.353413658739405
+          },
+          "R": {
+            "p99_edge_length_ratio": 2.1367889648048077,
+            "max_edge_length_ratio": 4.70997102298575
+          }
+        }
+      },
+      {
+        "frame": 1500,
+        "hand_surface": {
+          "L": {
+            "p99_edge_length_ratio": 2.0512930513715917,
+            "max_edge_length_ratio": 5.043892024936075
+          },
+          "R": {
+            "p99_edge_length_ratio": 1.9104101090825405,
+            "max_edge_length_ratio": 6.03678775419184
+          }
+        }
+      },
+      {
+        "frame": 1546,
+        "hand_surface": {
+          "L": {
+            "p99_edge_length_ratio": 2.2035736008907483,
+            "max_edge_length_ratio": 5.468485215549841
+          },
+          "R": {
+            "p99_edge_length_ratio": 2.327917456422957,
+            "max_edge_length_ratio": 8.220424983360976
+          }
+        }
+      },
+      {
+        "frame": 1567,
+        "hand_surface": {
+          "L": {
+            "p99_edge_length_ratio": 2.1840236927175978,
+            "max_edge_length_ratio": 5.214296949945625
+          },
+          "R": {
+            "p99_edge_length_ratio": 1.9776566528332056,
+            "max_edge_length_ratio": 5.9834333553739185
+          }
+        }
+      }
+    ],
+    "after": [
+      {
+        "frame": 2,
+        "hand_surface": {
+          "L": {
+            "p99_edge_length_ratio": 1.359120317498267,
+            "max_edge_length_ratio": 2.5396909599683695
+          },
+          "R": {
+            "p99_edge_length_ratio": 1.3314586564076838,
+            "max_edge_length_ratio": 2.632954981581833
+          }
+        }
+      },
+      {
+        "frame": 51,
+        "hand_surface": {
+          "L": {
+            "p99_edge_length_ratio": 1.356854352572252,
+            "max_edge_length_ratio": 2.532484493608433
+          },
+          "R": {
+            "p99_edge_length_ratio": 1.3333578703789564,
+            "max_edge_length_ratio": 2.654666671654464
+          }
+        }
+      },
+      {
+        "frame": 400,
+        "hand_surface": {
+          "L": {
+            "p99_edge_length_ratio": 1.3668413891721367,
+            "max_edge_length_ratio": 2.554254607293227
+          },
+          "R": {
+            "p99_edge_length_ratio": 1.325558695313977,
+            "max_edge_length_ratio": 2.5879101331550403
+          }
+        }
+      },
+      {
+        "frame": 800,
+        "hand_surface": {
+          "L": {
+            "p99_edge_length_ratio": 1.3355730229006764,
+            "max_edge_length_ratio": 2.541854597112893
+          },
+          "R": {
+            "p99_edge_length_ratio": 1.3217107430420585,
+            "max_edge_length_ratio": 2.7230358867404845
+          }
+        }
+      },
+      {
+        "frame": 1200,
+        "hand_surface": {
+          "L": {
+            "p99_edge_length_ratio": 1.386271541528184,
+            "max_edge_length_ratio": 2.5792229935189224
+          },
+          "R": {
+            "p99_edge_length_ratio": 1.3200473734220068,
+            "max_edge_length_ratio": 2.567850682296208
+          }
+        }
+      },
+      {
+        "frame": 1384,
+        "hand_surface": {
+          "L": {
+            "p99_edge_length_ratio": 1.4715453548829254,
+            "max_edge_length_ratio": 2.6435088825961834
+          },
+          "R": {
+            "p99_edge_length_ratio": 1.4099475156807713,
+            "max_edge_length_ratio": 2.3222269549070704
+          }
+        }
+      },
+      {
+        "frame": 1500,
+        "hand_surface": {
+          "L": {
+            "p99_edge_length_ratio": 1.3705374476127676,
+            "max_edge_length_ratio": 2.504214473136392
+          },
+          "R": {
+            "p99_edge_length_ratio": 1.3053423959723027,
+            "max_edge_length_ratio": 2.70305895792728
+          }
+        }
+      },
+      {
+        "frame": 1546,
+        "hand_surface": {
+          "L": {
+            "p99_edge_length_ratio": 1.411927343772567,
+            "max_edge_length_ratio": 2.578994206032978
+          },
+          "R": {
+            "p99_edge_length_ratio": 1.4619915679099016,
+            "max_edge_length_ratio": 3.587157794802222
+          }
+        }
+      },
+      {
+        "frame": 1567,
+        "hand_surface": {
+          "L": {
+            "p99_edge_length_ratio": 1.4040104176608152,
+            "max_edge_length_ratio": 2.5641182671842797
+          },
+          "R": {
+            "p99_edge_length_ratio": 1.3489094061383,
+            "max_edge_length_ratio": 2.7047927201304645
+          }
+        }
+      }
+    ]
+  }
+}

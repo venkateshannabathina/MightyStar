@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-22",
+  "app": "<workspace>/Mighty Chat.app",
+  "behavior": "Normal UI and saved characters; idle animation only; neutral face; no character creation or animation lab.",
+  "backup": "<workspace>/backups/idle-only-20261022",
+  "checks": {
+    "build": "passed; stable signature verified",
+    "browser": "GLB Hailey and cached PMX Lynae idle, paused bone stability, zero facial morphs, no pointer offsets; normal UI/settings; removed APIs return 404 with old flags enabled",
+    "preserved": "Existing app file URL, saved profiles/history and stable credential helper"
+  },
+  "sha256": {
+    "Resources/companion-ui.js": "c8f56c6a01c0eb53e18f9bad5bb2d3cd151bb4647f85a4e3a3ac3ca36ef1c560",
+    "Resources/desktop.js": "891378bfa7ed228d515af99b5bfa8edeecfce159e98999c4aff50b8060d7c181",
+    "Resources/index.html": "a976a5bf36827e3ca32e76ad606ab54324d082c27c8a4910b0ca7502f55c5a51",
+    "Resources/edge-tts-performance.py": "31a4f12c3abd39bfac9b5e45eca44949d8e442c596c7bf85615a41d8b1e3be52",
+    "Resources/Companion/companion.js": "ee1d6b53a8cdbbc0592c22c21b4bfe7dc86863c6e411d375ba830675fe329684",
+    "MacOS/MightyChat": "b4c5b74af04208cf9fa1ac503f8dbc46807c7a76729b9c5021d4646971991b6f"
+  },
+  "launchFlags": {
+    "MIGHTY_DEBUG_PERF": "0",
+    "MIGHTY_MEMORY_V1": "1",
+    "MIGHTY_STREAM_CHAT": "1"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "base_action": "Hailey \u2022 Idle 2 \u2022 Original transfer",
+  "corrected_action": "Hailey \u2022 Idle 2",
+  "arm_outward_degrees": 8,
+  "floor_offset_m": 0.0108,
+  "frames": [
+    1,
+    500
+  ]
+}

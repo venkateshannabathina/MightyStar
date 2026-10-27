@@ -1,0 +1,20 @@
+{
+  "installedAt": "2026-10-20T10:44:28.168205+05:30",
+  "installedApp": "<workspace>/Mighty Chat.app",
+  "backupApp": "<workspace>/backups/main-app-before-v2-20261020-104427/Mighty Chat.app",
+  "reviewedCandidate": "/private/tmp/mighty-wp9-workspace/Mighty Chat/build/Mighty Chat.app",
+  "flags": "All seven section-12 defaults remain off; no launch environment overrides installed.",
+  "humanAcceptance": "Pending; no quality-improvement claim.",
+  "installedHashes": {
+    "Contents/MacOS/MightyChat": "a59a35b0c7a2a0a94ae08c4f46a15c9bfcf37145762560e2c9975f0c20e4fd76",
+    "Contents/Resources/Companion/companion.js": "1beccacd979e2c87885926cea74285bd8460e2d51506eaaa281f2b5fc85bd77b",
+    "Contents/Resources/companion-server.cjs": "8c311c51d22f016c882e1624e9bde618c88dd5b198c93b4d5e473abfd0a24dbe",
+    "Contents/Resources/credential-agent": "00f927639f51a72c97b00a93db40524e5c5117b2299da084bf95b88f85c3168a"
+  },
+  "backupHashes": {
+    "Contents/MacOS/MightyChat": "bd32e2b340c49151fae283c52c2ff2538bf7a165c9e9531141ce71392b4e8f33",
+    "Contents/Resources/Companion/companion.js": "ebdd313dc94732031f7b7524f55f60d75344715e042bec277214693de9afb6a1",
+    "Contents/Resources/companion-server.cjs": "7a764e8b6cc7fc9ebb15df644af4d91f656a5e6f3759f02ebd976a7583f28b70",
+    "Contents/Resources/credential-agent": "4f20e5cbccf1c37a4b14ee4308f434af71559b7a8316ec8d740720b613ee86fe"
+  }
+}

@@ -1,0 +1,1 @@
+{"durationSeconds": 0.8125, "quality": "timed-word-visemes", "words": [{"start": 0.05, "end": 0.4375, "text": "Hello"}, {"start": 0.4375, "end": 0.8125, "text": "there"}], "mouthCues": [{"start": 0.05, "end": 0.2438, "pose": "e"}, {"start": 0.2438, "end": 0.4375, "pose": "u"}, {"start": 0.4375, "end": 0.8125, "pose": "e"}]}

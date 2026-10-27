@@ -1,0 +1,577 @@
+{
+  "source": "Apple macOS 27 UI Kit.sketch",
+  "components": [
+    {
+      "name": "Titlebars and Toolbars/Dark/XL/Buttons/Active/3",
+      "frame": {
+        "_class": "rect",
+        "constrainProportions": false,
+        "height": 36,
+        "width": 110,
+        "x": 2702,
+        "y": 1620
+      },
+      "style": {
+        "_class": "style",
+        "do_objectID": "0B62BB19-D086-4C1D-B205-EB5D44B76394",
+        "endMarkerType": 0,
+        "miterLimit": 10,
+        "startMarkerType": 0,
+        "windingRule": 1,
+        "skipCorners": true,
+        "blurs": [
+          {
+            "_class": "blur",
+            "isCustomGlass": 1,
+            "extraSamplingRegion": 0,
+            "isEnabled": true,
+            "center": "{0.5, 0.5}",
+            "motionAngle": 0,
+            "radius": 6,
+            "saturation": 1,
+            "brightness": 1,
+            "distortion": 0.4,
+            "chromaticAberrationMultiplier": 0,
+            "depth": 0.8,
+            "type": 4,
+            "isProgressive": false,
+            "skipLightingEffects": true,
+            "layeringType": 0
+          }
+        ],
+        "borderOptions": {
+          "_class": "borderOptions",
+          "isEnabled": true,
+          "dashPattern": [],
+          "centerDashes": true,
+          "lineCapStyle": 0,
+          "lineJoinStyle": 0
+        },
+        "borders": [],
+        "colorControls": {
+          "_class": "colorControls",
+          "isEnabled": false,
+          "brightness": 0,
+          "contrast": 1,
+          "hue": 0,
+          "saturation": 1
+        },
+        "contextSettings": {
+          "_class": "graphicsContextSettings",
+          "blendMode": 0,
+          "opacity": 1,
+          "isProgressive": false
+        },
+        "fills": [
+          {
+            "_class": "fill",
+            "isEnabled": true,
+            "fillType": 0,
+            "color": {
+              "_class": "color",
+              "alpha": 1,
+              "blue": 0,
+              "green": 0,
+              "red": 0
+            },
+            "contextSettings": {
+              "_class": "graphicsContextSettings",
+              "blendMode": 5,
+              "opacity": 1,
+              "isProgressive": false
+            },
+            "gradient": {
+              "_class": "gradient",
+              "colorInterpolation": 0,
+              "elipseLength": 0,
+              "from": "{0.5, 0}",
+              "gradientType": 0,
+              "to": "{0.5, 1}",
+              "stops": [
+                {
+                  "_class": "gradientStop",
+                  "position": 0,
+                  "color": {
+                    "_class": "color",
+                    "alpha": 1,
+                    "blue": 1,
+                    "green": 1,
+                    "red": 1
+                  }
+                },
+                {
+                  "_class": "gradientStop",
+                  "position": 1,
+                  "color": {
+                    "_class": "color",
+                    "alpha": 1,
+                    "blue": 0,
+                    "green": 0,
+                    "red": 0
+                  }
+                }
+              ]
+            },
+            "noiseIndex": 0,
+            "noiseIntensity": 0,
+            "patternFillType": 1,
+            "patternTileScale": 1,
+            "layeringType": 0
+          },
+          {
+            "_class": "fill",
+            "isEnabled": true,
+            "fillType": 0,
+            "color": {
+              "_class": "color",
+              "alpha": 0.17,
+              "blue": 0.6,
+              "green": 0.6,
+              "red": 0.6
+            },
+            "contextSettings": {
+              "_class": "graphicsContextSettings",
+              "blendMode": 0,
+              "opacity": 1,
+              "isProgressive": false
+            },
+            "gradient": {
+              "_class": "gradient",
+              "colorInterpolation": 0,
+              "elipseLength": 0,
+              "from": "{0.5, 0}",
+              "gradientType": 0,
+              "to": "{0.5, 1}",
+              "stops": [
+                {
+                  "_class": "gradientStop",
+                  "position": 0,
+                  "color": {
+                    "_class": "color",
+                    "alpha": 1,
+                    "blue": 1,
+                    "green": 1,
+                    "red": 1
+                  }
+                },
+                {
+                  "_class": "gradientStop",
+                  "position": 1,
+                  "color": {
+                    "_class": "color",
+                    "alpha": 1,
+                    "blue": 0,
+                    "green": 0,
+                    "red": 0
+                  }
+                }
+              ]
+            },
+            "noiseIndex": 0,
+            "noiseIntensity": 0,
+            "patternFillType": 1,
+            "patternTileScale": 1,
+            "layeringType": 0
+          }
+        ],
+        "shadows": [
+          {
+            "_class": "shadow",
+            "isEnabled": true,
+            "isInnerShadow": true,
+            "blurRadius": 20,
+            "offsetX": 20,
+            "offsetY": 0,
+            "spread": -30,
+            "color": {
+              "_class": "color",
+              "alpha": 1,
+              "blue": 0.698039215686275,
+              "green": 0.698039215686275,
+              "red": 0.698039215686275
+            },
+            "contextSettings": {
+              "_class": "graphicsContextSettings",
+              "blendMode": 16,
+              "opacity": 1,
+              "isProgressive": false
+            }
+          },
+          {
+            "_class": "shadow",
+            "isEnabled": true,
+            "isInnerShadow": true,
+            "blurRadius": 20,
+            "offsetX": -20,
+            "offsetY": 0,
+            "spread": -30,
+            "color": {
+              "_class": "color",
+              "alpha": 1,
+              "blue": 0.699019607843137,
+              "green": 0.699019607843137,
+              "red": 0.699019607843137
+            },
+            "contextSettings": {
+              "_class": "graphicsContextSettings",
+              "blendMode": 16,
+              "opacity": 1,
+              "isProgressive": false
+            }
+          },
+          {
+            "_class": "shadow",
+            "isEnabled": true,
+            "isInnerShadow": true,
+            "blurRadius": 0.5,
+            "offsetX": 0,
+            "offsetY": -4,
+            "spread": -4,
+            "color": {
+              "_class": "color",
+              "alpha": 1,
+              "blue": 0.4,
+              "green": 0.4,
+              "red": 0.4
+            },
+            "contextSettings": {
+              "_class": "graphicsContextSettings",
+              "blendMode": 17,
+              "opacity": 1,
+              "isProgressive": false
+            }
+          },
+          {
+            "_class": "shadow",
+            "isEnabled": true,
+            "isInnerShadow": true,
+            "blurRadius": 0.5,
+            "offsetX": 0,
+            "offsetY": 4,
+            "spread": -4,
+            "color": {
+              "_class": "color",
+              "alpha": 1,
+              "blue": 0.4,
+              "green": 0.4,
+              "red": 0.4
+            },
+            "contextSettings": {
+              "_class": "graphicsContextSettings",
+              "blendMode": 17,
+              "opacity": 1,
+              "isProgressive": false
+            }
+          },
+          {
+            "_class": "shadow",
+            "isEnabled": true,
+            "isInnerShadow": true,
+            "blurRadius": 0,
+            "offsetX": 0,
+            "offsetY": -1,
+            "spread": 0,
+            "color": {
+              "_class": "color",
+              "alpha": 1,
+              "blue": 0.09,
+              "green": 0.09,
+              "red": 0.09
+            },
+            "contextSettings": {
+              "_class": "graphicsContextSettings",
+              "blendMode": 17,
+              "opacity": 1,
+              "isProgressive": false
+            }
+          },
+          {
+            "_class": "shadow",
+            "isEnabled": true,
+            "isInnerShadow": true,
+            "blurRadius": 0,
+            "offsetX": 0,
+            "offsetY": 1,
+            "spread": 0,
+            "color": {
+              "_class": "color",
+              "alpha": 1,
+              "blue": 0.0901960784313726,
+              "green": 0.0901960784313726,
+              "red": 0.0901960784313726
+            },
+            "contextSettings": {
+              "_class": "graphicsContextSettings",
+              "blendMode": 17,
+              "opacity": 1,
+              "isProgressive": false
+            }
+          },
+          {
+            "_class": "shadow",
+            "isEnabled": true,
+            "isInnerShadow": false,
+            "blurRadius": 15,
+            "offsetX": 0,
+            "offsetY": 8,
+            "spread": 0,
+            "color": {
+              "_class": "color",
+              "alpha": 0.04,
+              "blue": 0,
+              "green": 0,
+              "red": 0
+            },
+            "contextSettings": {
+              "_class": "graphicsContextSettings",
+              "blendMode": 0,
+              "opacity": 1,
+              "isProgressive": false
+            }
+          },
+          {
+            "_class": "shadow",
+            "isEnabled": true,
+            "isInnerShadow": false,
+            "blurRadius": 0,
+            "offsetX": 0,
+            "offsetY": 0,
+            "spread": 0.5,
+            "color": {
+              "_class": "color",
+              "alpha": 1,
+              "blue": 0.650980392156863,
+              "green": 0.650980392156863,
+              "red": 0.650980392156863
+            },
+            "contextSettings": {
+              "_class": "graphicsContextSettings",
+              "blendMode": 16,
+              "opacity": 1,
+              "isProgressive": false
+            }
+          },
+          {
+            "_class": "shadow",
+            "isEnabled": true,
+            "isInnerShadow": false,
+            "blurRadius": 0,
+            "offsetX": -1.25,
+            "offsetY": 0,
+            "spread": -0.75,
+            "color": {
+              "_class": "color",
+              "alpha": 1,
+              "blue": 0.650980392156863,
+              "green": 0.650980392156863,
+              "red": 0.650980392156863
+            },
+            "contextSettings": {
+              "_class": "graphicsContextSettings",
+              "blendMode": 16,
+              "opacity": 1,
+              "isProgressive": false
+            }
+          },
+          {
+            "_class": "shadow",
+            "isEnabled": true,
+            "isInnerShadow": false,
+            "blurRadius": 0,
+            "offsetX": 1.25,
+            "offsetY": 0,
+            "spread": -0.75,
+            "color": {
+              "_class": "color",
+              "alpha": 1,
+              "blue": 0.650980392156863,
+              "green": 0.650980392156863,
+              "red": 0.650980392156863
+            },
+            "contextSettings": {
+              "_class": "graphicsContextSettings",
+              "blendMode": 16,
+              "opacity": 1,
+              "isProgressive": false
+            }
+          },
+          {
+            "_class": "shadow",
+            "isEnabled": true,
+            "isInnerShadow": true,
+            "blurRadius": 10,
+            "offsetX": 0,
+            "offsetY": -40,
+            "spread": -40,
+            "color": {
+              "_class": "color",
+              "alpha": 1,
+              "blue": 0.101960784313725,
+              "green": 0.101960784313725,
+              "red": 0.101960784313725
+            },
+            "contextSettings": {
+              "_class": "graphicsContextSettings",
+              "blendMode": 17,
+              "opacity": 1,
+              "isProgressive": false
+            }
+          },
+          {
+            "_class": "shadow",
+            "isEnabled": true,
+            "isInnerShadow": true,
+            "blurRadius": 10,
+            "offsetX": 0,
+            "offsetY": 40,
+            "spread": -40,
+            "color": {
+              "_class": "color",
+              "alpha": 1,
+              "blue": 0.1,
+              "green": 0.1,
+              "red": 0.1
+            },
+            "contextSettings": {
+              "_class": "graphicsContextSettings",
+              "blendMode": 17,
+              "opacity": 1,
+              "isProgressive": false
+            }
+          }
+        ],
+        "corners": {
+          "_class": "MSImmutableStyleCorners",
+          "radii": [
+            3.402823466385289e+38
+          ],
+          "style": 1,
+          "prefersConcentric": false,
+          "smoothing": 0.6
+        }
+      },
+      "children": [
+        {
+          "name": "Button 3",
+          "frame": {
+            "_class": "rect",
+            "constrainProportions": false,
+            "height": 28,
+            "width": 28,
+            "x": 78,
+            "y": 4
+          }
+        },
+        {
+          "name": "Button 2",
+          "frame": {
+            "_class": "rect",
+            "constrainProportions": false,
+            "height": 28,
+            "width": 28,
+            "x": 41,
+            "y": 4
+          }
+        },
+        {
+          "name": "Button 1",
+          "frame": {
+            "_class": "rect",
+            "constrainProportions": false,
+            "height": 28,
+            "width": 28,
+            "x": 4,
+            "y": 4
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sliders/Dark/Over-glass/Standard/Active, 1 - Idle/3 Rg",
+      "frame": {
+        "_class": "rect",
+        "constrainProportions": false,
+        "height": 24,
+        "width": 140,
+        "x": 2500,
+        "y": 0
+      },
+      "style": {
+        "_class": "style",
+        "do_objectID": "3E0D84A1-7A10-48E6-B4EE-28DA31DECD05",
+        "endMarkerType": 0,
+        "miterLimit": 10,
+        "startMarkerType": 0,
+        "windingRule": 1,
+        "skipCorners": true,
+        "blurs": [],
+        "borderOptions": {
+          "_class": "borderOptions",
+          "isEnabled": true,
+          "dashPattern": [],
+          "centerDashes": true,
+          "lineCapStyle": 0,
+          "lineJoinStyle": 0
+        },
+        "borders": [],
+        "colorControls": {
+          "_class": "colorControls",
+          "isEnabled": false,
+          "brightness": 0,
+          "contrast": 1,
+          "hue": 0,
+          "saturation": 1
+        },
+        "contextSettings": {
+          "_class": "graphicsContextSettings",
+          "blendMode": 0,
+          "opacity": 1,
+          "isProgressive": false
+        },
+        "fills": [],
+        "shadows": []
+      },
+      "children": [
+        {
+          "name": "Track - Unfilled",
+          "frame": {
+            "_class": "rect",
+            "constrainProportions": false,
+            "height": 6,
+            "width": 120,
+            "x": 10,
+            "y": 9
+          }
+        },
+        {
+          "name": "Track + Knob",
+          "frame": {
+            "_class": "rect",
+            "constrainProportions": false,
+            "height": 6,
+            "width": 120,
+            "x": 10,
+            "y": 9
+          }
+        }
+      ]
+    }
+  ],
+  "recording_observations": {
+    "compact_pill_points": [
+      120,
+      36
+    ],
+    "expanded_pill_points": [
+      164,
+      36
+    ],
+    "top_right_inset_points": 8,
+    "symbol_point_size": [
+      16,
+      17
+    ],
+    "selected_circle_diameter_points": 28,
+    "notes": "Music-specific dimensions normalized from supplied screenshots and video; kit supplies standard component baselines. Recording shows hover/fade and subtitle selection; expanded volume is taken from the supplied still capture."
+  }
+}

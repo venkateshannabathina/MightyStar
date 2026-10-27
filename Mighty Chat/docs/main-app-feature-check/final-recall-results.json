@@ -1,0 +1,38 @@
+[
+  {
+    "id": 62,
+    "role": "user",
+    "content": "The short checks are finished. What color is my imaginary bicycle?",
+    "meta": "{\"clientTurnId\":\"330b20b4-a922-47f1-b6bf-0b2a0f73b5b7\",\"private\":false}"
+  },
+  {
+    "id": 63,
+    "role": "assistant",
+    "content": " Blue.  Just a guess.",
+    "meta": "{\"clientTurnId\":\"330b20b4-a922-47f1-b6bf-0b2a0f73b5b7\",\"private\":false,\"sentenceEvents\":[{\"type\":\"sentence.start\",\"index\":0,\"e\":\"neutral\",\"i\":0.5,\"g\":\"-\",\"offset\":0},{\"type\":\"sentence.start\",\"index\":1,\"e\":\"neutral\",\"i\":0.4,\"g\":\"-\",\"offset\":6}]}"
+  },
+  {
+    "id": 64,
+    "role": "user",
+    "content": "What color is my imaginary bicycle?",
+    "meta": "{\"clientTurnId\":\"8ca0cf06-6cac-4dbe-8994-fc615523d665\",\"private\":false}"
+  },
+  {
+    "id": 65,
+    "role": "assistant",
+    "content": " Blue.  Or maybe purple?",
+    "meta": "{\"clientTurnId\":\"8ca0cf06-6cac-4dbe-8994-fc615523d665\",\"private\":false,\"sentenceEvents\":[{\"type\":\"sentence.start\",\"index\":0,\"e\":\"amused\",\"i\":0.5,\"g\":\"-\",\"offset\":0},{\"type\":\"sentence.start\",\"index\":1,\"e\":\"neutral\",\"i\":0.2,\"g\":\"-\",\"offset\":6}]}"
+  },
+  {
+    "id": 66,
+    "role": "user",
+    "content": "What color is my imaginary bicycle?",
+    "meta": "{\"clientTurnId\":\"b7673123-542e-4710-99d2-80bc88bf9c4a\",\"private\":false}"
+  },
+  {
+    "id": 67,
+    "role": "assistant",
+    "content": " Blue.  Or maybe purple?",
+    "meta": "{\"clientTurnId\":\"b7673123-542e-4710-99d2-80bc88bf9c4a\",\"private\":false,\"sentenceEvents\":[{\"type\":\"sentence.start\",\"index\":0,\"e\":\"amused\",\"i\":0.4,\"g\":\"-\",\"offset\":0},{\"type\":\"sentence.start\",\"index\":1,\"e\":\"amused\",\"i\":0.3991263423761596,\"g\":\"-\",\"offset\":6}]}"
+  }
+]

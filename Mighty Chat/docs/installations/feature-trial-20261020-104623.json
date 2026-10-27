@@ -1,0 +1,38 @@
+{
+  "time": "2026-10-20T10:46:23.377264+05:30",
+  "flags": {
+    "MIGHTY_MEMORY_V1": "1",
+    "MIGHTY_STREAM_CHAT": "1",
+    "MIGHTY_EXPR_V2": "1",
+    "MIGHTY_ENERGY_JAW": "1",
+    "MIGHTY_GESTURES_V2": "1",
+    "MIGHTY_FACE_LAB": "0",
+    "MIGHTY_DEBUG_PERF": "0"
+  },
+  "mechanism": "App-specific Launch Services environment; source defaults unchanged.",
+  "stage": "<workspace>/Mighty Chat.features-installing.app",
+  "backup": "<workspace>/backups/main-app-flags-off-20261020-104623/Mighty Chat.app",
+  "installedApp": "<workspace>/Mighty Chat.app",
+  "signature": "verified",
+  "launchedPID": 57188,
+  "runtimeVerified": true,
+  "mainFlags": {
+    "MIGHTY_MEMORY_V1": "1",
+    "MIGHTY_STREAM_CHAT": "1",
+    "MIGHTY_EXPR_V2": "1",
+    "MIGHTY_ENERGY_JAW": "1",
+    "MIGHTY_GESTURES_V2": "1",
+    "MIGHTY_FACE_LAB": "0",
+    "MIGHTY_DEBUG_PERF": "0"
+  },
+  "backendFlags": {
+    "MIGHTY_MEMORY_V1": "1",
+    "MIGHTY_STREAM_CHAT": "1",
+    "MIGHTY_EXPR_V2": "1",
+    "MIGHTY_ENERGY_JAW": "1",
+    "MIGHTY_GESTURES_V2": "1",
+    "MIGHTY_FACE_LAB": "0",
+    "MIGHTY_DEBUG_PERF": "0"
+  },
+  "backendPID": 57206
+}

@@ -1,0 +1,40 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),os=require('node:os'),path=require('node:path');
+const {MemoryStore}=require('../../Backend/memory/MemoryStore.cjs');
+const {MemoryService}=require('../../Backend/memory/MemoryService.cjs');
+const {LocalEmbeddings}=require('../../Backend/memory/LocalEmbeddings.cjs');
+const {Safety}=require('../../Backend/memory/Safety.cjs');
+(async()=>{
+ const root=fs.mkdtempSync(path.join(os.tmpdir(),'mighty-memory-')),embeddings=new LocalEmbeddings(),store=new MemoryStore({root});
+ let generated=0;
+ const memory=new MemoryService({store,embeddings,generate:async(_config,messages)=>{generated++;const prompt=messages[0].content;if(prompt.includes('persona card'))return JSON.stringify({card:'Mira is a thoughtful friend. User: Hello. Mira: Hey, you.'});if(prompt.includes('Summarize'))return JSON.stringify({summary:'The user has a dog named Milo.'});return JSON.stringify({facts:[{text:'The user has a golden retriever named Milo.',importance:4,evidence:'My dog is called Milo.'}],mood:'happy'});}});
+ try{
+  const character={id:'c',name:'Mira',description:'A friendly character.',profile:{aiProvider:'groq',aiModel:'openai/gpt-oss-20b'}};
+  await memory.saveCharacter(character);await memory.saveCharacter(character);assert.equal(generated,1,'persona compiles once per content hash');
+  const a=await embeddings.embed('The user has a golden retriever named Milo.');assert.equal(a.length,384);assert(Math.abs(a.reduce((n,x)=>n+x*x,0)-1)<0.001);
+  const first=store.begin('c','initial','h','My dog is called Milo.');store.finish('c','initial',{reply:'Milo sounds lovely.'});
+  const fact=store.insertFact('c','The user has a golden retriever named Milo.',3,a,first.userTurn);
+  assert.equal(store.insertFact('c','The user has a golden retriever named Milo.',5,a,first.userTurn),fact);
+  assert.equal(store.publicFacts('c').length,1);assert.equal(store.publicFacts('c')[0].importance,5);
+  store.db.exec('BEGIN');for(let i=0;i<500;i++)store.db.prepare("INSERT INTO turns(character_id,role,content,ts,meta) VALUES(?,'user',?,0,'{}')").run('c','Synthetic unrelated turn '+i);store.db.exec('COMMIT');
+  const found=store.retrieve('c',await embeddings.embed('What is the name of my dog?'));assert.equal(found[0].id,fact,'real BGE retrieves the fact 500 turns later');
+  assert.equal(store.retrieve('other',a).length,0);
+  await memory.editFact('c',fact,'The user has a dog named Rex.');assert.equal(store.publicFacts('c')[0].text,'The user has a dog named Rex.');
+  memory.deleteFact('c',fact);assert.equal(store.retrieve('c',a).length,0,'deletion removes retrieval immediately');
+  const ctx=await memory.prepare({characterId:'c',clientTurnId:'turn',userMessage:'My dog is called Milo.'});memory.finish(ctx,{reply:'Hello'});memory.afterReply(ctx,{reply:'Hello'});await memory.drain();assert.equal(store.publicFacts('c').length,1);
+  const cached=await memory.prepare({characterId:'c',clientTurnId:'turn',userMessage:'My dog is called Milo.'});assert.equal(cached.cached.reply,'Hello');
+  await assert.rejects(memory.prepare({characterId:'c',clientTurnId:'turn',userMessage:'Different'}),/already used/);
+  let release;memory.generate=async()=>new Promise(resolve=>release=resolve);
+  const late=await memory.prepare({characterId:'c',clientTurnId:'late',userMessage:'A late fact'});memory.finish(late,{reply:'Okay'});memory.afterReply(late,{reply:'Okay'});
+  while(!release)await new Promise(resolve=>setImmediate(resolve));memory.forget('c');release(JSON.stringify({facts:[{text:'The user likes hiking.',importance:4}],mood:'happy'}));await memory.drain();assert.equal(store.publicFacts('c').length,0,'forget fences in-flight extraction');assert.equal(store.recent('c').length,0);
+  const privateTurn=await memory.prepare({characterId:'c',clientTurnId:'private',userMessage:"Keep this private: my nickname is Moonbeam."});memory.finish(privateTurn,{reply:'Moonbeam is a nice nickname.'});memory.afterReply(privateTurn,{reply:'Moonbeam'});await memory.drain();
+  assert(!JSON.stringify(store.db.prepare('SELECT * FROM turns').all()).includes('Moonbeam'));
+  assert(!JSON.stringify(store.db.prepare('SELECT * FROM requests').all()).includes('Moonbeam'));
+  const safety=new Safety(['synthetic-sensitive-value-123']);assert.equal(safety.private('She is a private investigator.'),false);assert(!safety.redact('value synthetic-sensitive-value-123').includes('synthetic-sensitive-value-123'));
+  for(const input of ['password: fixture-value','4111 1111 1111 1111','123-45-6789','keep this private: user fact'])assert.equal(safety.fact(input),null);
+  assert.equal(fs.statSync(path.join(root,'memory.sqlite')).mode&0o777,0o600);
+  const badRoot=path.join(root,'symlink-test');fs.mkdirSync(badRoot);fs.symlinkSync(path.join(root,'must-not-create.sqlite'),path.join(badRoot,'memory.sqlite'));
+  assert.throws(()=>new MemoryStore({root:badRoot}),/Invalid memory database/);assert(!fs.existsSync(path.join(root,'must-not-create.sqlite')));
+  console.log('Memory store: real local BGE, 500-turn recall, dedupe, isolation, edit/delete, idempotency, privacy and forget race passed');
+ }finally{await memory.close();fs.rmSync(root,{recursive:true,force:true});}
+})().catch(error=>{console.error(error);process.exitCode=1});

@@ -1,0 +1,271 @@
+/* Siri reference treatment, confined to the transcript and composer.
+   Dimensions follow the app's spacing, typography and control tokens. */
+#conversation {
+  --chat-surface: #242321;
+  --chat-bubble: #3a3a38;
+  --chat-input: #30302e;
+}
+#conversation .messages {
+  padding: 120px 12% var(--space-7);
+  background: var(--chat-surface);
+  font-size: var(--font-conversation);
+  line-height: var(--line-body);
+  scrollbar-color: #ffffff52 #ffffff08;
+}
+#conversation .message-row {
+  position: relative;
+  margin: 0 0 var(--space-8);
+}
+#conversation .assistant-bubble { line-height: var(--line-body); }
+#conversation .message-meta {
+  position: absolute;
+  top: 100%;
+  left: calc(-1 * var(--space-1));
+  margin-top: var(--space-1);
+  gap: var(--space-1);
+  opacity: 0;
+  transition: opacity var(--duration-hover);
+}
+#conversation .message-meta > span { display: none; }
+#conversation .message-row:hover .message-meta,
+#conversation .message-row:focus-within .message-meta { opacity: 1; }
+#conversation .user-bubble {
+  position: relative;
+  width: fit-content;
+  max-width: 76%;
+  margin: 0 0 var(--space-8) auto;
+  padding: var(--space-1) var(--space-3);
+  background: var(--chat-bubble);
+  border: 0;
+  border-radius: var(--radius-lg);
+  line-height: var(--line-body);
+}
+#conversation .user-bubble::after {
+  content: '';
+  position: absolute;
+  right: var(--space-1);
+  bottom: -4px;
+  width: var(--space-3);
+  height: var(--space-3);
+  background: var(--chat-bubble);
+  clip-path: polygon(0 0, 75% 0, 100% 100%);
+}
+#conversation .composer-zone,
+#conversation.text-mode .composer-zone {
+  height: auto;
+  min-height: 0;
+  padding: var(--space-2) var(--space-3);
+  background: var(--chat-surface);
+  gap: var(--space-2);
+}
+#conversation .siri-composer,
+#conversation.text-mode .siri-composer {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+#conversation .siri-composer > .icon {
+  width: var(--control-md);
+  height: var(--control-md);
+  min-width: var(--control-md);
+  min-height: var(--control-md);
+  padding: 0;
+  margin: 0;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-pill);
+  border: 1px solid #ffffff08;
+  background: linear-gradient(#ffffff06, #ffffff00), var(--chat-input);
+  color: var(--text-primary);
+  box-shadow: inset 0 1px 1px #ffffff0a;
+}
+#conversation .siri-composer > .icon:hover { background: var(--chat-bubble); }
+#conversation .siri-composer > .icon .symbol { width: var(--icon-md); height: var(--icon-md); }
+#conversation .siri-composer .text-field {
+  min-height: var(--control-md);
+  max-height: 144px;
+  padding: var(--space-1) var(--space-3);
+  gap: var(--space-2);
+  background: linear-gradient(#ffffff03, #ffffff00), var(--chat-input);
+  border: 1px solid #ffffff08;
+  border-radius: var(--radius-xl);
+  box-shadow: none;
+  align-items: flex-end;
+}
+#conversation .siri-composer .text-field:focus-within {
+  border-color: #ffffff26;
+  box-shadow: inset 0 1px 2px #ffffff14, 0 0 0 1px #ffffff06;
+}
+#conversation .siri-composer textarea {
+  font-size: var(--font-body);
+  line-height: 22px;
+}
+#conversation .siri-composer textarea::placeholder { color: var(--text-secondary); }
+#conversation .siri-composer .send-button {
+  width: var(--control-sm);
+  height: var(--control-sm);
+  background: var(--chat-bubble);
+  border: 0;
+  color: var(--text-primary);
+  margin: -1px calc(-1 * var(--space-2)) -1px 0;
+}
+#conversation .siri-composer .send-button:disabled { display: none; }
+#conversation .siri-composer .talk-button[data-state=listening] {
+  background: var(--accent);
+  color: var(--text-on-accent);
+  box-shadow: 0 0 0 3px var(--accent-selection);
+  filter: none;
+}
+#conversation .siri-composer .talk-button[data-state=thinking] { opacity: .6; }
+#conversation .siri-composer .talk-button[data-state=speaking] { color: var(--accent-strong); }
+#conversation .composer-hint { margin: 0; padding: 0 var(--space-8); }
+#conversation .chat-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+#conversation .typing { padding: 0; min-height: var(--control-sm); }
+.chat-spinner {
+  display: inline-block;
+  width: var(--icon-md);
+  height: var(--icon-md);
+  border: 2px dotted var(--text-muted);
+  border-radius: 50%;
+  animation: chat-spin 1s linear infinite;
+}
+@keyframes chat-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .chat-spinner { animation: none; }
+  #conversation .message-meta { transition: none; }
+}
+@media (hover: none) {
+  #conversation .message-meta { opacity: 1; }
+}
+/* The top inset clears the existing, unchanged character header. */
+#conversation .messages { padding-bottom: 0; overflow-anchor: none; }
+#conversation .chat-turn {
+  display: flow-root;
+  min-height: var(--chat-turn-height, calc(100vh - 176px));
+  padding-bottom: var(--space-7);
+}
+#conversation .chat-turn .chat-row { display: flow-root; }
+#conversation .chat-turn .user-bubble { margin-bottom: var(--space-8); }
+#conversation .chat-turn .message-row { margin-bottom: var(--space-7); }
+#conversation .chat-turn .typing { margin-left: var(--space-1); }
+#conversation .chat-spinner {
+  width: var(--icon-lg);
+  height: var(--icon-lg);
+  border: 3px dotted var(--text-muted);
+  -webkit-mask-image: conic-gradient(transparent, #000);
+  mask-image: conic-gradient(transparent, #000);
+}
+/* The same surface morphs from the field into the sphere. Both modes retain
+   the composer's 32-point baseline; the sphere grows upward into free space. */
+#conversation .siri-composer,
+#conversation.siri-voice-mode .siri-composer { display: flex; }
+#conversation .siri-voice-controls {
+  display: flex;
+  position: absolute;
+  bottom: var(--space-2);
+  left: var(--space-3);
+  right: var(--space-3);
+  height: var(--control-md);
+  justify-content: space-between;
+  align-items: flex-end;
+  pointer-events: none;
+  z-index: 5;
+}
+#conversation .siri-voice-controls > .icon {
+  width: var(--control-md);
+  height: var(--control-md);
+  border-radius: var(--radius-pill);
+  background: var(--chat-input);
+  color: var(--text-primary);
+  border: 1px solid #ffffff0a;
+  opacity: 0;
+  filter: blur(6px);
+  transition: opacity 180ms ease, filter 180ms ease;
+}
+#conversation .siri-voice-controls > .icon .symbol { width: var(--icon-md); height: var(--icon-md); }
+#conversation.siri-voice-mode .siri-voice-controls > .icon { opacity: 1; filter: blur(0); pointer-events: auto; }
+#conversation .siri-voice-orb {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 112px;
+  height: 112px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  overflow: visible;
+  visibility: hidden;
+  pointer-events: none;
+}
+#conversation .siri-voice-orb:hover { background: transparent; }
+#conversation .siri-voice-orb canvas { width: 100%; height: 100%; display: block; }
+#conversation[data-orb-phase=enter] .siri-voice-orb,
+#conversation[data-orb-phase=exit] .siri-voice-orb,
+#conversation[data-orb-phase=voice] .siri-voice-orb { visibility: visible; }
+#conversation[data-orb-phase=voice] .siri-voice-orb { pointer-events: auto; }
+#conversation .siri-composer > .icon,
+#conversation .siri-composer textarea,
+#conversation .siri-composer .send-button { transition: opacity 140ms ease, filter 180ms ease; }
+#conversation.siri-voice-mode .siri-composer > .icon { opacity: 0; filter: blur(6px); pointer-events: none; }
+#conversation.siri-voice-mode .siri-composer textarea,
+#conversation.siri-voice-mode .siri-composer .send-button { opacity: 0; }
+#conversation[data-orb-phase=enter] .text-field,
+#conversation[data-orb-phase=exit] .text-field,
+#conversation[data-orb-phase=voice] .text-field { background: transparent; border-color: transparent; box-shadow: none; }
+#conversation.siri-voice-mode .siri-composer textarea { height: 22px!important; }
+#conversation.siri-voice-mode #voiceLabel { position: absolute; bottom: 128px; left: 50%; transform: translateX(-50%); padding: 0; white-space: nowrap; }
+@media(prefers-reduced-motion: reduce) {
+  #conversation .siri-voice-controls > .icon,
+  #conversation .siri-composer > .icon,
+  #conversation .siri-composer textarea { transition: none; }
+}
+#conversation .chat-row.is-new-reply { animation: siri-reply-enter 240ms ease-out both; }
+@keyframes siri-reply-enter {
+  from { opacity: .2; filter: blur(2px); }
+  to { opacity: 1; filter: blur(0); }
+}
+@media(prefers-reduced-motion: reduce) {
+  #conversation .chat-row.is-new-reply { animation: none; }
+}
+
+/* Measured reference: 32-point field and side controls, 12-point gaps,
+   16-point side insets, and 12-point bottom inset. */
+#conversation .composer-zone,
+#conversation.text-mode .composer-zone { padding: var(--space-2) var(--space-4) var(--space-3); }
+#conversation .siri-voice-controls { left: var(--space-4); right: var(--space-4); bottom: var(--space-3); }
+
+#conversation .siri-orb-label {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  right: 14px;
+  transform: translateY(-50%);
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: left;
+  color: var(--text-secondary);
+  font: var(--font-body)/22px var(--font-system);
+  pointer-events: none;
+}
+#conversation[data-orb-phase=enter] .siri-composer textarea,
+#conversation[data-orb-phase=exit] .siri-composer textarea,
+#conversation[data-orb-phase=voice] .siri-composer textarea { opacity: 0; transition: none; }
+#conversation[data-orb-phase=text] .siri-composer textarea { opacity: 1; transition: none; }

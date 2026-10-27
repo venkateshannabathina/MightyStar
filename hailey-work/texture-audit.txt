@@ -1,0 +1,20 @@
+Hailey texture audit (read-only source inspection)
+
+Observed data, not game shader source:
+- Color maps (_C): sRGB, fully opaque. Face base C includes dark brown painted scalp and eyebrows; Makeup Face C is an alternate full color atlas, not a transparent overlay.
+- Normal maps (_N): tangent normals. Use Non-Color, Normal Map node; DirectX green inversion is likely because these appear to be game exports, but verify bumps under light.
+- Hair_P: 512x512 RGBA packed atlas. Alpha contains the true fine strand opacity. R resembles strand ID, G root/tip gradient, B strand depth. No dedicated hair color/normal is present. Recommended dark brown base matching painted scalp, subtle G variation, roughness ~0.4, anisotropy, alpha from A. Never use RGB straight as color: it is orange/magenta/yellow packed data.
+- Face_P and Body_P: blue is clearly a skin/SSS mask (white skin, black scalp). Red is essentially all white. Alpha is ~0.498 constant. Green supplies variable surface response; roughness is a plausible interpretation, but no shader source proves it. Body green spans 0-0.55. Face and alternate makeup green differ strongly, with makeup markedly darker. Do not use B as metalness; skin must remain nonmetallic.
+- Garment PartA_P / PartB_P: >99% black with tiny data islands only. A direct P green to Roughness connection produces an incorrect mirrored suit. Use garment constants/ID masks for broad regions and P only as a minor detail override if needed.
+- Garment ID palettes: magenta is most of white cloth panels; red gray straps/rigid details; green (A) or cyan (B) dark material; blue small rigid details; yellow small A region. Roughness ~0.5-0.65 cloth, ~0.3-0.4 rigid pieces; metallic modest only on actual hardware.
+- FX: nearly black with a few red emissive accents. sRGB emission color with restrained strength 0.5-2 can retain these small details.
+- Iris_M: R filament detail, G spot-detail control, B radial profile, A inverted pupil mask (black pupil, white elsewhere). It is not a ready-made iris color: using raw RGB shows neon green speckles. Recommended tint red detail with gray/blue iris color, keep pupil black using alpha mask, white sclera from geometry/material. H is detailed grayscale height with spot noise (G emphasized dots); use very low bump if needed.
+- sample_pbr_e3.dds: a 128px six-face HDR cubemap (RGBA16F). It is outdoor environment lighting, not character texture. Not required for a portable studio setup.
+
+Previews in the same folder:
+texture_contact_sheet.jpg — all texture RGB views
+PC_016_A_VAR_Head_000A_Hair_P_channels.jpg — R/G/B/A proof of opacity
+PC_016_A0101_Face_P_channels.jpg — skin-mask proof
+PC_016_Makeup_PT_Iris_A_002A_M_channels.jpg — iris mask channels
+Additional *_channels.jpg for every packed/mask/height/FX texture
+sample_pbr_e3.jpg — tone-mapped first DDS cubemap face

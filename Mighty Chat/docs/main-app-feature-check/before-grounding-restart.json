@@ -1,0 +1,53 @@
+{
+  "recent": [
+    {
+      "role": "assistant",
+      "content": " Blue.  Just a guess."
+    },
+    {
+      "role": "user",
+      "content": "The short checks are finished. What color is my imaginary bicycle?"
+    },
+    {
+      "role": "assistant",
+      "content": "14"
+    },
+    {
+      "role": "user",
+      "content": "Sixth short check: what is 6 plus 8? Number only."
+    },
+    {
+      "role": "assistant",
+      "content": "12"
+    },
+    {
+      "role": "user",
+      "content": "Fifth short check: what is 5 plus 7? Number only."
+    },
+    {
+      "role": "assistant",
+      "content": "10"
+    },
+    {
+      "role": "user",
+      "content": "Fourth short check: what is 4 plus 6? Number only."
+    },
+    {
+      "role": "assistant",
+      "content": " 8"
+    },
+    {
+      "role": "user",
+      "content": "Third short check: what is 3 plus 5? Number only."
+    }
+  ],
+  "summaryContainsMarker": false,
+  "recentContainsMarker": false,
+  "facts": [
+    {
+      "text": "User has an imaginary bicycle that is cobalt blue.",
+      "importance": 1,
+      "embeddingBytes": 1536
+    }
+  ]
+}

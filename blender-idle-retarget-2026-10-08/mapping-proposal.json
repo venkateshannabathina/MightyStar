@@ -1,0 +1,403 @@
+{
+  "source_armature": "Idle_Source",
+  "target_armature": "Augusta_Idle_Rig",
+  "source_action": "Idle • Source (static object)",
+  "action_name": "Augusta • Idle (retargeted)",
+  "root_source": "mixamorig:Hips",
+  "root_target": "腰",
+  "mapping": {
+    "腰": "mixamorig:Hips",
+    "上半身": "mixamorig:Spine",
+    "上半身3": "mixamorig:Spine1",
+    "上半身2": "mixamorig:Spine2",
+    "首": "mixamorig:Neck",
+    "頭": "mixamorig:Head",
+    "肩.L": "mixamorig:LeftShoulder",
+    "腕.L": "mixamorig:LeftArm",
+    "ひじ.L": "mixamorig:LeftForeArm",
+    "手首.L": "mixamorig:LeftHand",
+    "足D.L": "mixamorig:LeftUpLeg",
+    "ひざD.L": "mixamorig:LeftLeg",
+    "足首D.L": "mixamorig:LeftFoot",
+    "足先EX.L": "mixamorig:LeftToeBase",
+    "親指０.L": "mixamorig:LeftHandThumb1",
+    "親指１.L": "mixamorig:LeftHandThumb2",
+    "親指２.L": "mixamorig:LeftHandThumb3",
+    "人指１.L": "mixamorig:LeftHandIndex1",
+    "人指２.L": "mixamorig:LeftHandIndex2",
+    "人指３.L": "mixamorig:LeftHandIndex3",
+    "中指１.L": "mixamorig:LeftHandMiddle1",
+    "中指２.L": "mixamorig:LeftHandMiddle2",
+    "中指３.L": "mixamorig:LeftHandMiddle3",
+    "薬指１.L": "mixamorig:LeftHandRing1",
+    "薬指２.L": "mixamorig:LeftHandRing2",
+    "薬指３.L": "mixamorig:LeftHandRing3",
+    "小指１.L": "mixamorig:LeftHandPinky1",
+    "小指２.L": "mixamorig:LeftHandPinky2",
+    "小指３.L": "mixamorig:LeftHandPinky3",
+    "肩.R": "mixamorig:RightShoulder",
+    "腕.R": "mixamorig:RightArm",
+    "ひじ.R": "mixamorig:RightForeArm",
+    "手首.R": "mixamorig:RightHand",
+    "足D.R": "mixamorig:RightUpLeg",
+    "ひざD.R": "mixamorig:RightLeg",
+    "足首D.R": "mixamorig:RightFoot",
+    "足先EX.R": "mixamorig:RightToeBase",
+    "親指０.R": "mixamorig:RightHandThumb1",
+    "親指１.R": "mixamorig:RightHandThumb2",
+    "親指２.R": "mixamorig:RightHandThumb3",
+    "人指１.R": "mixamorig:RightHandIndex1",
+    "人指２.R": "mixamorig:RightHandIndex2",
+    "人指３.R": "mixamorig:RightHandIndex3",
+    "中指１.R": "mixamorig:RightHandMiddle1",
+    "中指２.R": "mixamorig:RightHandMiddle2",
+    "中指３.R": "mixamorig:RightHandMiddle3",
+    "薬指１.R": "mixamorig:RightHandRing1",
+    "薬指２.R": "mixamorig:RightHandRing2",
+    "薬指３.R": "mixamorig:RightHandRing3",
+    "小指１.R": "mixamorig:RightHandPinky1",
+    "小指２.R": "mixamorig:RightHandPinky2",
+    "小指３.R": "mixamorig:RightHandPinky3"
+  },
+  "segments": [
+    {
+      "target": "肩.L",
+      "target_end": "腕.L",
+      "source": "mixamorig:LeftShoulder",
+      "source_end": "mixamorig:LeftArm"
+    },
+    {
+      "target": "腕.L",
+      "target_end": "ひじ.L",
+      "source": "mixamorig:LeftArm",
+      "source_end": "mixamorig:LeftForeArm"
+    },
+    {
+      "target": "ひじ.L",
+      "target_end": "手首.L",
+      "source": "mixamorig:LeftForeArm",
+      "source_end": "mixamorig:LeftHand"
+    },
+    {
+      "target": "足D.L",
+      "target_end": "ひざD.L",
+      "source": "mixamorig:LeftUpLeg",
+      "source_end": "mixamorig:LeftLeg"
+    },
+    {
+      "target": "ひざD.L",
+      "target_end": "足首D.L",
+      "source": "mixamorig:LeftLeg",
+      "source_end": "mixamorig:LeftFoot"
+    },
+    {
+      "target": "親指０.L",
+      "target_end": "親指１.L",
+      "source": "mixamorig:LeftHandThumb1",
+      "source_end": "mixamorig:LeftHandThumb2",
+      "prior_palm": "手首.L"
+    },
+    {
+      "target": "親指１.L",
+      "target_end": "親指２.L",
+      "source": "mixamorig:LeftHandThumb2",
+      "source_end": "mixamorig:LeftHandThumb3",
+      "prior_palm": "手首.L"
+    },
+    {
+      "target": "親指２.L",
+      "target_end": "親指２先.L",
+      "source": "mixamorig:LeftHandThumb3",
+      "source_end": "mixamorig:LeftHandThumb4",
+      "prior_palm": "手首.L"
+    },
+    {
+      "target": "人指１.L",
+      "target_end": "人指２.L",
+      "source": "mixamorig:LeftHandIndex1",
+      "source_end": "mixamorig:LeftHandIndex2",
+      "prior_palm": "手首.L"
+    },
+    {
+      "target": "人指２.L",
+      "target_end": "人指３.L",
+      "source": "mixamorig:LeftHandIndex2",
+      "source_end": "mixamorig:LeftHandIndex3",
+      "prior_palm": "手首.L"
+    },
+    {
+      "target": "人指３.L",
+      "target_end": "人指３先.L",
+      "source": "mixamorig:LeftHandIndex3",
+      "source_end": "mixamorig:LeftHandIndex4",
+      "prior_palm": "手首.L"
+    },
+    {
+      "target": "中指１.L",
+      "target_end": "中指２.L",
+      "source": "mixamorig:LeftHandMiddle1",
+      "source_end": "mixamorig:LeftHandMiddle2",
+      "prior_palm": "手首.L"
+    },
+    {
+      "target": "中指２.L",
+      "target_end": "中指３.L",
+      "source": "mixamorig:LeftHandMiddle2",
+      "source_end": "mixamorig:LeftHandMiddle3",
+      "prior_palm": "手首.L"
+    },
+    {
+      "target": "中指３.L",
+      "target_end": "中指３先.L",
+      "source": "mixamorig:LeftHandMiddle3",
+      "source_end": "mixamorig:LeftHandMiddle4",
+      "prior_palm": "手首.L"
+    },
+    {
+      "target": "薬指１.L",
+      "target_end": "薬指２.L",
+      "source": "mixamorig:LeftHandRing1",
+      "source_end": "mixamorig:LeftHandRing2",
+      "prior_palm": "手首.L"
+    },
+    {
+      "target": "薬指２.L",
+      "target_end": "薬指３.L",
+      "source": "mixamorig:LeftHandRing2",
+      "source_end": "mixamorig:LeftHandRing3",
+      "prior_palm": "手首.L"
+    },
+    {
+      "target": "薬指３.L",
+      "target_end": "薬指３先.L",
+      "source": "mixamorig:LeftHandRing3",
+      "source_end": "mixamorig:LeftHandRing4",
+      "prior_palm": "手首.L"
+    },
+    {
+      "target": "小指１.L",
+      "target_end": "小指２.L",
+      "source": "mixamorig:LeftHandPinky1",
+      "source_end": "mixamorig:LeftHandPinky2",
+      "prior_palm": "手首.L"
+    },
+    {
+      "target": "小指２.L",
+      "target_end": "小指３.L",
+      "source": "mixamorig:LeftHandPinky2",
+      "source_end": "mixamorig:LeftHandPinky3",
+      "prior_palm": "手首.L"
+    },
+    {
+      "target": "小指３.L",
+      "target_end": "小指３先.L",
+      "source": "mixamorig:LeftHandPinky3",
+      "source_end": "mixamorig:LeftHandPinky4",
+      "prior_palm": "手首.L"
+    },
+    {
+      "target": "肩.R",
+      "target_end": "腕.R",
+      "source": "mixamorig:RightShoulder",
+      "source_end": "mixamorig:RightArm"
+    },
+    {
+      "target": "腕.R",
+      "target_end": "ひじ.R",
+      "source": "mixamorig:RightArm",
+      "source_end": "mixamorig:RightForeArm"
+    },
+    {
+      "target": "ひじ.R",
+      "target_end": "手首.R",
+      "source": "mixamorig:RightForeArm",
+      "source_end": "mixamorig:RightHand"
+    },
+    {
+      "target": "足D.R",
+      "target_end": "ひざD.R",
+      "source": "mixamorig:RightUpLeg",
+      "source_end": "mixamorig:RightLeg"
+    },
+    {
+      "target": "ひざD.R",
+      "target_end": "足首D.R",
+      "source": "mixamorig:RightLeg",
+      "source_end": "mixamorig:RightFoot"
+    },
+    {
+      "target": "親指０.R",
+      "target_end": "親指１.R",
+      "source": "mixamorig:RightHandThumb1",
+      "source_end": "mixamorig:RightHandThumb2",
+      "prior_palm": "手首.R"
+    },
+    {
+      "target": "親指１.R",
+      "target_end": "親指２.R",
+      "source": "mixamorig:RightHandThumb2",
+      "source_end": "mixamorig:RightHandThumb3",
+      "prior_palm": "手首.R"
+    },
+    {
+      "target": "親指２.R",
+      "target_end": "親指２先.R",
+      "source": "mixamorig:RightHandThumb3",
+      "source_end": "mixamorig:RightHandThumb4",
+      "prior_palm": "手首.R"
+    },
+    {
+      "target": "人指１.R",
+      "target_end": "人指２.R",
+      "source": "mixamorig:RightHandIndex1",
+      "source_end": "mixamorig:RightHandIndex2",
+      "prior_palm": "手首.R"
+    },
+    {
+      "target": "人指２.R",
+      "target_end": "人指３.R",
+      "source": "mixamorig:RightHandIndex2",
+      "source_end": "mixamorig:RightHandIndex3",
+      "prior_palm": "手首.R"
+    },
+    {
+      "target": "人指３.R",
+      "target_end": "人指３先.R",
+      "source": "mixamorig:RightHandIndex3",
+      "source_end": "mixamorig:RightHandIndex4",
+      "prior_palm": "手首.R"
+    },
+    {
+      "target": "中指１.R",
+      "target_end": "中指２.R",
+      "source": "mixamorig:RightHandMiddle1",
+      "source_end": "mixamorig:RightHandMiddle2",
+      "prior_palm": "手首.R"
+    },
+    {
+      "target": "中指２.R",
+      "target_end": "中指３.R",
+      "source": "mixamorig:RightHandMiddle2",
+      "source_end": "mixamorig:RightHandMiddle3",
+      "prior_palm": "手首.R"
+    },
+    {
+      "target": "中指３.R",
+      "target_end": "中指３先.R",
+      "source": "mixamorig:RightHandMiddle3",
+      "source_end": "mixamorig:RightHandMiddle4",
+      "prior_palm": "手首.R"
+    },
+    {
+      "target": "薬指１.R",
+      "target_end": "薬指２.R",
+      "source": "mixamorig:RightHandRing1",
+      "source_end": "mixamorig:RightHandRing2",
+      "prior_palm": "手首.R"
+    },
+    {
+      "target": "薬指２.R",
+      "target_end": "薬指３.R",
+      "source": "mixamorig:RightHandRing2",
+      "source_end": "mixamorig:RightHandRing3",
+      "prior_palm": "手首.R"
+    },
+    {
+      "target": "薬指３.R",
+      "target_end": "薬指３先.R",
+      "source": "mixamorig:RightHandRing3",
+      "source_end": "mixamorig:RightHandRing4",
+      "prior_palm": "手首.R"
+    },
+    {
+      "target": "小指１.R",
+      "target_end": "小指２.R",
+      "source": "mixamorig:RightHandPinky1",
+      "source_end": "mixamorig:RightHandPinky2",
+      "prior_palm": "手首.R"
+    },
+    {
+      "target": "小指２.R",
+      "target_end": "小指３.R",
+      "source": "mixamorig:RightHandPinky2",
+      "source_end": "mixamorig:RightHandPinky3",
+      "prior_palm": "手首.R"
+    },
+    {
+      "target": "小指３.R",
+      "target_end": "小指３先.R",
+      "source": "mixamorig:RightHandPinky3",
+      "source_end": "mixamorig:RightHandPinky4",
+      "prior_palm": "手首.R"
+    }
+  ],
+  "palms": [
+    {
+      "target": [
+        "手首.L",
+        "中指１.L",
+        "人指１.L",
+        "小指１.L"
+      ],
+      "source": [
+        "mixamorig:LeftHand",
+        "mixamorig:LeftHandMiddle1",
+        "mixamorig:LeftHandIndex1",
+        "mixamorig:LeftHandPinky1"
+      ]
+    },
+    {
+      "target": [
+        "手首.R",
+        "中指１.R",
+        "人指１.R",
+        "小指１.R"
+      ],
+      "source": [
+        "mixamorig:RightHand",
+        "mixamorig:RightHandMiddle1",
+        "mixamorig:RightHandIndex1",
+        "mixamorig:RightHandPinky1"
+      ]
+    }
+  ],
+  "inherit_calibration": {},
+  "leg_chains": [
+    {
+      "target": [
+        "足D.L",
+        "ひざD.L",
+        "足首D.L"
+      ],
+      "source": [
+        "mixamorig:LeftUpLeg",
+        "mixamorig:LeftLeg",
+        "mixamorig:LeftFoot"
+      ]
+    },
+    {
+      "target": [
+        "足D.R",
+        "ひざD.R",
+        "足首D.R"
+      ],
+      "source": [
+        "mixamorig:RightUpLeg",
+        "mixamorig:RightLeg",
+        "mixamorig:RightFoot"
+      ]
+    }
+  ],
+  "alignment_quaternion": [
+    1,
+    0,
+    0,
+    0
+  ],
+  "root_motion": "full",
+  "frame_range": [
+    1,
+    1567
+  ],
+  "backup_path": "<workspace>/blender-idle-retarget-2026-10-08/Augusta-before-idle-retarget.blend"
+}

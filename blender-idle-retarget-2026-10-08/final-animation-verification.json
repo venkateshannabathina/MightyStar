@@ -1,0 +1,30 @@
+{
+  "source": "Idle_Source",
+  "target": "Augusta_Idle_Rig",
+  "source_action": "Idle \u2022 Source (static object)",
+  "frames": [
+    1,
+    1567
+  ],
+  "mapped_bones": 52,
+  "bound_meshes": [
+    "Augusta_Idle_Mesh"
+  ],
+  "root_motion": "full",
+  "root_motion_scale": 0.9756615535674764,
+  "warnings": [],
+  "mode": "verify",
+  "status": "passed",
+  "action": "Augusta \u2022 Idle (retargeted)",
+  "frames_checked": 1567,
+  "keyed_channels": 211,
+  "max_rotation_error_degrees": 0.068528,
+  "max_position_error_world": 7e-07,
+  "max_root_error_world": 1e-07,
+  "source_max_rotation_from_start_degrees": 180.0,
+  "target_max_rotation_from_start_degrees": 180.0,
+  "target_max_root_displacement_world": 0.43926,
+  "end_to_start_rotation_degrees": 178.8675,
+  "end_to_start_root_distance_world": 0.4367186,
+  "visual_review_required": true
+}

@@ -1,0 +1,20 @@
+'use strict';
+const assert=require('node:assert/strict');
+const {providerSettings}=require('../../Backend/providers/ProviderSettings.cjs');
+const {replyRequest,replyText}=require('../../Backend/providers/ReplyRequest.cjs');
+const {streamGroq}=require('../../Backend/providers/GroqLLM.cjs');
+(async()=>{
+ const config=providerSettings({MIGHTY_AI_PROVIDER:'anthropic',ANTHROPIC_API_KEY:'test-claude',GROQ_API_KEY:'test-groq'});
+ assert.equal(config.provider,'anthropic');assert.equal(config.transcriptionProvider,'groq');assert.equal(config.transcriptionKey,'test-groq');
+ const fallback=providerSettings({MIGHTY_AI_PROVIDER:'anthropic',OPENAI_API_KEY:'test-openai'});
+ assert.equal(fallback.transcriptionKey,'test-openai');assert.equal(fallback.transcriptionModel,'gpt-4o-mini-transcribe');
+ const messages=[{role:'system',content:'Character instructions'},{role:'user',content:'Hello'}];
+ const request=replyRequest({...config,messages},{json:true});const body=JSON.parse(request.options.body);
+ assert.equal(request.url,'https://api.anthropic.com/v1/messages');assert.equal(body.system,'Character instructions');assert.deepEqual(body.messages,[messages[1]]);assert.equal(request.options.headers['x-api-key'],'test-claude');assert.equal(body.max_tokens,1200);assert.equal(body.response_format,undefined);
+ assert.equal(replyText({content:[{type:'thinking',thinking:'internal'},{type:'text',text:'Hello'}]},'anthropic'),'Hello');
+ const frames='event: content_block_delta\ndata: {"type":"content_block_delta","delta":{"type":"text_delta","text":"Hello"}}\n\nevent: message_stop\ndata: {"type":"message_stop"}\n\n';
+ const tokens=[];for await(const token of streamGroq({...config,messages,fetchImpl:async(url,options)=>{assert.equal(url,request.url);assert.equal(JSON.parse(options.body).stream,true);return {ok:true,body:new ReadableStream({start(c){const bytes=new TextEncoder().encode(frames);for(let i=0;i<bytes.length;i+=7)c.enqueue(bytes.slice(i,i+7));c.close();}})};}}))tokens.push(token);
+ assert.deepEqual(tokens,['Hello']);
+ await assert.rejects(async()=>{for await(const token of streamGroq({...config,messages,fetchImpl:async()=>({ok:true,body:new ReadableStream({start(c){c.enqueue(new TextEncoder().encode('data: {"type":"error","error":{"type":"overloaded_error"}}\n\n'));c.close();}})})})){}},/interrupted/);
+ console.log('Claude request, system context, fragmented stream, provider errors and transcription fallback passed');
+})().catch(e=>{console.error(e);process.exitCode=1});

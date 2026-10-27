@@ -1,0 +1,11 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict');
+const source=fs.readFileSync(path.resolve(__dirname,'../../Sources/desktop.js'),'utf8');
+const start=source.indexOf('const faceSpeech={}'),end=source.indexOf('frame.addEventListener',start);assert(start>=0&&end>start);
+const messages=[],c=vm.createContext({config:{character:{id:'one'},origin:'http://local'},frame:{contentWindow:{postMessage:(value,origin)=>messages.push({value,origin})}},updateHint(){},renderMenu(){},phase:'idle'});c.window=c;
+vm.runInContext(source.slice(start,end),c);
+for(const kind of ['phase','performance','playback'])c.setDesktopSpeech(kind,{characterId:'one',type:'thinking',utteranceId:'speech',state:'speaking'});
+assert.equal(messages.length,3);assert.deepEqual(messages.map(v=>v.value.type),['mighty-companion-phase','mighty-companion-performance','mighty-companion-playback']);
+c.setDesktopSpeech('playback',{characterId:'different',state:'speaking'});assert.equal(messages.length,3,'cross-character speech is rejected');
+c.setDesktopSpeech('output',{volume:.3});assert.equal(messages.length,3,'output settings are not face motion');
+console.log('PASS: desktop forwards phase, performance and playback to the renderer while rejecting cross-character and non-face events');

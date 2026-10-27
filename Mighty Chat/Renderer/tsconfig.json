@@ -1,0 +1,18 @@
+{
+  "extends": "../../model-viewer-clean/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "../../model-viewer-clean/node_modules/*"
+      ]
+    },
+    "module": "esnext"
+  },
+  "include": [
+    "*.ts"
+  ],
+  "exclude": [
+    "../Sources"
+  ]
+}

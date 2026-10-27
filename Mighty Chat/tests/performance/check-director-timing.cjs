@@ -1,0 +1,10 @@
+'use strict';
+const assert=require('node:assert/strict');const{TurnTiming}=require('../../Backend/performance/TurnTiming.cjs');
+const identity={sessionId:'fixture',characterId:'c',generation:1,turnId:'one'},timing=new TurnTiming({enabled:true,now:()=>1000});
+assert(timing.importSample({identity,source:'browser',timestamps:{input_begin:900,input_commit:930},offsetMs:0,uncertaintyMs:1}));
+assert(!timing.importSample({identity,source:'browser',timestamps:{llm_first_token:950},offsetMs:0,uncertaintyMs:1}));
+assert(timing.importSample({identity,source:'renderer',timestamps:{face_listen_onset:920,face_think_onset:955},offsetMs:0,uncertaintyMs:1}));
+assert(timing.importSample({identity,source:'native',timestamps:{filler_playback_start:960,playback_start:990},offsetMs:0,uncertaintyMs:1}));
+assert(!timing.importSample({identity,source:'browser',timestamps:{filler_playback_start:960},offsetMs:0,uncertaintyMs:1}));
+const row=JSON.parse(timing.jsonLines());assert.equal(row.timestamps.face_listen_onset-row.timestamps.input_begin,20);assert.equal(row.timestamps.face_think_onset-row.timestamps.input_commit,25);assert(!('content'in row));
+console.log('Director timing: distinct browser input clock, renderer onset allowlist, content-free correlation and unauthorized mark rejection passed.');

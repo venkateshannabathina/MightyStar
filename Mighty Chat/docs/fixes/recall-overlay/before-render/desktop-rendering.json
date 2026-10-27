@@ -1,0 +1,436 @@
+[
+  {
+    "maximumCanvasVisiblePixelsOf26624" : 5586,
+    "maximumHitMaskSetBits" : 49437,
+    "messages" : [
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-load"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-control"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-control"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : true,
+        "path" : "\/Users\/papaya\/Documents\/ChatGPT\/Mighty%20Star\/Mighty%20Chat.app\/Contents\/Resources\/desktop.html",
+        "state" : "booted",
+        "type" : "mighty-companion-state"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-load"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-control"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-control"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : true,
+        "path" : "\/Users\/papaya\/Documents\/ChatGPT\/Mighty%20Star\/Mighty%20Chat.app\/Contents\/Resources\/desktop.html",
+        "state" : "",
+        "type" : "mighty-companion-retry-region"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : true,
+        "path" : "\/Users\/papaya\/Documents\/ChatGPT\/Mighty%20Star\/Mighty%20Chat.app\/Contents\/Resources\/desktop.html",
+        "state" : "loading",
+        "type" : "mighty-companion-state"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : true,
+        "path" : "\/Users\/papaya\/Documents\/ChatGPT\/Mighty%20Star\/Mighty%20Chat.app\/Contents\/Resources\/desktop.html",
+        "state" : "",
+        "type" : "mighty-companion-retry-region"
+      },
+      {
+        "clientHeight" : 650,
+        "clientWidth" : 360,
+        "error" : "",
+        "height" : 1300,
+        "hidden" : false,
+        "kind" : "canvas",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "status" : "Opening character…",
+        "visibility" : "visible",
+        "visiblePixels" : 0,
+        "width" : 720
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : true,
+        "path" : "\/Users\/papaya\/Documents\/ChatGPT\/Mighty%20Star\/Mighty%20Chat.app\/Contents\/Resources\/desktop.html",
+        "state" : "",
+        "type" : "mighty-companion-face"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : true,
+        "path" : "\/Users\/papaya\/Documents\/ChatGPT\/Mighty%20Star\/Mighty%20Chat.app\/Contents\/Resources\/desktop.html",
+        "state" : "",
+        "type" : "mighty-companion-retry-region"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : true,
+        "path" : "\/Users\/papaya\/Documents\/ChatGPT\/Mighty%20Star\/Mighty%20Chat.app\/Contents\/Resources\/desktop.html",
+        "state" : "ready",
+        "type" : "mighty-companion-state"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-load"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-control"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-control"
+      },
+      {
+        "clientHeight" : 650,
+        "clientWidth" : 360,
+        "error" : "",
+        "height" : 1300,
+        "hidden" : true,
+        "kind" : "canvas",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "status" : "",
+        "visibility" : "visible",
+        "visiblePixels" : 0,
+        "width" : 720
+      },
+      {
+        "clientHeight" : 650,
+        "clientWidth" : 360,
+        "error" : "",
+        "height" : 1300,
+        "hidden" : true,
+        "kind" : "canvas",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "status" : "",
+        "visibility" : "visible",
+        "visiblePixels" : 5586,
+        "width" : 720
+      },
+      {
+        "clientHeight" : 650,
+        "clientWidth" : 360,
+        "error" : "",
+        "height" : 1300,
+        "hidden" : true,
+        "kind" : "canvas",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "status" : "",
+        "visibility" : "visible",
+        "visiblePixels" : 5580,
+        "width" : 720
+      },
+      {
+        "clientHeight" : 650,
+        "clientWidth" : 360,
+        "error" : "",
+        "height" : 1300,
+        "hidden" : true,
+        "kind" : "canvas",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "status" : "",
+        "visibility" : "visible",
+        "visiblePixels" : 5577,
+        "width" : 720
+      },
+      {
+        "clientHeight" : 650,
+        "clientWidth" : 360,
+        "error" : "",
+        "height" : 1300,
+        "hidden" : true,
+        "kind" : "canvas",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "status" : "",
+        "visibility" : "visible",
+        "visiblePixels" : 5572,
+        "width" : 720
+      }
+    ],
+    "nativeHitMaskMessages" : 44,
+    "parent" : "{\"href\":\"file:\/\/\/Users\/papaya\/Documents\/ChatGPT\/Mighty%20Star\/Mighty%20Chat.app\/Contents\/Resources\/desktop.html\",\"viewer\":\"http:\/\/127.0.0.1:58611\/Companion\/index.html\",\"body\":\"overlay\",\"width\":360,\"height\":650}",
+    "phase" : "nested-overlay",
+    "rendererReady" : true,
+    "snapshotError" : "",
+    "snapshotSampleOpaque" : 50619
+  },
+  {
+    "maximumCanvasVisiblePixelsOf26624" : 14582,
+    "maximumHitMaskSetBits" : 72542,
+    "messages" : [
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-load"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-control"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-control"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : true,
+        "path" : "\/Users\/papaya\/Documents\/ChatGPT\/Mighty%20Star\/Mighty%20Chat.app\/Contents\/Resources\/desktop.html",
+        "state" : "booted",
+        "type" : "mighty-companion-state"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-load"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-control"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-control"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : true,
+        "path" : "\/Users\/papaya\/Documents\/ChatGPT\/Mighty%20Star\/Mighty%20Chat.app\/Contents\/Resources\/desktop.html",
+        "state" : "",
+        "type" : "mighty-companion-retry-region"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : true,
+        "path" : "\/Users\/papaya\/Documents\/ChatGPT\/Mighty%20Star\/Mighty%20Chat.app\/Contents\/Resources\/desktop.html",
+        "state" : "loading",
+        "type" : "mighty-companion-state"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : true,
+        "path" : "\/Users\/papaya\/Documents\/ChatGPT\/Mighty%20Star\/Mighty%20Chat.app\/Contents\/Resources\/desktop.html",
+        "state" : "",
+        "type" : "mighty-companion-retry-region"
+      },
+      {
+        "clientHeight" : 440,
+        "clientWidth" : 300,
+        "error" : "",
+        "height" : 880,
+        "hidden" : false,
+        "kind" : "canvas",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "status" : "Opening character…",
+        "visibility" : "visible",
+        "visiblePixels" : 0,
+        "width" : 600
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : true,
+        "path" : "\/Users\/papaya\/Documents\/ChatGPT\/Mighty%20Star\/Mighty%20Chat.app\/Contents\/Resources\/desktop.html",
+        "state" : "",
+        "type" : "mighty-companion-face"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : true,
+        "path" : "\/Users\/papaya\/Documents\/ChatGPT\/Mighty%20Star\/Mighty%20Chat.app\/Contents\/Resources\/desktop.html",
+        "state" : "",
+        "type" : "mighty-companion-retry-region"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : true,
+        "path" : "\/Users\/papaya\/Documents\/ChatGPT\/Mighty%20Star\/Mighty%20Chat.app\/Contents\/Resources\/desktop.html",
+        "state" : "ready",
+        "type" : "mighty-companion-state"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-load"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-control"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-control"
+      },
+      {
+        "clientHeight" : 440,
+        "clientWidth" : 300,
+        "error" : "",
+        "height" : 880,
+        "hidden" : true,
+        "kind" : "canvas",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "status" : "",
+        "visibility" : "visible",
+        "visiblePixels" : 14582,
+        "width" : 600
+      },
+      {
+        "clientHeight" : 440,
+        "clientWidth" : 300,
+        "error" : "",
+        "height" : 880,
+        "hidden" : true,
+        "kind" : "canvas",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "status" : "",
+        "visibility" : "visible",
+        "visiblePixels" : 14560,
+        "width" : 600
+      },
+      {
+        "clientHeight" : 440,
+        "clientWidth" : 300,
+        "error" : "",
+        "height" : 880,
+        "hidden" : true,
+        "kind" : "canvas",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "status" : "",
+        "visibility" : "visible",
+        "visiblePixels" : 14549,
+        "width" : 600
+      },
+      {
+        "clientHeight" : 440,
+        "clientWidth" : 300,
+        "error" : "",
+        "height" : 880,
+        "hidden" : true,
+        "kind" : "canvas",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "status" : "",
+        "visibility" : "visible",
+        "visiblePixels" : 14555,
+        "width" : 600
+      }
+    ],
+    "nativeHitMaskMessages" : 47,
+    "parent" : "{\"href\":\"file:\/\/\/Users\/papaya\/Documents\/ChatGPT\/Mighty%20Star\/Mighty%20Chat.app\/Contents\/Resources\/desktop.html\",\"viewer\":\"http:\/\/127.0.0.1:58611\/Companion\/index.html\",\"body\":\"portrait\",\"width\":300,\"height\":440}",
+    "phase" : "nested-portrait",
+    "rendererReady" : true,
+    "snapshotError" : "",
+    "snapshotSampleOpaque" : 190080
+  }
+]

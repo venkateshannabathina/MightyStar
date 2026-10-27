@@ -1,0 +1,54 @@
+{
+  "text": "The audio engine was restarting between the two clips.",
+  "durationSeconds": 3.312,
+  "lastWordEndSeconds": 2.9625,
+  "quality": "word-boundaries",
+  "words": [
+    {
+      "start": 0.0625,
+      "end": 0.175,
+      "text": "The"
+    },
+    {
+      "start": 0.1875,
+      "end": 0.575,
+      "text": "audio"
+    },
+    {
+      "start": 0.5875,
+      "end": 1,
+      "text": "engine"
+    },
+    {
+      "start": 1.0125,
+      "end": 1.2,
+      "text": "was"
+    },
+    {
+      "start": 1.2125,
+      "end": 1.725,
+      "text": "restarting"
+    },
+    {
+      "start": 1.7375,
+      "end": 2.1,
+      "text": "between"
+    },
+    {
+      "start": 2.1125,
+      "end": 2.2,
+      "text": "the"
+    },
+    {
+      "start": 2.2,
+      "end": 2.4375,
+      "text": "two"
+    },
+    {
+      "start": 2.45,
+      "end": 2.9625,
+      "text": "clips"
+    }
+  ],
+  "mouthCues": []
+}

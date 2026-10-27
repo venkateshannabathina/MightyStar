@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Mighty Chat call control envelope v2",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["version", "type", "eventId", "sequence", "identity"],
+  "properties": {
+    "version": { "const": 2 },
+    "type": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "eventId": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "sequence": { "type": "integer", "minimum": 0 },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sessionId", "characterId", "generation", "turnId"],
+      "properties": {
+        "sessionId": { "type": "string", "minLength": 1, "maxLength": 100 },
+        "characterId": { "type": "string", "minLength": 1, "maxLength": 100 },
+        "generation": { "type": "integer", "minimum": 0 },
+        "turnId": { "type": "string", "minLength": 1, "maxLength": 100 }
+      }
+    }
+  }
+}

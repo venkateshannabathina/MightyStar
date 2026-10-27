@@ -1,0 +1,20 @@
+'use strict';
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict'),path=require('node:path');
+const source=fs.readFileSync(path.resolve(__dirname,'../../Sources/companion-ui.js'),'utf8');
+const start=source.indexOf('const memoryRegistered='),end=source.indexOf('let companionOutput=',start);
+const calls=[],context=vm.createContext({window:{},TextEncoder,globalThis:{crypto:{randomUUID:()=> 'stable-client-turn'}},backendRequest:async(route,options)=>{calls.push({route,body:JSON.parse(options.body)});return route.includes('characters')?{card:'A compact card.',sourceHash:'hash'}:{reply:'Hi'};}});
+vm.runInContext(source.slice(start,end),context);
+(async()=>{
+ context.window.mightyMemoryV1=true;context.window.mightyMemoryReady=Promise.resolve();
+ context.character={id:'c',name:'Mira',profile:{voice:'en-US-AvaMultilingualNeural'}};
+ context.rows=Array.from({length:2000},(_,i)=>({role:i%2?'assistant':'user',text:'Old history '+i}));context.rows.push({role:'user',text:'Hello there'});
+ await vm.runInContext('requestCharacterReply(character,rows)',context);
+ const request=calls.find(x=>x.route==='/api/chat');assert.deepEqual(Object.keys(request.body).sort(),['characterId','clientTurnId','userMessage']);
+ assert(Buffer.byteLength(JSON.stringify(request.body))<8192);assert.equal(request.body.userMessage,'Hello there');
+ await vm.runInContext('requestCharacterReply(character,rows)',context);assert.equal(calls.filter(x=>x.route.includes('characters')).length,1);
+ assert.equal(calls.filter(x=>x.route==='/api/chat')[1].body.clientTurnId,request.body.clientTurnId);
+ context.rows.push({role:'user',text:'界'.repeat(4000)});await assert.rejects(vm.runInContext('requestCharacterReply(character,rows)',context),/shorten/);
+ context.window.mightyMemoryV1=false;context.rows=[{role:'user',text:'Legacy'}];await vm.runInContext('requestCharacterReply(character,rows)',context);
+ assert.equal(calls.at(-1).body.messages[0].content,'Legacy');
+ console.log('Memory UI: 2,000 display rows remain compact, stable retry ID, cached registration, UTF-8 cap and flag-off rollback passed');
+})().catch(error=>{console.error(error);process.exitCode=1});

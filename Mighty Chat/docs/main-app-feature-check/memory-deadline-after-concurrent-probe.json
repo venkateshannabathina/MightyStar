@@ -1,0 +1,8 @@
+{
+  "scope": "Isolated database copy, fresh memory service with repaired registration warmup; not a live UI result.",
+  "registrationMs": 400.75933299999997,
+  "firstPrepareMs": 142.3979159999999,
+  "timedOut": true,
+  "hasBothFacts": false,
+  "hasRetrievedMemories": false
+}

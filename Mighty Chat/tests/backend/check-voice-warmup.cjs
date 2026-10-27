@@ -1,0 +1,13 @@
+'use strict';
+const assert=require('node:assert/strict');
+const {ConversationSession}=require('../../Backend/call/ConversationSession.cjs');
+const {EdgeTTS}=require('../../Backend/providers/EdgeTTS.cjs');
+const commands=[];
+const tts=new EdgeTTS({audioRoot:'/tmp/unused-mighty-warmup'});
+tts.start=()=>{tts.child={stdin:{writable:true,write:line=>commands.push(JSON.parse(line))}}};
+tts.warmup();assert.deepEqual(commands,[{type:'warmup',jobId:'warmup'}]);assert.equal(tts.pending.size,0,'warming never creates speech or a pending audio job');
+let options;
+const call=new ConversationSession({character:{profile:{ttsProvider:'edge',voice:'en-US-AvaMultilingualNeural',voiceSpeed:1.2,voicePitch:2}},send(){},tts:{warmup:speech=>options=speech}});
+call.warmSpeech();assert.equal(options.voice,'en-US-AvaMultilingualNeural');assert.equal(options.rate,'+20%');assert.equal(options.pitch,'+2Hz');
+new ConversationSession({character:{},send(){},tts:{warmup(){throw Error('fixture')}}}).warmSpeech();
+console.log('Voice warmup: prepares transport without audio jobs, preserves voice/rate/pitch, and cannot fail a user turn.');

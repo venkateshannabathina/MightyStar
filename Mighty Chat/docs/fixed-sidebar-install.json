@@ -1,0 +1,21 @@
+{
+  "updatedApps": [
+    "<workspace>/Mighty Chat.app",
+    "<workspace>/Mighty Chat/build/Mighty Chat.app"
+  ],
+  "backup": "<workspace>/backups/Mighty Chat-before-fixed-sidebar-20261021T150106Z.app",
+  "files": [
+    "index.html",
+    "sidebar-rail.js",
+    "sidebar-rail.css",
+    "mightystar-ui.js"
+  ],
+  "permanentCompactSidebar": true,
+  "removedControls": [
+    "sidebar expansion",
+    "sidebar search",
+    "create character"
+  ],
+  "signaturesVerified": true,
+  "credentialHelpersPreserved": true
+}

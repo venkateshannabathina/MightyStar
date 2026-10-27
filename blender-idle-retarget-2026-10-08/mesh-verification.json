@@ -1,0 +1,510 @@
+{
+  "status": "passed",
+  "target_rig": "Augusta_Idle_Rig",
+  "target_mesh": "Augusta_Idle_Mesh",
+  "reference_frame": 2,
+  "sample_frames": [
+    2,
+    51,
+    400,
+    800,
+    1200,
+    1500,
+    1567
+  ],
+  "frame_restored": true,
+  "action": "Augusta • Idle (retargeted)",
+  "action_frame_range": [
+    1.0,
+    1567.0
+  ],
+  "assigned_slot": "OBAugusta_Idle_Rig",
+  "curve_count": 211,
+  "key_count": 330637,
+  "keys_per_curve_min": 1567,
+  "keys_per_curve_max": 1567,
+  "armature_bindings": [
+    {
+      "modifier": "mmd_armature",
+      "rig": "Augusta_Idle_Rig",
+      "viewport_enabled": true,
+      "render_enabled": true
+    }
+  ],
+  "target_constraints_count": 0,
+  "target_driver_count": 0,
+  "active_constraints_to_source": [],
+  "drivers_to_source": [],
+  "reference_floor_z": 0.000105,
+  "reference_floor_note": "Frame-2 minimum across vertices weighted >=0.25 to either ankle/toe group; not an independently measured scene floor.",
+  "max_shape_motion_after_removing_root_translation": 0.4049137,
+  "samples": [
+    {
+      "frame": 2,
+      "vertex_count": 78189,
+      "all_vertices_finite": true,
+      "bbox_min": [
+        -0.4728322,
+        -0.1756784,
+        0.000105
+      ],
+      "bbox_max": [
+        0.2447092,
+        0.3864812,
+        1.7450919
+      ],
+      "root_world": [
+        -0.1273376,
+        -0.0083585,
+        0.9764916
+      ],
+      "deformation_vs_reference": {
+        "max": 0.0,
+        "rms": 0.0
+      },
+      "deformation_after_removing_root_translation": {
+        "max": 0.0,
+        "rms": 0.0
+      },
+      "feet": {
+        "L": {
+          "vertices": 3273,
+          "min_z": 0.000767,
+          "p01_z": 0.0037493,
+          "p10_z": 0.0167296,
+          "max_z": 0.1400046,
+          "min_z_change_from_reference_floor": 0.000662,
+          "vertices_within_0_02_of_reference_floor": 576,
+          "centroid": [
+            -0.0431546,
+            -0.0805283,
+            0.0571978
+          ],
+          "deformation_vs_reference": {
+            "max": 0.0,
+            "rms": 0.0
+          }
+        },
+        "R": {
+          "vertices": 3273,
+          "min_z": 0.000105,
+          "p01_z": 0.002172,
+          "p10_z": 0.0152129,
+          "max_z": 0.138938,
+          "min_z_change_from_reference_floor": 0.0,
+          "vertices_within_0_02_of_reference_floor": 682,
+          "centroid": [
+            -0.2632238,
+            0.0329915,
+            0.0562008
+          ],
+          "deformation_vs_reference": {
+            "max": 0.0,
+            "rms": 0.0
+          }
+        }
+      }
+    },
+    {
+      "frame": 51,
+      "vertex_count": 78189,
+      "all_vertices_finite": true,
+      "bbox_min": [
+        -0.4807565,
+        -0.1754256,
+        0.0004723
+      ],
+      "bbox_max": [
+        0.2365491,
+        0.4106013,
+        1.7484913
+      ],
+      "root_world": [
+        -0.1517094,
+        0.014481,
+        0.9781777
+      ],
+      "deformation_vs_reference": {
+        "max": 0.05276,
+        "rms": 0.0353488
+      },
+      "deformation_after_removing_root_translation": {
+        "max": 0.0364971,
+        "rms": 0.0166227
+      },
+      "feet": {
+        "L": {
+          "vertices": 3273,
+          "min_z": 0.0009033,
+          "p01_z": 0.0033644,
+          "p10_z": 0.0171368,
+          "max_z": 0.1416011,
+          "min_z_change_from_reference_floor": 0.0007983,
+          "vertices_within_0_02_of_reference_floor": 548,
+          "centroid": [
+            -0.0421471,
+            -0.082397,
+            0.0576693
+          ],
+          "deformation_vs_reference": {
+            "max": 0.0033313,
+            "rms": 0.0022705
+          }
+        },
+        "R": {
+          "vertices": 3273,
+          "min_z": 0.0004723,
+          "p01_z": 0.0024198,
+          "p10_z": 0.0152412,
+          "max_z": 0.1392655,
+          "min_z_change_from_reference_floor": 0.0003673,
+          "vertices_within_0_02_of_reference_floor": 672,
+          "centroid": [
+            -0.2622228,
+            0.0319524,
+            0.0562834
+          ],
+          "deformation_vs_reference": {
+            "max": 0.0030647,
+            "rms": 0.0015458
+          }
+        }
+      }
+    },
+    {
+      "frame": 400,
+      "vertex_count": 78189,
+      "all_vertices_finite": true,
+      "bbox_min": [
+        -0.4810498,
+        -0.174652,
+        0.0
+      ],
+      "bbox_max": [
+        0.2355788,
+        0.4074163,
+        1.7464807
+      ],
+      "root_world": [
+        -0.1470776,
+        0.0071931,
+        0.9779243
+      ],
+      "deformation_vs_reference": {
+        "max": 0.0420053,
+        "rms": 0.0270327
+      },
+      "deformation_after_removing_root_translation": {
+        "max": 0.0273046,
+        "rms": 0.0119218
+      },
+      "feet": {
+        "L": {
+          "vertices": 3273,
+          "min_z": 0.000409,
+          "p01_z": 0.002773,
+          "p10_z": 0.0165218,
+          "max_z": 0.1406522,
+          "min_z_change_from_reference_floor": 0.000304,
+          "vertices_within_0_02_of_reference_floor": 588,
+          "centroid": [
+            -0.0466226,
+            -0.0818448,
+            0.0571146
+          ],
+          "deformation_vs_reference": {
+            "max": 0.0062366,
+            "rms": 0.0041205
+          }
+        },
+        "R": {
+          "vertices": 3273,
+          "min_z": 0.0,
+          "p01_z": 0.0018175,
+          "p10_z": 0.014352,
+          "max_z": 0.1389934,
+          "min_z_change_from_reference_floor": -0.000105,
+          "vertices_within_0_02_of_reference_floor": 759,
+          "centroid": [
+            -0.268018,
+            0.0370675,
+            0.0556447
+          ],
+          "deformation_vs_reference": {
+            "max": 0.0119094,
+            "rms": 0.0072459
+          }
+        }
+      }
+    },
+    {
+      "frame": 800,
+      "vertex_count": 78189,
+      "all_vertices_finite": true,
+      "bbox_min": [
+        -0.4621667,
+        -0.1472402,
+        0.0007939
+      ],
+      "bbox_max": [
+        0.237923,
+        0.4408099,
+        1.7433334
+      ],
+      "root_world": [
+        -0.1466892,
+        0.0359231,
+        0.9773567
+      ],
+      "deformation_vs_reference": {
+        "max": 0.2027932,
+        "rms": 0.0809904
+      },
+      "deformation_after_removing_root_translation": {
+        "max": 0.1952261,
+        "rms": 0.0638548
+      },
+      "feet": {
+        "L": {
+          "vertices": 3273,
+          "min_z": 0.0025674,
+          "p01_z": 0.006712,
+          "p10_z": 0.0222331,
+          "max_z": 0.1406252,
+          "min_z_change_from_reference_floor": 0.0024624,
+          "vertices_within_0_02_of_reference_floor": 223,
+          "centroid": [
+            -0.0292622,
+            0.0643465,
+            0.060669
+          ],
+          "deformation_vs_reference": {
+            "max": 0.1982666,
+            "rms": 0.1532648
+          }
+        },
+        "R": {
+          "vertices": 3273,
+          "min_z": 0.0007939,
+          "p01_z": 0.0028452,
+          "p10_z": 0.0156409,
+          "max_z": 0.1414045,
+          "min_z_change_from_reference_floor": 0.0006889,
+          "vertices_within_0_02_of_reference_floor": 641,
+          "centroid": [
+            -0.2747825,
+            -0.0467634,
+            0.0568177
+          ],
+          "deformation_vs_reference": {
+            "max": 0.1068184,
+            "rms": 0.0866993
+          }
+        }
+      }
+    },
+    {
+      "frame": 1200,
+      "vertex_count": 78189,
+      "all_vertices_finite": true,
+      "bbox_min": [
+        -0.4675458,
+        -0.1439299,
+        0.0005148
+      ],
+      "bbox_max": [
+        0.2462963,
+        0.4318762,
+        1.7435541
+      ],
+      "root_world": [
+        -0.1384724,
+        0.0325163,
+        0.9769077
+      ],
+      "deformation_vs_reference": {
+        "max": 0.2084453,
+        "rms": 0.0781767
+      },
+      "deformation_after_removing_root_translation": {
+        "max": 0.2048944,
+        "rms": 0.0646076
+      },
+      "feet": {
+        "L": {
+          "vertices": 3273,
+          "min_z": 0.0020511,
+          "p01_z": 0.00635,
+          "p10_z": 0.0214509,
+          "max_z": 0.1400102,
+          "min_z_change_from_reference_floor": 0.001946,
+          "vertices_within_0_02_of_reference_floor": 252,
+          "centroid": [
+            -0.0314209,
+            0.0607245,
+            0.0600422
+          ],
+          "deformation_vs_reference": {
+            "max": 0.1889897,
+            "rms": 0.1486394
+          }
+        },
+        "R": {
+          "vertices": 3273,
+          "min_z": 0.0005148,
+          "p01_z": 0.002695,
+          "p10_z": 0.0160626,
+          "max_z": 0.1409883,
+          "min_z_change_from_reference_floor": 0.0004098,
+          "vertices_within_0_02_of_reference_floor": 615,
+          "centroid": [
+            -0.2722709,
+            -0.0463971,
+            0.0569697
+          ],
+          "deformation_vs_reference": {
+            "max": 0.1073094,
+            "rms": 0.0862383
+          }
+        }
+      }
+    },
+    {
+      "frame": 1500,
+      "vertex_count": 78189,
+      "all_vertices_finite": true,
+      "bbox_min": [
+        -0.4819502,
+        -0.1396775,
+        0.0011401
+      ],
+      "bbox_max": [
+        0.2347438,
+        0.4413114,
+        1.740443
+      ],
+      "root_world": [
+        -0.145717,
+        0.0420762,
+        0.9775771
+      ],
+      "deformation_vs_reference": {
+        "max": 0.2300823,
+        "rms": 0.0847519
+      },
+      "deformation_after_removing_root_translation": {
+        "max": 0.2182327,
+        "rms": 0.0673796
+      },
+      "feet": {
+        "L": {
+          "vertices": 3273,
+          "min_z": 0.0022872,
+          "p01_z": 0.0062165,
+          "p10_z": 0.0213198,
+          "max_z": 0.1407673,
+          "min_z_change_from_reference_floor": 0.0021822,
+          "vertices_within_0_02_of_reference_floor": 265,
+          "centroid": [
+            -0.0301492,
+            0.0597212,
+            0.060059
+          ],
+          "deformation_vs_reference": {
+            "max": 0.1879143,
+            "rms": 0.1476563
+          }
+        },
+        "R": {
+          "vertices": 3273,
+          "min_z": 0.0011401,
+          "p01_z": 0.0038827,
+          "p10_z": 0.01691,
+          "max_z": 0.1412131,
+          "min_z_change_from_reference_floor": 0.0010351,
+          "vertices_within_0_02_of_reference_floor": 555,
+          "centroid": [
+            -0.2699593,
+            -0.0468728,
+            0.0575271
+          ],
+          "deformation_vs_reference": {
+            "max": 0.1087153,
+            "rms": 0.0866805
+          }
+        }
+      }
+    },
+    {
+      "frame": 1567,
+      "vertex_count": 78189,
+      "all_vertices_finite": true,
+      "bbox_min": [
+        -0.5803152,
+        -0.6405627,
+        0.0003285
+      ],
+      "bbox_max": [
+        0.1172116,
+        0.1253635,
+        1.7005018
+      ],
+      "root_world": [
+        -0.2741036,
+        -0.2980617,
+        0.9706904
+      ],
+      "deformation_vs_reference": {
+        "max": 0.6627886,
+        "rms": 0.3608719
+      },
+      "deformation_after_removing_root_translation": {
+        "max": 0.4049137,
+        "rms": 0.1138708
+      },
+      "feet": {
+        "L": {
+          "vertices": 3273,
+          "min_z": 0.0003285,
+          "p01_z": 0.0076189,
+          "p10_z": 0.0191124,
+          "max_z": 0.144099,
+          "min_z_change_from_reference_floor": 0.0002234,
+          "vertices_within_0_02_of_reference_floor": 384,
+          "centroid": [
+            -0.0718625,
+            -0.2771867,
+            0.0612984
+          ],
+          "deformation_vs_reference": {
+            "max": 0.2436086,
+            "rms": 0.2022861
+          }
+        },
+        "R": {
+          "vertices": 3273,
+          "min_z": 0.0009006,
+          "p01_z": 0.0062877,
+          "p10_z": 0.0160035,
+          "max_z": 0.1424893,
+          "min_z_change_from_reference_floor": 0.0007956,
+          "vertices_within_0_02_of_reference_floor": 667,
+          "centroid": [
+            -0.271323,
+            -0.3809659,
+            0.059373
+          ],
+          "deformation_vs_reference": {
+            "max": 0.438335,
+            "rms": 0.4155023
+          }
+        }
+      }
+    }
+  ],
+  "notes": [
+    "Finite sampled evaluated vertices and nonzero deformation verified independently of retarget solver.",
+    "Foot heights are measurements, not proof of contact or absence of sliding.",
+    "Full action includes source T reference pose at frame 1 and later turn; no seamless-loop claim."
+  ]
+}

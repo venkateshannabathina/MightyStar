@@ -1,0 +1,22 @@
+{
+  "installedAt": "2026-10-20T17:49:59.242231",
+  "app": "<workspace>/Mighty Chat.app",
+  "backup": "<workspace>/backups/main-app-before-recall-overlay-20261020-174959/Mighty Chat.app",
+  "sha256": {
+    "MemoryService.cjs": "82086fe61c3b874bd7fff9ddd85a64b3abc899e88d7f8cb72d78b316c8991c87",
+    "MemoryStore.cjs": "892d484b230e47f61e7524849f34080bb364510b32d86121b022cdb66e643742",
+    "FactGrounding.cjs": "078042f2edbb7d978bfb4b12ff42da53bcf2f8ea88fe3f2747895518c88abc97",
+    "Contents/MacOS/MightyChat": "93762b2cd6c744a558d85338bcbe073412493c1cb1a577a296794fc3f55f0e88",
+    "Contents/Resources/Companion/companion.js": "27dd0f2c59ffc572411bbd083dc494e0fc901337b229e52bb2d6f2876c2b9dec"
+  },
+  "flags": {
+    "MIGHTY_MEMORY_V1": "1",
+    "MIGHTY_STREAM_CHAT": "1",
+    "MIGHTY_EXPR_V2": "1",
+    "MIGHTY_ENERGY_JAW": "1",
+    "MIGHTY_GESTURES_V2": "1",
+    "MIGHTY_FACE_LAB": "0",
+    "MIGHTY_DEBUG_PERF": "0"
+  },
+  "signatureVerified": true
+}

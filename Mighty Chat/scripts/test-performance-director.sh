@@ -1,0 +1,15 @@
+#!/bin/bash
+set -euo pipefail
+app_root="$(cd "$(dirname "$0")/.." && pwd)"
+bash "$app_root/scripts/test-expressive-face.sh"
+node "$app_root/tests/face/check-performance-director.cjs"
+node "$app_root/tests/backend/check-face-cues.cjs"
+node "$app_root/tests/performance/check-director-timing.cjs"
+node "$app_root/tests/ui/check-director-bridge.cjs"
+node "$app_root/tests/backend/check-turn-timing.cjs"
+node "$app_root/tests/backend/check-conversation.cjs"
+node "$app_root/tests/backend/check-phrase-scheduler.cjs"
+node "$app_root/tests/ui/check-stream-chat-ui.cjs"
+node "$app_root/tests/ui/check-stream-submit.cjs"
+node "$app_root/tests/ui/check-memory-ui.cjs"
+node "$app_root/tests/ui/check-idle-bridge-vm.cjs"

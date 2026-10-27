@@ -1,0 +1,33 @@
+<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;width:100%;height:100%;background:#2c3440}canvas{width:100%;height:100%;display:block}</style>
+<script type="importmap">{"imports":{"@babylonjs/core/":"/model-viewer-clean/node_modules/@babylonjs/core/","@babylonjs/loaders/":"/model-viewer-clean/node_modules/@babylonjs/loaders/"}}</script>
+</head><body><canvas id="canvas"></canvas><script type="module">
+import {Engine} from '@babylonjs/core/Engines/engine.js';
+import {Scene} from '@babylonjs/core/scene.js';
+import {SceneLoader} from '@babylonjs/core/Loading/sceneLoader.js';
+import {ArcRotateCamera} from '@babylonjs/core/Cameras/arcRotateCamera.js';
+import {HemisphericLight} from '@babylonjs/core/Lights/hemisphericLight.js';
+import {DirectionalLight} from '@babylonjs/core/Lights/directionalLight.js';
+import {Vector3} from '@babylonjs/core/Maths/math.vector.js';
+import {Color4,Color3} from '@babylonjs/core/Maths/math.color.js';
+import {TransformNode} from '@babylonjs/core/Meshes/transformNode.js';
+import '@babylonjs/loaders/glTF/index.js';
+
+const engine=new Engine(document.querySelector('canvas'),true,{preserveDrawingBuffer:true,stencil:true});
+const scene=new Scene(engine);scene.clearColor=new Color4(.14,.17,.22,1);
+scene.useRightHandedSystem=false;
+const camera=new ArcRotateCamera('cam',-Math.PI/2,Math.PI/2.07,2.7,new Vector3(0,.93,0),scene);
+camera.minZ=.001;camera.attachControl(document.querySelector('canvas'),true);
+const hemi=new HemisphericLight('hemi',new Vector3(0,1,-.7),scene);hemi.intensity=1.0;hemi.groundColor=new Color3(.20,.23,.30);
+const light=new DirectionalLight('light',new Vector3(-.5,-1,1),scene);light.intensity=1.2;
+light.position=new Vector3(2,4,-3);
+const result=await SceneLoader.ImportMeshAsync(null,'/Mighty%20Chat/Sources/Characters/hailey/','hailey.glb',scene);
+const wrapper=new TransformNode('viewerCharacter',scene);
+for(const root of [...result.meshes,...result.transformNodes])if(!root.parent)root.parent=wrapper;
+if(new URL(location.href).searchParams.get('turn')==='1')wrapper.rotation.y=Math.PI;
+const bones=result.skeletons[0].bones;
+window.result=result;window.scene=scene;window.engine=engine;window.camera=camera;
+window.report={rightHanded:scene.useRightHandedSystem,root:result.meshes[0].name,materials:scene.materials.map(m=>({name:m.name,alpha:m.alpha,transparencyMode:m.transparencyMode,roughness:m.roughness,metallic:m.metallic,backFaceCulling:m.backFaceCulling,albedoTexture:m.albedoTexture?.name})),bones:bones.length};
+engine.runRenderLoop(()=>scene.render());
+await scene.whenReadyAsync();
+window.ready=true;
+</script></body></html>

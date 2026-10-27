@@ -1,0 +1,5 @@
+const path=require('node:path');
+const requireViewer=require('node:module').createRequire(path.resolve(__dirname,'../../model-viewer-clean/package.json'));
+const CopyPlugin=requireViewer('copy-webpack-plugin');
+const modules=path.resolve(__dirname,'../../model-viewer-clean/node_modules');
+module.exports={mode:'production',context:__dirname,entry:'./companion.ts',output:{path:path.resolve(__dirname,'../Sources/Companion'),filename:'companion.js',publicPath:'auto',clean:true},resolve:{extensions:['.ts','.js'],modules:[modules]},resolveLoader:{modules:[modules]},module:{rules:[{test:/\.ts$/,loader:'ts-loader',options:{configFile:path.join(__dirname,'tsconfig.json')}},{test:/\.m?js$/,resolve:{fullySpecified:false}}]},plugins:[new CopyPlugin({patterns:[{from:'index.html',to:'index.html'},{from:'assets/studio-neutral.hdr',to:'assets/studio-neutral.hdr'},{from:path.join(modules,'@babylonjs/havok/lib/esm/HavokPhysics.wasm'),to:'assets/HavokPhysics.wasm'},{from:path.join(modules,'@babylonjs/havok/LICENSE'),to:'assets/Havok-LICENSE.txt'}]})],performance:{hints:false}};

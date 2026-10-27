@@ -1,0 +1,1 @@
+{"version":2,"type":"playback.snapshot","eventId":"event-3","sequence":3,"identity":{"sessionId":"session-1","characterId":"character-1","generation":0,"turnId":"turn-1"},"clockEpoch":0,"chunkId":"chunk-1","chunkIndex":0,"playedSamplesInChunk":-1,"sampleRate":48000,"state":"playing"}

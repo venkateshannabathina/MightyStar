@@ -1,0 +1,590 @@
+{
+  "source": "Mixamo \u2022 Idle 2 source",
+  "action": "Armature.001|mixamo.com|Layer0",
+  "frame_range": [
+    1,
+    500
+  ],
+  "fps": 30.0,
+  "source_root": {
+    "lowest_frame": 167,
+    "highest_frame": 128,
+    "height_min": 1.002983570098877,
+    "height_max": 1.0294159650802612,
+    "height_range": 0.026432394981384277,
+    "endpoint_displacement": 1.4021957548455468e-06,
+    "root_max_displacement_from_start": 0.10431506063913086
+  },
+  "feet": {
+    "Left": {
+      "ankle_min_z": 0.08729618042707443,
+      "ankle_max_z": 0.09239345043897629,
+      "toe_knuckle_min_z": 9.429561032447964e-06,
+      "toe_knuckle_max_z": 0.002523190574720502,
+      "toe_tip_min_z": 2.5931474283424905e-06,
+      "toe_tip_max_z": 0.0011569717898964882,
+      "contact_proxy_z_min": 2.5931474283424905e-06,
+      "contact_proxy_z_max": 0.0011569717898964882,
+      "contact_proxy_lowest_frame": 133,
+      "contact_proxy_highest_frame": 149,
+      "max_horizontal_ankle_displacement_from_start": 0.0038101269344665402,
+      "endpoint_ankle_displacement": 8.793915457416863e-06
+    },
+    "Right": {
+      "ankle_min_z": 0.08729591220617294,
+      "ankle_max_z": 0.08742847293615341,
+      "toe_knuckle_min_z": 9.169942131848074e-06,
+      "toe_knuckle_max_z": 0.00014173067756928504,
+      "toe_tip_min_z": 2.79402388514427e-06,
+      "toe_tip_max_z": 0.0028626953717321157,
+      "contact_proxy_z_min": 2.79402388514427e-06,
+      "contact_proxy_z_max": 0.00014173067756928504,
+      "contact_proxy_lowest_frame": 318,
+      "contact_proxy_highest_frame": 135,
+      "max_horizontal_ankle_displacement_from_start": 0.0037729283114613654,
+      "endpoint_ankle_displacement": 8.622739469515865e-07
+    }
+  },
+  "bone_rotation_metrics": {
+    "Hips": {
+      "world_rotation_from_start_max_degrees": 20.77596081996012,
+      "world_rotation_extreme_frame": 153,
+      "local_rotation_from_start_max_degrees": 20.77596081996012,
+      "local_rotation_extreme_frame": 153,
+      "world_step_max_degrees": 0.6367341143071883,
+      "world_step_extreme_frame": 305,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "Spine": {
+      "world_rotation_from_start_max_degrees": 15.034058101857598,
+      "world_rotation_extreme_frame": 209,
+      "local_rotation_from_start_max_degrees": 17.865003872903667,
+      "local_rotation_extreme_frame": 170,
+      "world_step_max_degrees": 0.5855044602396909,
+      "world_step_extreme_frame": 316,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "Spine1": {
+      "world_rotation_from_start_max_degrees": 16.707809389728165,
+      "world_rotation_extreme_frame": 216,
+      "local_rotation_from_start_max_degrees": 8.49011064574713,
+      "local_rotation_extreme_frame": 208,
+      "world_step_max_degrees": 0.6065157959475658,
+      "world_step_extreme_frame": 308,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "Spine2": {
+      "world_rotation_from_start_max_degrees": 21.539933372062624,
+      "world_rotation_extreme_frame": 215,
+      "local_rotation_from_start_max_degrees": 8.43837330669063,
+      "local_rotation_extreme_frame": 208,
+      "world_step_max_degrees": 0.7600141131285937,
+      "world_step_extreme_frame": 308,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "Neck": {
+      "world_rotation_from_start_max_degrees": 16.043535568720866,
+      "world_rotation_extreme_frame": 216,
+      "local_rotation_from_start_max_degrees": 10.195242753573732,
+      "local_rotation_extreme_frame": 210,
+      "world_step_max_degrees": 0.6632258485484289,
+      "world_step_extreme_frame": 316,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "Head": {
+      "world_rotation_from_start_max_degrees": 12.863204370608424,
+      "world_rotation_extreme_frame": 215,
+      "local_rotation_from_start_max_degrees": 7.37942524453649,
+      "local_rotation_extreme_frame": 465,
+      "world_step_max_degrees": 0.6218085471340329,
+      "world_step_extreme_frame": 317,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "LeftShoulder": {
+      "world_rotation_from_start_max_degrees": 22.277561236630014,
+      "world_rotation_extreme_frame": 171,
+      "local_rotation_from_start_max_degrees": 5.436155648028111,
+      "local_rotation_extreme_frame": 459,
+      "world_step_max_degrees": 1.390975817105225,
+      "world_step_extreme_frame": 137,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "LeftArm": {
+      "world_rotation_from_start_max_degrees": 23.277033613381022,
+      "world_rotation_extreme_frame": 164,
+      "local_rotation_from_start_max_degrees": 17.641472776296986,
+      "local_rotation_extreme_frame": 165,
+      "world_step_max_degrees": 0.9610255996547256,
+      "world_step_extreme_frame": 188,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "LeftForeArm": {
+      "world_rotation_from_start_max_degrees": 24.00740940517438,
+      "world_rotation_extreme_frame": 165,
+      "local_rotation_from_start_max_degrees": 2.922782020884417,
+      "local_rotation_extreme_frame": 169,
+      "world_step_max_degrees": 0.9610255996547256,
+      "world_step_extreme_frame": 188,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "LeftHand": {
+      "world_rotation_from_start_max_degrees": 29.702230472704283,
+      "world_rotation_extreme_frame": 165,
+      "local_rotation_from_start_max_degrees": 8.098827436119366,
+      "local_rotation_extreme_frame": 166,
+      "world_step_max_degrees": 1.592951973108979,
+      "world_step_extreme_frame": 188,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "LeftUpLeg": {
+      "world_rotation_from_start_max_degrees": 23.68517294905484,
+      "world_rotation_extreme_frame": 152,
+      "local_rotation_from_start_max_degrees": 26.160046369251248,
+      "local_rotation_extreme_frame": 170,
+      "world_step_max_degrees": 1.011807659851425,
+      "world_step_extreme_frame": 120,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "LeftLeg": {
+      "world_rotation_from_start_max_degrees": 22.67916181910046,
+      "world_rotation_extreme_frame": 257,
+      "local_rotation_from_start_max_degrees": 20.19226747209262,
+      "local_rotation_extreme_frame": 130,
+      "world_step_max_degrees": 0.8934985789919048,
+      "world_step_extreme_frame": 120,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "LeftFoot": {
+      "world_rotation_from_start_max_degrees": 3.317420365728477,
+      "world_rotation_extreme_frame": 147,
+      "local_rotation_from_start_max_degrees": 22.66512362321546,
+      "local_rotation_extreme_frame": 258,
+      "world_step_max_degrees": 0.9244962994338876,
+      "world_step_extreme_frame": 137,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "LeftToeBase": {
+      "world_rotation_from_start_max_degrees": 2.1021766453315758,
+      "world_rotation_extreme_frame": 67,
+      "local_rotation_from_start_max_degrees": 2.2350022454076006,
+      "local_rotation_extreme_frame": 167,
+      "world_step_max_degrees": 0.4545638851331352,
+      "world_step_extreme_frame": 137,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "RightShoulder": {
+      "world_rotation_from_start_max_degrees": 27.10154878068383,
+      "world_rotation_extreme_frame": 213,
+      "local_rotation_from_start_max_degrees": 7.498923509545358,
+      "local_rotation_extreme_frame": 281,
+      "world_step_max_degrees": 1.019513896914341,
+      "world_step_extreme_frame": 308,
+      "endpoint_world_rotation_degrees": 0.03956468205889273,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "RightArm": {
+      "world_rotation_from_start_max_degrees": 23.996175054567153,
+      "world_rotation_extreme_frame": 214,
+      "local_rotation_from_start_max_degrees": 17.370826056760517,
+      "local_rotation_extreme_frame": 208,
+      "world_step_max_degrees": 1.135724674588209,
+      "world_step_extreme_frame": 367,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "RightForeArm": {
+      "world_rotation_from_start_max_degrees": 23.79488523418372,
+      "world_rotation_extreme_frame": 214,
+      "local_rotation_from_start_max_degrees": 1.6216829210271526,
+      "local_rotation_extreme_frame": 206,
+      "world_step_max_degrees": 1.1869457619725474,
+      "world_step_extreme_frame": 367,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "RightHand": {
+      "world_rotation_from_start_max_degrees": 26.932511798102485,
+      "world_rotation_extreme_frame": 213,
+      "local_rotation_from_start_max_degrees": 4.550409400413908,
+      "local_rotation_extreme_frame": 204,
+      "world_step_max_degrees": 1.5107395022364007,
+      "world_step_extreme_frame": 367,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "RightUpLeg": {
+      "world_rotation_from_start_max_degrees": 18.703917324652018,
+      "world_rotation_extreme_frame": 167,
+      "local_rotation_from_start_max_degrees": 24.79700275653059,
+      "local_rotation_extreme_frame": 168,
+      "world_step_max_degrees": 0.9642778297997887,
+      "world_step_extreme_frame": 305,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "RightLeg": {
+      "world_rotation_from_start_max_degrees": 7.64488003451385,
+      "world_rotation_extreme_frame": 180,
+      "local_rotation_from_start_max_degrees": 19.276375455804747,
+      "local_rotation_extreme_frame": 167,
+      "world_step_max_degrees": 0.7176395027772532,
+      "world_step_extreme_frame": 317,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "RightFoot": {
+      "world_rotation_from_start_max_degrees": 1.7870107388635295,
+      "world_rotation_extreme_frame": 181,
+      "local_rotation_from_start_max_degrees": 7.384942261160556,
+      "local_rotation_extreme_frame": 170,
+      "world_step_max_degrees": 0.16312937613715478,
+      "world_step_extreme_frame": 126,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "RightToeBase": {
+      "world_rotation_from_start_max_degrees": 1.8570332459360779,
+      "world_rotation_extreme_frame": 181,
+      "local_rotation_from_start_max_degrees": 1.2404708333986427,
+      "local_rotation_extreme_frame": 141,
+      "world_step_max_degrees": 0.32142510028853843,
+      "world_step_extreme_frame": 118,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "LeftHandThumb1": {
+      "world_rotation_from_start_max_degrees": 30.606991984507907,
+      "world_rotation_extreme_frame": 165,
+      "local_rotation_from_start_max_degrees": 12.146241796386265,
+      "local_rotation_extreme_frame": 244,
+      "world_step_max_degrees": 1.5816104021236088,
+      "world_step_extreme_frame": 188,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "LeftHandThumb2": {
+      "world_rotation_from_start_max_degrees": 34.270587952587526,
+      "world_rotation_extreme_frame": 247,
+      "local_rotation_from_start_max_degrees": 15.642997123104838,
+      "local_rotation_extreme_frame": 246,
+      "world_step_max_degrees": 1.63944378398244,
+      "world_step_extreme_frame": 188,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "LeftHandThumb3": {
+      "world_rotation_from_start_max_degrees": 49.541947062945624,
+      "world_rotation_extreme_frame": 247,
+      "local_rotation_from_start_max_degrees": 18.884340134781976,
+      "local_rotation_extreme_frame": 243,
+      "world_step_max_degrees": 1.7045143728773233,
+      "world_step_extreme_frame": 188,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "LeftHandIndex1": {
+      "world_rotation_from_start_max_degrees": 32.76136291189736,
+      "world_rotation_extreme_frame": 165,
+      "local_rotation_from_start_max_degrees": 7.506857299465158,
+      "local_rotation_extreme_frame": 370,
+      "world_step_max_degrees": 1.6183008320441574,
+      "world_step_extreme_frame": 188,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "LeftHandIndex2": {
+      "world_rotation_from_start_max_degrees": 37.728081135878256,
+      "world_rotation_extreme_frame": 164,
+      "local_rotation_from_start_max_degrees": 9.461211645583003,
+      "local_rotation_extreme_frame": 370,
+      "world_step_max_degrees": 1.6570142992463597,
+      "world_step_extreme_frame": 188,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.03956468205889273
+    },
+    "LeftHandIndex3": {
+      "world_rotation_from_start_max_degrees": 47.16869168118224,
+      "world_rotation_extreme_frame": 161,
+      "local_rotation_from_start_max_degrees": 14.809558052151905,
+      "local_rotation_extreme_frame": 370,
+      "world_step_max_degrees": 1.7250545669041035,
+      "world_step_extreme_frame": 188,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "LeftHandMiddle1": {
+      "world_rotation_from_start_max_degrees": 33.09602989013469,
+      "world_rotation_extreme_frame": 165,
+      "local_rotation_from_start_max_degrees": 8.037856958750693,
+      "local_rotation_extreme_frame": 370,
+      "world_step_max_degrees": 1.6207173300141247,
+      "world_step_extreme_frame": 188,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "LeftHandMiddle2": {
+      "world_rotation_from_start_max_degrees": 37.68807119310814,
+      "world_rotation_extreme_frame": 164,
+      "local_rotation_from_start_max_degrees": 8.853113643265758,
+      "local_rotation_extreme_frame": 370,
+      "world_step_max_degrees": 1.6551237759571285,
+      "world_step_extreme_frame": 188,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "LeftHandMiddle3": {
+      "world_rotation_from_start_max_degrees": 45.28005879251158,
+      "world_rotation_extreme_frame": 162,
+      "local_rotation_from_start_max_degrees": 12.21518956085122,
+      "local_rotation_extreme_frame": 370,
+      "world_step_max_degrees": 1.7104735405941949,
+      "world_step_extreme_frame": 188,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "LeftHandRing1": {
+      "world_rotation_from_start_max_degrees": 33.358852787830735,
+      "world_rotation_extreme_frame": 165,
+      "local_rotation_from_start_max_degrees": 9.000386702288395,
+      "local_rotation_extreme_frame": 370,
+      "world_step_max_degrees": 1.6245762508195103,
+      "world_step_extreme_frame": 188,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "LeftHandRing2": {
+      "world_rotation_from_start_max_degrees": 35.972263766522346,
+      "world_rotation_extreme_frame": 165,
+      "local_rotation_from_start_max_degrees": 5.079047784753012,
+      "local_rotation_extreme_frame": 370,
+      "world_step_max_degrees": 1.6442110864874968,
+      "world_step_extreme_frame": 188,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "LeftHandRing3": {
+      "world_rotation_from_start_max_degrees": 40.48716503488173,
+      "world_rotation_extreme_frame": 162,
+      "local_rotation_from_start_max_degrees": 7.768468909235502,
+      "local_rotation_extreme_frame": 370,
+      "world_step_max_degrees": 1.676736114217251,
+      "world_step_extreme_frame": 188,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "LeftHandPinky1": {
+      "world_rotation_from_start_max_degrees": 32.55562390888,
+      "world_rotation_extreme_frame": 165,
+      "local_rotation_from_start_max_degrees": 7.047401588186307,
+      "local_rotation_extreme_frame": 370,
+      "world_step_max_degrees": 1.6158807205233616,
+      "world_step_extreme_frame": 188,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "LeftHandPinky2": {
+      "world_rotation_from_start_max_degrees": 38.21919916513476,
+      "world_rotation_extreme_frame": 164,
+      "local_rotation_from_start_max_degrees": 11.021359840053353,
+      "local_rotation_extreme_frame": 370,
+      "world_step_max_degrees": 1.6584307775302933,
+      "world_step_extreme_frame": 188,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "LeftHandPinky3": {
+      "world_rotation_from_start_max_degrees": 49.475378845891385,
+      "world_rotation_extreme_frame": 161,
+      "local_rotation_from_start_max_degrees": 17.482415391589335,
+      "local_rotation_extreme_frame": 370,
+      "world_step_max_degrees": 1.7386132313109108,
+      "world_step_extreme_frame": 188,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "RightHandThumb1": {
+      "world_rotation_from_start_max_degrees": 26.96129890281894,
+      "world_rotation_extreme_frame": 213,
+      "local_rotation_from_start_max_degrees": 0.9320846733085271,
+      "local_rotation_extreme_frame": 373,
+      "world_step_max_degrees": 1.512292984824872,
+      "world_step_extreme_frame": 367,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "RightHandThumb2": {
+      "world_rotation_from_start_max_degrees": 27.061437574510805,
+      "world_rotation_extreme_frame": 212,
+      "local_rotation_from_start_max_degrees": 2.7636536336617374,
+      "local_rotation_extreme_frame": 372,
+      "world_step_max_degrees": 1.5128104578753652,
+      "world_step_extreme_frame": 367,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "RightHandThumb3": {
+      "world_rotation_from_start_max_degrees": 27.394619290385517,
+      "world_rotation_extreme_frame": 212,
+      "local_rotation_from_start_max_degrees": 5.607308996318122,
+      "local_rotation_extreme_frame": 372,
+      "world_step_max_degrees": 1.5148785825254467,
+      "world_step_extreme_frame": 367,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "RightHandIndex1": {
+      "world_rotation_from_start_max_degrees": 26.233585111928615,
+      "world_rotation_extreme_frame": 214,
+      "local_rotation_from_start_max_degrees": 3.9266753385979767,
+      "local_rotation_extreme_frame": 371,
+      "world_step_max_degrees": 1.5107395022364007,
+      "world_step_extreme_frame": 367,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "RightHandIndex2": {
+      "world_rotation_from_start_max_degrees": 25.68640529413388,
+      "world_rotation_extreme_frame": 214,
+      "local_rotation_from_start_max_degrees": 3.4698897478883657,
+      "local_rotation_extreme_frame": 371,
+      "world_step_max_degrees": 1.5091844206605047,
+      "world_step_extreme_frame": 367,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "RightHandIndex3": {
+      "world_rotation_from_start_max_degrees": 24.445129828356936,
+      "world_rotation_extreme_frame": 214,
+      "local_rotation_from_start_max_degrees": 9.958585559611844,
+      "local_rotation_extreme_frame": 372,
+      "world_step_max_degrees": 1.5071084826898453,
+      "world_step_extreme_frame": 367,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "RightHandMiddle1": {
+      "world_rotation_from_start_max_degrees": 26.00273376877689,
+      "world_rotation_extreme_frame": 214,
+      "local_rotation_from_start_max_degrees": 5.429093538610964,
+      "local_rotation_extreme_frame": 371,
+      "world_step_max_degrees": 1.5091844206605047,
+      "world_step_extreme_frame": 367,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "RightHandMiddle2": {
+      "world_rotation_from_start_max_degrees": 24.759055149650454,
+      "world_rotation_extreme_frame": 214,
+      "local_rotation_from_start_max_degrees": 8.241495149866953,
+      "local_rotation_extreme_frame": 372,
+      "world_step_max_degrees": 1.505549650857038,
+      "world_step_extreme_frame": 367,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "RightHandMiddle3": {
+      "world_rotation_from_start_max_degrees": 27.855930115661558,
+      "world_rotation_extreme_frame": 345,
+      "local_rotation_from_start_max_degrees": 11.167550155691803,
+      "local_rotation_extreme_frame": 372,
+      "world_step_max_degrees": 1.4982536591080433,
+      "world_step_extreme_frame": 367,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.03956468205889273
+    },
+    "RightHandRing1": {
+      "world_rotation_from_start_max_degrees": 25.838493203941397,
+      "world_rotation_extreme_frame": 214,
+      "local_rotation_from_start_max_degrees": 6.638839780427246,
+      "local_rotation_extreme_frame": 372,
+      "world_step_max_degrees": 1.5097029591559776,
+      "world_step_extreme_frame": 367,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "RightHandRing2": {
+      "world_rotation_from_start_max_degrees": 25.04392069133609,
+      "world_rotation_extreme_frame": 214,
+      "local_rotation_from_start_max_degrees": 5.374011347819453,
+      "local_rotation_extreme_frame": 372,
+      "world_step_max_degrees": 1.5086657039502007,
+      "world_step_extreme_frame": 367,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "RightHandRing3": {
+      "world_rotation_from_start_max_degrees": 24.288422290205197,
+      "world_rotation_extreme_frame": 214,
+      "local_rotation_from_start_max_degrees": 5.815690268743215,
+      "local_rotation_extreme_frame": 371,
+      "world_step_max_degrees": 1.505549650857038,
+      "world_step_extreme_frame": 367,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.03956468205889273
+    },
+    "RightHandPinky1": {
+      "world_rotation_from_start_max_degrees": 25.8385543029335,
+      "world_rotation_extreme_frame": 214,
+      "local_rotation_from_start_max_degrees": 6.244224725655193,
+      "local_rotation_extreme_frame": 372,
+      "world_step_max_degrees": 1.5086657039502007,
+      "world_step_extreme_frame": 367,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "RightHandPinky2": {
+      "world_rotation_from_start_max_degrees": 24.93376987890221,
+      "world_rotation_extreme_frame": 214,
+      "local_rotation_from_start_max_degrees": 6.221232957469226,
+      "local_rotation_extreme_frame": 372,
+      "world_step_max_degrees": 1.5071084826898453,
+      "world_step_extreme_frame": 367,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    },
+    "RightHandPinky3": {
+      "world_rotation_from_start_max_degrees": 24.251284491540762,
+      "world_rotation_extreme_frame": 214,
+      "local_rotation_from_start_max_degrees": 5.9916951529120785,
+      "local_rotation_extreme_frame": 372,
+      "world_step_max_degrees": 1.505549650857038,
+      "world_step_extreme_frame": 367,
+      "endpoint_world_rotation_degrees": 0.0,
+      "endpoint_local_rotation_degrees": 0.0
+    }
+  },
+  "endpoint_max_body_rotation": {
+    "bone": "RightShoulder",
+    "degrees": 0.03956468205889273
+  },
+  "suggested_visual_check_frames": [
+    1,
+    128,
+    135,
+    149,
+    164,
+    165,
+    167,
+    180,
+    213,
+    214,
+    215,
+    257,
+    500
+  ],
+  "note": "Foot contact uses toe-base/head and toe-tail joint positions, not surface mesh; z values are world units. All rotations are evaluated pose quaternions."
+}

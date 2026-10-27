@@ -1,0 +1,46 @@
+{
+  "facts": [
+    {
+      "text": "User won a fictional contest.",
+      "importance": 5,
+      "embeddingBytes": 1536,
+      "source_turn": 68
+    },
+    {
+      "text": "User's imaginary garden has a violet gate.",
+      "importance": 5,
+      "embeddingBytes": 1536,
+      "source_turn": 68
+    },
+    {
+      "text": "The short checks are finished.",
+      "importance": 1,
+      "embeddingBytes": 1536,
+      "source_turn": 62
+    },
+    {
+      "text": "User states that five plus seven equals twelve.",
+      "importance": 5,
+      "embeddingBytes": 1536,
+      "source_turn": 58
+    },
+    {
+      "text": "The user answered that 4 plus 6 equals 10.",
+      "importance": 3,
+      "embeddingBytes": 1536,
+      "source_turn": 56
+    }
+  ],
+  "turns": [
+    {
+      "role": "assistant",
+      "content": " Congrats on the win!  Your garden gate stays violet.",
+      "meta": "{\"clientTurnId\":\"62883a97-3404-494f-a02d-4b1ec5d31ace\",\"private\":false,\"sentenceEvents\":[{\"type\":\"sentence.start\",\"index\":0,\"e\":\"happy\",\"i\":0.6,\"g\":\"victory\",\"offset\":0},{\"type\":\"sentence.start\",\"index\":1,\"e\":\"happy\",\"i\":0.5,\"g\":\"-\",\"offset\":21}]}"
+    },
+    {
+      "role": "user",
+      "content": "My imaginary garden has a violet gate. Please remember that. I won a fictional contest! Celebrate with a victory gesture and two happy sentences.",
+      "meta": "{\"clientTurnId\":\"62883a97-3404-494f-a02d-4b1ec5d31ace\",\"private\":false}"
+    }
+  ]
+}

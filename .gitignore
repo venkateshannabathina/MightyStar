@@ -1,0 +1,31 @@
+.DS_Store
+node_modules/
+__pycache__/
+.pytest_cache/
+.venv/
+build/
+backups/
+*.app/
+*.dmg
+*.zip
+*.log
+*.sqlite*
+*.db
+.env
+.env.*
+*.p12
+*.pfx
+*.keychain-db
+keychain-password
+certificate.pem
+Mighty Chat/Sources/Python/
+Mighty Chat/Sources/PocketTTS/
+Mighty Chat/Sources/EdgeTTS/
+Mighty Chat/Sources/Companion/
+Mighty Chat/Sources/Symbols/
+Mighty Chat/Sources/symbol-assets.js
+Mighty Chat/Sources/credential-agent
+Mighty Chat/Sources/credential-agent-v01
+Mighty Chat/Backend/vendor/memory/node_modules/
+Mighty Chat/Backend/vendor/ws/
+Mighty Chat/Backend/memory/models/bge-small-en-v1.5/

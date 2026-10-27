@@ -1,0 +1,78 @@
+{
+  "scope": "Actual main-app synthetic character before the repaired restart; no live database writes.",
+  "id": "mvgjhwccg4q6z4j1656",
+  "userTurns": 17,
+  "assistantTurns": 17,
+  "recentContainsFreshValue": false,
+  "summaryContainsFreshValue": false,
+  "summary": "",
+  "recent": [
+    {
+      "id": 52,
+      "role": "user",
+      "content": "Second short check: what is 2 plus 3? Number only.",
+      "meta": "{\"clientTurnId\":\"e164d71c-3d88-42d2-acc0-556bcd221e82\",\"private\":false}"
+    },
+    {
+      "id": 53,
+      "role": "assistant",
+      "content": "5",
+      "meta": "{\"clientTurnId\":\"e164d71c-3d88-42d2-acc0-556bcd221e82\",\"private\":false,\"sentenceEvents\":[{\"type\":\"sentence.start\",\"index\":0,\"e\":\"neutral\",\"i\":0,\"g\":\"-\",\"offset\":0}]}"
+    },
+    {
+      "id": 54,
+      "role": "user",
+      "content": "Third short check: what is 3 plus 5? Number only.",
+      "meta": "{\"clientTurnId\":\"19999e7e-cc67-4c5b-ba95-cced78c9b7df\",\"private\":false}"
+    },
+    {
+      "id": 55,
+      "role": "assistant",
+      "content": " 8",
+      "meta": "{\"clientTurnId\":\"19999e7e-cc67-4c5b-ba95-cced78c9b7df\",\"private\":false,\"sentenceEvents\":[{\"type\":\"sentence.start\",\"index\":0,\"e\":\"neutral\",\"i\":0.3,\"g\":\"-\",\"offset\":0}]}"
+    },
+    {
+      "id": 56,
+      "role": "user",
+      "content": "Fourth short check: what is 4 plus 6? Number only.",
+      "meta": "{\"clientTurnId\":\"dcd52cc7-cf60-4b86-be36-921a7fc513ee\",\"private\":false}"
+    },
+    {
+      "id": 57,
+      "role": "assistant",
+      "content": "10",
+      "meta": "{\"clientTurnId\":\"dcd52cc7-cf60-4b86-be36-921a7fc513ee\",\"private\":false,\"sentenceEvents\":[{\"type\":\"sentence.start\",\"index\":0,\"e\":\"neutral\",\"i\":0,\"g\":\"-\",\"offset\":0}]}"
+    },
+    {
+      "id": 58,
+      "role": "user",
+      "content": "Fifth short check: what is 5 plus 7? Number only.",
+      "meta": "{\"clientTurnId\":\"23b01d88-6f12-47ce-a342-be7cefd27da8\",\"private\":false}"
+    },
+    {
+      "id": 59,
+      "role": "assistant",
+      "content": "12",
+      "meta": "{\"clientTurnId\":\"23b01d88-6f12-47ce-a342-be7cefd27da8\",\"private\":false,\"sentenceEvents\":[{\"type\":\"sentence.start\",\"index\":0,\"e\":\"neutral\",\"i\":0,\"g\":\"-\",\"offset\":0}]}"
+    },
+    {
+      "id": 60,
+      "role": "user",
+      "content": "Sixth short check: what is 6 plus 8? Number only.",
+      "meta": "{\"clientTurnId\":\"89026ac4-fdc8-4979-8101-8a4bb692e8e2\",\"private\":false}"
+    },
+    {
+      "id": 61,
+      "role": "assistant",
+      "content": "14",
+      "meta": "{\"clientTurnId\":\"89026ac4-fdc8-4979-8101-8a4bb692e8e2\",\"private\":false,\"sentenceEvents\":[{\"type\":\"sentence.start\",\"index\":0,\"e\":\"neutral\",\"i\":0,\"g\":\"-\",\"offset\":0}]}"
+    }
+  ],
+  "freshFact": [
+    {
+      "text": "User has an imaginary bicycle that is cobalt blue.",
+      "importance": 1,
+      "embeddingBytes": 1536
+    }
+  ]
+}

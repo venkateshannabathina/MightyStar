@@ -1,0 +1,29 @@
+{
+  "scope": "Actual installed main-app reply after process restart. Original values absent from pre-restart recent 10 rows and rolling summary; see before-restart.json.",
+  "characterId": "mvgjhwccg4q6z4j1656",
+  "query": "The calculation checks are finished. What is my favorite drink, and what is the name of my imaginary pet turtle?",
+  "reply": " I’m not sure.  Maybe you could remind me?",
+  "bothFactsRecalled": false,
+  "meta": {
+    "clientTurnId": "dd17be68-d58c-4794-9813-31492aa62ee4",
+    "private": false,
+    "sentenceEvents": [
+      {
+        "type": "sentence.start",
+        "index": 0,
+        "e": "shy",
+        "i": 0.4,
+        "g": "-",
+        "offset": 0
+      },
+      {
+        "type": "sentence.start",
+        "index": 1,
+        "e": "neutral",
+        "i": 0.3,
+        "g": "-",
+        "offset": 14
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "app": "<workspace>/Mighty Chat.app",
+  "backup": "<workspace>/backups/Mighty Chat-before-roster-install-20261021T145547Z.app",
+  "updatedFiles": [
+    "Contents/Resources/catalog.js",
+    "Contents/Resources/companion-ui.js",
+    "Contents/Resources/chat-ui.js",
+    "Contents/Backend/assets/CharacterCache.cjs"
+  ],
+  "credentialHelperPreserved": true,
+  "signatureVerified": true,
+  "restarted": true,
+  "verifiedInNativeCharacterEditor": {
+    "characters": [
+      "Lynae",
+      "Lucy (Wuthering Waves)",
+      "Rover (Female)",
+      "Rover (Male)",
+      "Hailey",
+      "Evelyn (Zenless Zone Zero)"
+    ],
+    "appearanceButtons": 10,
+    "onlyAllowedCharacters": true
+  }
+}

@@ -1,0 +1,4 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path');
+const {EdgeTTS}=require('../Backend/providers/EdgeTTS.cjs');
+(async()=>{const root=fs.mkdtempSync('/private/tmp/mighty-context-body-'),tts=new EdgeTTS({audioRoot:root,openingDirectory:null});try{const text='The audio engine was restarting between the two clips.';const result=await tts.synthesize({text,voice:'en-US-AvaMultilingualNeural'});fs.copyFileSync(path.join(root,result.audioId+'.mp3'),path.resolve(__dirname,'../tests/fixtures/context-body.mp3'));const {audioId,...timeline}=result;fs.writeFileSync(path.resolve(__dirname,'../tests/fixtures/context-body.json'),JSON.stringify({text,...timeline},null,2)+'\n');console.log('Recorded synthetic Ava continuation for native integration tests.');}finally{tts.close();fs.rmSync(root,{recursive:true,force:true});}})().catch(e=>{console.error(e.message);process.exitCode=1;});

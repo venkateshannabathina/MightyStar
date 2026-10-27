@@ -1,0 +1,9 @@
+{
+  "time": "20261020-105056",
+  "installed": "<workspace>/Mighty Chat.app",
+  "backup": "<workspace>/backups/main-app-before-stream-cors-fix-20261020-105056/Mighty Chat.app",
+  "fix": "CORS headers on successful tagged NDJSON chat replies",
+  "sourceSHA256": "ad1ab0612b31ec6493d7b964c52446512cda2d284d4d605275fcd308e1973835",
+  "signature": "verified",
+  "featureSettings": "Five trial features enabled; Face Lab/debug off"
+}

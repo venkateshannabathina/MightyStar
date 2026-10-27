@@ -1,0 +1,419 @@
+[
+  {
+    "maximumCanvasVisiblePixelsOf26624" : 5583,
+    "maximumHitMaskSetBits" : 49465,
+    "messages" : [
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-load"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-control"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-control"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : true,
+        "path" : "\/Users\/papaya\/Documents\/ChatGPT\/Mighty%20Star\/Mighty%20Chat.recall-overlay-installing.app\/Contents\/Resources\/desktop.html",
+        "state" : "booted",
+        "type" : "mighty-companion-state"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-load"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-control"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-control"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : true,
+        "path" : "\/Users\/papaya\/Documents\/ChatGPT\/Mighty%20Star\/Mighty%20Chat.recall-overlay-installing.app\/Contents\/Resources\/desktop.html",
+        "state" : "",
+        "type" : "mighty-companion-retry-region"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : true,
+        "path" : "\/Users\/papaya\/Documents\/ChatGPT\/Mighty%20Star\/Mighty%20Chat.recall-overlay-installing.app\/Contents\/Resources\/desktop.html",
+        "state" : "loading",
+        "type" : "mighty-companion-state"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : true,
+        "path" : "\/Users\/papaya\/Documents\/ChatGPT\/Mighty%20Star\/Mighty%20Chat.recall-overlay-installing.app\/Contents\/Resources\/desktop.html",
+        "state" : "",
+        "type" : "mighty-companion-retry-region"
+      },
+      {
+        "afterRestore" : false,
+        "clientHeight" : 650,
+        "clientWidth" : 360,
+        "error" : "",
+        "height" : 1300,
+        "hidden" : false,
+        "kind" : "canvas",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "status" : "Opening character…",
+        "visibility" : "visible",
+        "visiblePixels" : 0,
+        "width" : 720
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : true,
+        "path" : "\/Users\/papaya\/Documents\/ChatGPT\/Mighty%20Star\/Mighty%20Chat.recall-overlay-installing.app\/Contents\/Resources\/desktop.html",
+        "state" : "",
+        "type" : "mighty-companion-face"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : true,
+        "path" : "\/Users\/papaya\/Documents\/ChatGPT\/Mighty%20Star\/Mighty%20Chat.recall-overlay-installing.app\/Contents\/Resources\/desktop.html",
+        "state" : "",
+        "type" : "mighty-companion-retry-region"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : true,
+        "path" : "\/Users\/papaya\/Documents\/ChatGPT\/Mighty%20Star\/Mighty%20Chat.recall-overlay-installing.app\/Contents\/Resources\/desktop.html",
+        "state" : "ready",
+        "type" : "mighty-companion-state"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-load"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-control"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-control"
+      },
+      {
+        "afterRestore" : false,
+        "clientHeight" : 650,
+        "clientWidth" : 360,
+        "error" : "",
+        "height" : 1300,
+        "hidden" : true,
+        "kind" : "canvas",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "status" : "",
+        "visibility" : "visible",
+        "visiblePixels" : 5583,
+        "width" : 720
+      },
+      {
+        "afterRestore" : true,
+        "clientHeight" : 650,
+        "clientWidth" : 360,
+        "error" : "",
+        "height" : 1300,
+        "hidden" : true,
+        "kind" : "canvas",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "status" : "",
+        "visibility" : "visible",
+        "visiblePixels" : 5569,
+        "width" : 720
+      },
+      {
+        "afterRestore" : true,
+        "clientHeight" : 650,
+        "clientWidth" : 360,
+        "error" : "",
+        "height" : 1300,
+        "hidden" : true,
+        "kind" : "canvas",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "status" : "",
+        "visibility" : "visible",
+        "visiblePixels" : 5575,
+        "width" : 720
+      },
+      {
+        "afterRestore" : true,
+        "clientHeight" : 650,
+        "clientWidth" : 360,
+        "error" : "",
+        "height" : 1300,
+        "hidden" : true,
+        "kind" : "canvas",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "status" : "",
+        "visibility" : "visible",
+        "visiblePixels" : 5562,
+        "width" : 720
+      }
+    ],
+    "nativeHitMaskMessages" : 48,
+    "parent" : "{\"href\":\"file:\/\/\/Users\/papaya\/Documents\/ChatGPT\/Mighty%20Star\/Mighty%20Chat.recall-overlay-installing.app\/Contents\/Resources\/desktop.html\",\"viewer\":\"http:\/\/127.0.0.1:58981\/Companion\/index.html\",\"body\":\"overlay\",\"width\":360,\"height\":650}",
+    "phase" : "nested-overlay",
+    "postPageCacheVisiblePixels" : 5575,
+    "rendererReady" : true,
+    "snapshotError" : "",
+    "snapshotSampleOpaque" : 50645
+  },
+  {
+    "maximumCanvasVisiblePixelsOf26624" : 14597,
+    "maximumHitMaskSetBits" : 72544,
+    "messages" : [
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-load"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-control"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-control"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : true,
+        "path" : "\/Users\/papaya\/Documents\/ChatGPT\/Mighty%20Star\/Mighty%20Chat.recall-overlay-installing.app\/Contents\/Resources\/desktop.html",
+        "state" : "booted",
+        "type" : "mighty-companion-state"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-load"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-control"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-control"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : true,
+        "path" : "\/Users\/papaya\/Documents\/ChatGPT\/Mighty%20Star\/Mighty%20Chat.recall-overlay-installing.app\/Contents\/Resources\/desktop.html",
+        "state" : "",
+        "type" : "mighty-companion-retry-region"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : true,
+        "path" : "\/Users\/papaya\/Documents\/ChatGPT\/Mighty%20Star\/Mighty%20Chat.recall-overlay-installing.app\/Contents\/Resources\/desktop.html",
+        "state" : "loading",
+        "type" : "mighty-companion-state"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : true,
+        "path" : "\/Users\/papaya\/Documents\/ChatGPT\/Mighty%20Star\/Mighty%20Chat.recall-overlay-installing.app\/Contents\/Resources\/desktop.html",
+        "state" : "",
+        "type" : "mighty-companion-retry-region"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : true,
+        "path" : "\/Users\/papaya\/Documents\/ChatGPT\/Mighty%20Star\/Mighty%20Chat.recall-overlay-installing.app\/Contents\/Resources\/desktop.html",
+        "state" : "",
+        "type" : "mighty-companion-face"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : true,
+        "path" : "\/Users\/papaya\/Documents\/ChatGPT\/Mighty%20Star\/Mighty%20Chat.recall-overlay-installing.app\/Contents\/Resources\/desktop.html",
+        "state" : "",
+        "type" : "mighty-companion-retry-region"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : true,
+        "path" : "\/Users\/papaya\/Documents\/ChatGPT\/Mighty%20Star\/Mighty%20Chat.recall-overlay-installing.app\/Contents\/Resources\/desktop.html",
+        "state" : "ready",
+        "type" : "mighty-companion-state"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-load"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-control"
+      },
+      {
+        "detail" : "",
+        "kind" : "message",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "state" : "",
+        "type" : "mighty-companion-control"
+      },
+      {
+        "afterRestore" : false,
+        "clientHeight" : 440,
+        "clientWidth" : 300,
+        "error" : "",
+        "height" : 880,
+        "hidden" : true,
+        "kind" : "canvas",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "status" : "",
+        "visibility" : "visible",
+        "visiblePixels" : 14597,
+        "width" : 600
+      },
+      {
+        "afterRestore" : true,
+        "clientHeight" : 440,
+        "clientWidth" : 300,
+        "error" : "",
+        "height" : 880,
+        "hidden" : true,
+        "kind" : "canvas",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "status" : "",
+        "visibility" : "visible",
+        "visiblePixels" : 14578,
+        "width" : 600
+      },
+      {
+        "afterRestore" : true,
+        "clientHeight" : 440,
+        "clientWidth" : 300,
+        "error" : "",
+        "height" : 880,
+        "hidden" : true,
+        "kind" : "canvas",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "status" : "",
+        "visibility" : "visible",
+        "visiblePixels" : 14565,
+        "width" : 600
+      },
+      {
+        "afterRestore" : true,
+        "clientHeight" : 440,
+        "clientWidth" : 300,
+        "error" : "",
+        "height" : 880,
+        "hidden" : true,
+        "kind" : "canvas",
+        "main" : false,
+        "path" : "\/Companion\/index.html",
+        "status" : "",
+        "visibility" : "visible",
+        "visiblePixels" : 14555,
+        "width" : 600
+      }
+    ],
+    "nativeHitMaskMessages" : 40,
+    "parent" : "{\"href\":\"file:\/\/\/Users\/papaya\/Documents\/ChatGPT\/Mighty%20Star\/Mighty%20Chat.recall-overlay-installing.app\/Contents\/Resources\/desktop.html\",\"viewer\":\"http:\/\/127.0.0.1:58981\/Companion\/index.html\",\"body\":\"portrait\",\"width\":300,\"height\":440}",
+    "phase" : "nested-portrait",
+    "postPageCacheVisiblePixels" : 14578,
+    "rendererReady" : true,
+    "snapshotError" : "",
+    "snapshotSampleOpaque" : 190080
+  }
+]

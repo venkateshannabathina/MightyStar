@@ -1,0 +1,141 @@
+{
+  "rig_bones": 247,
+  "meshes": [
+    {
+      "name": "Hailey \u2022 Body skin",
+      "vertices": 8054,
+      "uv": "DiffuseUV",
+      "rest_delta_m": 9.310256961664057e-06,
+      "materials": [
+        "Hailey | Skin \u2022 body"
+      ],
+      "visible": true
+    },
+    {
+      "name": "Hailey \u2022 Eye moisture",
+      "vertices": 276,
+      "uv": "DiffuseUV",
+      "rest_delta_m": 6.36098090961322e-07,
+      "materials": [
+        "Hailey | Eye moisture"
+      ],
+      "visible": true
+    },
+    {
+      "name": "Hailey \u2022 Eyebrows",
+      "vertices": 2572,
+      "uv": "DiffuseUV",
+      "rest_delta_m": 7.191643734374147e-07,
+      "materials": [
+        "Hailey | Eyebrows"
+      ],
+      "visible": false
+    },
+    {
+      "name": "Hailey \u2022 Eyelashes",
+      "vertices": 7260,
+      "uv": "DiffuseUV",
+      "rest_delta_m": 7.168449811135974e-07,
+      "materials": [
+        "Hailey | Eyelashes"
+      ],
+      "visible": true
+    },
+    {
+      "name": "Hailey \u2022 Eyes",
+      "vertices": 772,
+      "uv": "DiffuseUV",
+      "rest_delta_m": 7.861068714202732e-07,
+      "materials": [
+        "Hailey | Eyes \u2022 blue grey"
+      ],
+      "visible": true
+    },
+    {
+      "name": "Hailey \u2022 Face & neck",
+      "vertices": 12227,
+      "uv": "DiffuseUV",
+      "rest_delta_m": 1.5453131014309225e-06,
+      "materials": [
+        "Hailey | Skin \u2022 face"
+      ],
+      "visible": true
+    },
+    {
+      "name": "Hailey \u2022 Hair",
+      "vertices": 24565,
+      "uv": "DiffuseUV",
+      "rest_delta_m": 1.16867884497054e-06,
+      "materials": [
+        "Hailey | Hair \u2022 chestnut strands"
+      ],
+      "visible": true
+    },
+    {
+      "name": "Hailey \u2022 Headset",
+      "vertices": 783,
+      "uv": "DiffuseUV",
+      "rest_delta_m": 1.0662419268923504e-06,
+      "materials": [
+        "Hailey | Headset"
+      ],
+      "visible": true
+    },
+    {
+      "name": "Hailey \u2022 Jacket & gear",
+      "vertices": 46738,
+      "uv": "DiffuseUV",
+      "rest_delta_m": 0.0006520163243321649,
+      "materials": [
+        "Hailey | Suit \u2022 PartA"
+      ],
+      "visible": true
+    },
+    {
+      "name": "Hailey \u2022 Mouth interior",
+      "vertices": 1666,
+      "uv": "DiffuseUV",
+      "rest_delta_m": 6.240062801554132e-07,
+      "materials": [
+        "Hailey | Mouth interior"
+      ],
+      "visible": true
+    },
+    {
+      "name": "Hailey \u2022 Ponytail",
+      "vertices": 5331,
+      "uv": "DiffuseUV",
+      "rest_delta_m": 2.603911299562786e-06,
+      "materials": [
+        "Hailey | Hair \u2022 chestnut strands"
+      ],
+      "visible": true
+    },
+    {
+      "name": "Hailey \u2022 Tearline",
+      "vertices": 330,
+      "uv": "DiffuseUV",
+      "rest_delta_m": 6.437318882433429e-07,
+      "materials": [
+        "Hailey | Tearline"
+      ],
+      "visible": true
+    },
+    {
+      "name": "Hailey \u2022 Trousers & boots",
+      "vertices": 33991,
+      "uv": "DiffuseUV",
+      "rest_delta_m": 0.0006718072474093888,
+      "materials": [
+        "Hailey | Suit \u2022 PartB"
+      ],
+      "visible": true
+    }
+  ],
+  "missing_weighted_bones": [],
+  "scale": [
+    1.0,
+    1.0,
+    1.0
+  ]
+}
