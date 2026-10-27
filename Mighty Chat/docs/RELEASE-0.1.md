@@ -10,6 +10,6 @@ The original development credential broker is untouched. A separate release brok
 
 The DMG includes the app, an Applications shortcut and an installation guide. It excludes development backups, tests, logs, personal data, signing material and Hailey assets. Node, Python, Pocket speech and English voice weights are bundled. Character models and additional speech languages download on demand. Provider usage may incur charges.
 
-Build with `scripts/build.sh`, then `scripts/package-v01.py`. Signing uses the existing local identity; never add its private key or password to the release. Release artifacts live under `build/release-v0.1`. The website repository is `venkateshannabathina/mighty_star_web`.
+For the corrected download, see `CLEAN-RELEASE-0.1.1.md`. Build with `MIGHTY_BUILD_ROOT="$PWD/build/clean-release-validation" bash scripts/build.sh`, then `python3 scripts/package-v01.py`. Signing uses the existing local identity; never add its private key or password to the release. Release artifacts live under `build/release-v0.1.1`. The website repository is `venkateshannabathina/mighty_star_web`.
 
 Validation includes the existing build checks and `tests/ui/check-onboarding.cjs`. The release must also pass signature verification, dependency/minimum-OS audit, bundled runtime startup, local backend health, DMG verification, and website download-link verification before publication.
